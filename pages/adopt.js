@@ -9,10 +9,10 @@ import { useRouter } from "next/router";
 // Component Imports
 
 // Style Imports
-import "../assets/styles/modules/Index/Index.module.css";
+// import "../assets/styles/modules/Adopt/Adopt.module.css";
 
-export default function Home() {
+export default function Adopt() {
   const router = useRouter();
 
-  return "Home Page";
+  return "Adopt Page";
 }
