@@ -12,10 +12,7 @@ import { useRouter } from "next/router";
 import "../assets/styles/modules/Index/Index.module.css";
 
 export default function Home() {
-
   const router = useRouter();
 
-  return (
-    ""
-  )
+  return "Testing";
 }
