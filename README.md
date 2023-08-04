@@ -4,7 +4,7 @@
 
 ---
 
-
+This is the Animal Ark of Summerlin website.
 
 ===
 
@@ -12,7 +12,7 @@
 
 ---
 
-Demo: PUT_SITE_URL_HERE
+Demo: summerlinanimalark.com
 
 ===
 
@@ -20,9 +20,9 @@ Demo: PUT_SITE_URL_HERE
 
 ---
 
-## Started Developement - 
+## Started Developement - 8/4/2023
 
-## Ended Development -
+## Ended Development - IN PROGRESS
 
 ## Status
 
