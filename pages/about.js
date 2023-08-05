@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import { PageHead } from "@/assets/components/global/All/PageHead";
 
 // Style Imports
-// import "../assets/styles/modules/About/About.module.css";
+import "../assets/styles/modules/About/About.module.css";
 
 export default function About() {
   const router = useRouter();
