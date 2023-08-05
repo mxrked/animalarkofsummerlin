@@ -19,10 +19,14 @@ export const PageHead = () => {
   const router = useRouter();
 
   //! Descriptions
-  const INDEX_DESC = "";
-  const ABOUT_DESC = "";
-  const CONTACT_DESC = "";
-  const ADOPT_DESC = "";
+  const INDEX_DESC =
+    "Animal Ark: Summerlin's Pet Shelter & Animal Rescue. Find loving owners, adoptable pets, and community support. Join us in fostering responsible pet ownership!";
+  const ABOUT_DESC =
+    "Meet Susan Allison: The Compassionate Creator behind Animal Ark of Summerlin - A Remarkable Dog Rescue & Adoption Center. Join us in transforming neglected dogs' lives with love and dedication. Witness heartwarming tales of hope and a brighter future.";
+  const CONTACT_DESC =
+    "Adopting a Dog? Contact Us! Fill out the Inquiry Form to find your perfect match and simplify the adoption process.";
+  const ADOPT_DESC =
+    "Adopt your perfect dog today! Browse adoptable dogs, get details, and simplify the adoption process. Find a loving companion for life";
   const DESCS = [INDEX_DESC, ABOUT_DESC, CONTACT_DESC, ADOPT_DESC];
 
   let desc;
