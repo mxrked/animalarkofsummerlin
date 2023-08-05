@@ -1,8 +1,98 @@
 // This file is used to hold some arrays
 
-const INDEX_KWS = [];
-const ABOUT_KWS = [];
-const ADOPT_KWS = [];
-const CONTACT_KWS = [];
+import { OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE } from "./OBJECTS";
+
+const INDEX_KWS = [
+  "Animal Ark",
+  "Summerlin",
+  "dogs",
+  "pet shelter",
+  "loving owners",
+  "caring environment",
+  "background",
+  "dedication",
+  "animal rescue",
+  "safe haven",
+  "accomplish",
+  "task",
+  "home page",
+  "adoptable pets",
+  "community support",
+  "volunteer opportunities",
+  "pet adoption",
+  "fostering",
+  "responsible pet ownership",
+];
+const ABOUT_KWS = [
+  "Susan Allison",
+  "compassionate creator",
+  "Animal Ark of Summerlin",
+  "dog rescue",
+  "adoption center",
+  "Phoenix",
+  "neglect",
+  "passion for helping dogs",
+  "unwavering dedication",
+  "remarkable rescue network",
+  "transformation journey",
+  "rescue",
+  "10-year-old Zavian",
+  "mother Stephanie",
+  "rural area",
+  "Reidsville",
+  "NC",
+  "challenges",
+  "determination",
+  "guidance",
+  "loving foster care",
+  "beautiful Beagle",
+  "new lease on life",
+  "heartwarming tale",
+  "power of love",
+  "collective efforts",
+  "neglected animals",
+  "brighter future",
+];
+const ADOPT_KWS = [
+  "available dogs",
+  "capable for adoption",
+  "select one",
+  "get to know",
+  "details",
+  "decide",
+  "adopt one",
+  "dog adoption",
+  "adoptable dogs",
+  "dog details",
+  "pet adoption",
+  "adopt a dog",
+  "dog rescue",
+  "dog shelter",
+  "find a dog",
+  "dog adoption process",
+];
+const CONTACT_KWS = [
+  "fill out",
+  "contact form",
+  "inquiry form",
+  "questions",
+  "concerns",
+  "adoption form",
+  "specific dog",
+  "interested in",
+  "dog adoption",
+  "dog inquiry",
+  "adoption inquiry",
+  "contact us",
+  "adoption process",
+  "adopt a dog",
+  "pet adoption",
+  "dog adoption form",
+  "question form",
+  "concern form",
+];
+
+const DOGS = [OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE];
 
 export { INDEX_KWS, ABOUT_KWS, ADOPT_KWS, CONTACT_KWS };
+export { DOGS };
