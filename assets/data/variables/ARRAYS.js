@@ -92,7 +92,8 @@ const CONTACT_KWS = [
   "concern form",
 ];
 
+const INDEX_DOGS = [OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE];
 const DOGS = [OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE];
 
 export { INDEX_KWS, ABOUT_KWS, ADOPT_KWS, CONTACT_KWS };
-export { DOGS };
+export { INDEX_DOGS, DOGS };
