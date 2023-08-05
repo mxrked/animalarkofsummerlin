@@ -36,7 +36,7 @@ const OBJ_SOPHIE = new Dog(
   "Pit Mix",
   "?",
   "The Pit mix is Sophie who is also 2yo, tan and white, housetrained, and shy.",
-  [SOPHIE_1, SOPHIE_2, SOPHIE_3],
+  [SOPHIE_1, SOPHIE_2, SOPHIE_3, PLACEHOLDER],
   "Available"
 );
 
