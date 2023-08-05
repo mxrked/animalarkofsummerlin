@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 // Data/Functions/Images Imports
 
 // Component Imports
+import { PageHead } from "@/assets/components/global/All/PageHead";
 
 // Style Imports
 // import "../assets/styles/modules/Adopt/Adopt.module.css";
@@ -14,5 +15,11 @@ import { useRouter } from "next/router";
 export default function Adopt() {
   const router = useRouter();
 
-  return "Adopt Page";
+  return (
+    <div id="PAGE" className="page overrides_Adopt full-second">
+      <PageHead />
+
+      <main id="PAGE_CNT"></main>
+    </div>
+  );
 }
