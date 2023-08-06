@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/All/PageHead";
+import { NavTop } from "@/assets/components/global/Nav/Both/NavTop";
 
 // Style Imports
 import "../assets/styles/modules/Contact/Contact.module.css";
@@ -18,6 +19,7 @@ export default function Contact() {
   return (
     <div id="PAGE" className="page overrides_Contact full-second">
       <PageHead />
+      <NavTop />
 
       <main id="PAGE_CNT"></main>
     </div>
