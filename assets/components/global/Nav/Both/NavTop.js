@@ -5,6 +5,9 @@
  */
 
 import { FaAmazon, FaFacebook, FaDonate } from "react-icons/fa";
+import { BackgroundImage } from "react-image-and-background-image-fade";
+
+import { NAV_TOP_GRADIENT_BG } from "@/assets/cdns/CDNBgs";
 
 import ToggleDonationPopup from "@/assets/functions/dom/togglers/ToggleDonationPopup";
 
@@ -13,6 +16,13 @@ import styles from "../../../../styles/modules/Nav/Nav.module.css";
 export const NavTop = () => {
   return (
     <section id="navTop" className={`${styles.nav_top} overrides_NavTop`}>
+      <BackgroundImage
+        src={NAV_TOP_GRADIENT_BG}
+        className={`${styles.bg}`}
+        width="100%"
+        height="100%"
+      />
+
       <div className={`${styles.nav_top_inner}`}>
         <div className={`${styles.nav_top_inner_box} container-fluid`}>
           <div className={`${styles.nav_top_inner_row} row`}>
