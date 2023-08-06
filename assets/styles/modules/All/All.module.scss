@@ -1,0 +1,600 @@
+// Imports
+@import "../../tools/mixins/mixins.scss";
+@import "../../tools/themes/themes.scss";
+@import "../../tools/variables/variable.scss";
+
+// Font Families
+@font-face {
+  font-family: "Poppins Black";
+  src: url("../../../fonts/Poppins-Black.ttf");
+}
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("../../../fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Lato Bold";
+  src: url("../../../fonts/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../../../fonts/Lato-Regular.ttf");
+}
+
+// Desktop
+.donation_popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+
+  .darken {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+  }
+
+  .donation_popup_main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 100;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px black;
+    @include displayElement(flex, center, center);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .donation_popup_main_cnt {
+      h1 {
+        font-family: "Poppins Bold";
+        font-size: clamp(3rem, 3.5vw, 3.5rem);
+        text-transform: uppercase;
+      }
+
+      p {
+        @include quickCenter("relative");
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-family: "Lato Regular";
+        font-size: $Text;
+        max-width: 500px;
+        white-space: pre-wrap;
+      }
+
+      ul {
+        @include displayElement(flex, space-between, center);
+        @include quickCenter("relative");
+        margin-top: 45px;
+        margin-bottom: 35px;
+        max-width: 330px;
+
+        li {
+          background-color: $BurningOrange;
+          height: 45px;
+          width: 100%;
+          font-family: "Lato Bold";
+          font-size: $Link;
+          color: $Gallery;
+          @include displayElement(flex, center, center);
+          cursor: pointer;
+
+          &:hover {
+            background-color: $BrinkPink;
+          }
+
+          &:first-child {
+            max-width: 90px;
+          }
+
+          &:nth-child(even) {
+            max-width: 90px;
+          }
+
+          &:last-child {
+            max-width: 70px;
+          }
+        }
+      }
+
+      button {
+        background-color: $EbonyClay;
+        color: $Gallery;
+        font-family: "Lato Bold";
+        font-size: $Link;
+        width: 100%;
+        height: 40px;
+        max-width: 70px;
+        // margin-left: 8px;
+      }
+    }
+  }
+}
+
+// Responsive
+@media all and (max-width: 1995px) {
+}
+
+@media all and (max-width: 991px) {
+  .donation_popup {
+    .donation_popup_main {
+      max-width: 610px;
+      max-height: 430px;
+
+      .donation_popup_main_cnt {
+        h1 {
+          font-size: clamp(30px, 35px, 35px);
+        }
+
+        p {
+          font-size: clamp(18px, 19px, 19px);
+          max-width: 400px;
+        }
+
+        ul {
+          max-width: 300px;
+          margin-bottom: 20px;
+
+          li {
+            height: 40px;
+            font-size: clamp(17px, 18px, 18px);
+          }
+        }
+
+        button {
+          // margin-left: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+// Desktop Window (Smallest)
+@media all and (max-width: 768px) {
+  .donation_popup {
+    .donation_popup_main {
+      max-width: 430px;
+      max-height: 400px;
+
+      .donation_popup_main_cnt {
+        h1 {
+          font-size: clamp(25px, 30px, 30px);
+        }
+
+        p {
+          font-size: clamp(16px, 17px, 17px);
+          max-width: 340px;
+        }
+
+        ul {
+          max-width: 180px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+
+          li {
+            width: 100%;
+            height: 35px;
+            font-size: clamp(16px, 16px, 16px);
+            @include quickCenter("relative");
+            margin-bottom: 15px;
+
+            &:first-child {
+              max-width: 70px;
+            }
+
+            &:nth-child(even) {
+              max-width: 70px;
+            }
+
+            &:last-child {
+              max-width: 60px;
+            }
+          }
+        }
+
+        button {
+          // margin-left: 0px;
+          max-width: 65px;
+        }
+      }
+    }
+  }
+}
+
+// Smaller Devices (Phones)
+@media all and (max-width: 419px) {
+  .donation_popup {
+    .donation_popup_main {
+      max-width: 320px;
+      max-height: 400px;
+
+      .donation_popup_main_cnt {
+        h1 {
+          font-size: clamp(20px, 25px, 25px);
+        }
+
+        p {
+          font-size: clamp(15px, 16px, 16px);
+          max-width: 230px;
+        }
+
+        ul {
+          max-width: 180px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+
+          li {
+            width: 100%;
+            height: 35px;
+            font-size: clamp(16px, 16px, 16px);
+            @include quickCenter("relative");
+            margin-bottom: 15px;
+
+            &:first-child {
+              max-width: 70px;
+            }
+
+            &:nth-child(even) {
+              max-width: 70px;
+            }
+
+            &:last-child {
+              max-width: 60px;
+            }
+          }
+        }
+
+        button {
+          // margin-left: 0px;
+          max-width: 65px;
+        }
+      }
+    }
+  }
+}
+
+// Pixel 2 XL
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .donation_popup {
+    .donation_popup_main {
+      max-width: 450px;
+      max-height: 280px;
+
+      .donation_popup_main_cnt {
+        h1 {
+          font-size: clamp(20px, 25px, 25px);
+        }
+
+        p {
+          font-size: clamp(15px, 16px, 16px);
+          max-width: 355px;
+        }
+
+        ul {
+          max-width: 260px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          margin-top: 30px;
+
+          li {
+            width: 100%;
+            height: 35px;
+            font-size: clamp(16px, 16px, 16px);
+            @include quickCenter("relative");
+            margin-bottom: 15px;
+
+            &:first-child {
+              max-width: 70px;
+            }
+
+            &:nth-child(even) {
+              max-width: 70px;
+            }
+
+            &:last-child {
+              max-width: 60px;
+            }
+          }
+        }
+
+        button {
+          // margin-left: 0px;
+          max-width: 65px;
+          height: 35px;
+          font-size: clamp(16px, 16px, 16px);
+        }
+      }
+    }
+  }
+}
+
+// Ipad
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .donation_popup {
+    .donation_popup_main {
+      max-width: 570px;
+      max-height: 470px;
+
+      .donation_popup_main_cnt {
+        h1 {
+          font-size: clamp(30px, 35px, 35px);
+        }
+
+        p {
+          font-size: clamp(17px, 18px, 18px);
+          max-width: 355px;
+        }
+
+        ul {
+          max-width: 210px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          margin-top: 45px;
+
+          li {
+            width: 100%;
+            height: 45px;
+            font-size: clamp(17px, 18px, 18px);
+            @include quickCenter("relative");
+            margin-bottom: 15px;
+
+            &:first-child {
+              max-width: 84px;
+            }
+
+            &:nth-child(even) {
+              max-width: 80px;
+            }
+
+            &:last-child {
+              max-width: 65px;
+            }
+          }
+        }
+
+        button {
+          // margin-left: 0px;
+          max-width: 65px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .donation_popup {
+    .donation_popup_main {
+      max-width: 500px;
+      max-height: 340px;
+
+      .donation_popup_main_cnt {
+        h1 {
+          font-size: clamp(25px, 30px, 30px);
+        }
+
+        p {
+          font-size: clamp(16px, 17px, 17px);
+          max-width: 355px;
+        }
+
+        ul {
+          max-width: 310px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          margin-top: 45px;
+
+          li {
+            width: 100%;
+            height: 40px;
+            font-size: clamp(16px, 17px, 17px);
+            @include quickCenter("relative");
+            margin-bottom: 15px;
+
+            &:first-child {
+              max-width: 74px;
+            }
+
+            &:nth-child(even) {
+              max-width: 75px;
+            }
+
+            &:last-child {
+              max-width: 65px;
+            }
+          }
+        }
+
+        button {
+          // margin-left: 0px;
+          max-width: 65px;
+        }
+      }
+    }
+  }
+}
+
+// iPad Pro
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .donation_popup {
+    .donation_popup_main {
+      max-width: 670px;
+      max-height: 440px;
+
+      .donation_popup_main_cnt {
+        h1 {
+          font-size: clamp(35px, 40px, 40px);
+        }
+
+        p {
+          font-size: clamp(18px, 19px, 19px);
+          max-width: 395px;
+        }
+
+        ul {
+          max-width: 310px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          margin-top: 45px;
+
+          li {
+            width: 100%;
+            height: 45px;
+            font-size: clamp(17px, 18px, 18px);
+            @include quickCenter("relative");
+            margin-bottom: 15px;
+
+            &:first-child {
+              max-width: 74px;
+            }
+
+            &:nth-child(even) {
+              max-width: 75px;
+            }
+
+            &:last-child {
+              max-width: 65px;
+            }
+          }
+        }
+
+        button {
+          // margin-left: 0px;
+          max-width: 65px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .donation_popup {
+    .donation_popup_main {
+      max-width: 670px;
+      max-height: 440px;
+
+      .donation_popup_main_cnt {
+        h1 {
+          font-size: clamp(35px, 40px, 40px);
+        }
+
+        p {
+          font-size: clamp(18px, 19px, 19px);
+          max-width: 395px;
+        }
+
+        ul {
+          max-width: 310px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          margin-top: 45px;
+
+          li {
+            width: 100%;
+            height: 45px;
+            font-size: clamp(17px, 18px, 18px);
+            @include quickCenter("relative");
+            margin-bottom: 15px;
+
+            &:first-child {
+              max-width: 74px;
+            }
+
+            &:nth-child(even) {
+              max-width: 75px;
+            }
+
+            &:last-child {
+              max-width: 65px;
+            }
+          }
+        }
+
+        button {
+          // margin-left: 0px;
+          max-width: 65px;
+        }
+      }
+    }
+  }
+}
+
+// Laptops
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .donation_popup {
+    .donation_popup_main {
+      max-width: 700px;
+      max-height: 480px;
+
+      .donation_popup_main_cnt {
+        h1 {
+          font-size: clamp(40px, 45px, 45px);
+        }
+
+        p {
+          font-size: clamp(19px, 20px, 20px);
+          max-width: 395px;
+        }
+
+        ul {
+          max-width: 310px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          margin-top: 45px;
+
+          li {
+            width: 100%;
+            height: 45px;
+            font-size: clamp(17px, 18px, 18px);
+            @include quickCenter("relative");
+            margin-bottom: 15px;
+
+            &:first-child {
+              max-width: 74px;
+            }
+
+            &:nth-child(even) {
+              max-width: 75px;
+            }
+
+            &:last-child {
+              max-width: 65px;
+            }
+          }
+        }
+
+        button {
+          // margin-left: 0px;
+          max-width: 65px;
+        }
+      }
+    }
+  }
+}
