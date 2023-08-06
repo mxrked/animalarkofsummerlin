@@ -82,6 +82,7 @@ export const MobileNav = () => {
                       "mobileNavMenuDarken"
                     );
                     const MAIN = document.getElementById("mobileNavMenuMain");
+                    const CNT = document.getElementById("mobileNavMenuMainCnt");
 
                     DeclareStorageVariable(
                       "session",
@@ -101,14 +102,20 @@ export const MobileNav = () => {
 
                     setTimeout(() => {
                       MAIN.style.transform = "translateX(0)";
+                      MAIN.style.pointerEvents = "auto";
                     }, 850);
+
+                    setTimeout(() => {
+                      CNT.style.opacity = 1;
+                      CNT.style.visibility = "visible";
+                    }, 1430);
 
                     setTimeout(() => {
                       DARKEN.style.pointerEvents = "auto";
 
                       MENU.style.pointerEvents = "auto";
                       MENU.style.overflowY = "auto";
-                    }, 1900);
+                    }, 2100);
                   }}
                 >
                   <span className="half-second" />
