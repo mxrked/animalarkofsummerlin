@@ -6,6 +6,8 @@
 
 import { useRouter } from "next/router";
 
+import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
+
 import { LOGO_WITHOUT_TEXT } from "@/assets/cdns/CDNIcons";
 
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
@@ -73,7 +75,42 @@ export const MobileNav = () => {
               className={`${styles.mobile_nav_inner_side} ${styles.mobile_nav_R} col-lg-6 col-md-6 col-sm-6 col-xs-6`}
             >
               <div className={`${styles.mobile_nav_inner_side_cnt}`}>
-                <button onClick={() => {}}>
+                <button
+                  onClick={() => {
+                    const MENU = document.getElementById("mobileNavMenu");
+                    const DARKEN = document.getElementById(
+                      "mobileNavMenuDarken"
+                    );
+                    const MAIN = document.getElementById("mobileNavMenuMain");
+
+                    DeclareStorageVariable(
+                      "session",
+                      "Mobile Nav Opened",
+                      true
+                    );
+
+                    document.body.style.pointerEvents = "none";
+                    document.body.style.overflowY = "hidden";
+
+                    MENU.style.display = "block";
+
+                    setTimeout(() => {
+                      DARKEN.style.opacity = 1;
+                      DARKEN.style.visibility = "visible";
+                    }, 600);
+
+                    setTimeout(() => {
+                      MAIN.style.transform = "translateX(0)";
+                    }, 850);
+
+                    setTimeout(() => {
+                      DARKEN.style.pointerEvents = "auto";
+
+                      MENU.style.pointerEvents = "auto";
+                      MENU.style.overflowY = "auto";
+                    }, 1900);
+                  }}
+                >
                   <span className="half-second" />
                   <span className="half-second" />
                   <span className="half-second" />
