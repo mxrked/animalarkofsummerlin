@@ -101,6 +101,7 @@ function MyApp({ Component, pageProps }) {
     if (sessionStorage.getItem("EA Fix")) {
       RemoveStorageVariable("local", "ally-supports-cache");
       RemoveStorageVariable("session", "Mobile Nav Opened");
+      RemoveStorageVariable("session", "Donation Popup Opened");
       RemoveStorageVariable("session", "HREF");
       RemoveStorageVariable("session", "FM Loaded");
       RemoveStorageVariable("session", "Page Reload");
