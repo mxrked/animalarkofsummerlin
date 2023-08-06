@@ -44,29 +44,27 @@ export const DesktopNav = (props) => {
                     </div>
                   </div>
                 ) : (
-                  <div className={`${styles.logo} ${styles.active}`}>
-                    <a href="/">
-                      <img
-                        data-src={LOGO_WITHOUT_TEXT}
-                        className="lazyload orientation-change-element half-second"
-                        alt="Animal Ark of Summerlin Logo."
-                      />
+                  <a href="/" className={`${styles.logo} ${styles.active}`}>
+                    <img
+                      data-src={LOGO_WITHOUT_TEXT}
+                      className="lazyload orientation-change-element half-second"
+                      alt="Animal Ark of Summerlin Logo."
+                    />
 
-                      <div>
-                        <h1
-                          className={`${styles.top_text} orientation-change-element half-second`}
-                        >
-                          Animal Ark Of <span>Summerlin</span>
-                        </h1>
+                    <div>
+                      <h1
+                        className={`${styles.top_text} orientation-change-element half-second`}
+                      >
+                        Animal Ark Of <span>Summerlin</span>
+                      </h1>
 
-                        <span
-                          className={`${styles.bottom_text} orientation-change-element half-second`}
-                        >
-                          Dog Rescue & Adoption
-                        </span>
-                      </div>
-                    </a>
-                  </div>
+                      <span
+                        className={`${styles.bottom_text} orientation-change-element half-second`}
+                      >
+                        Dog Rescue & Adoption
+                      </span>
+                    </div>
+                  </a>
                 )}
               </div>
             </div>
@@ -86,6 +84,7 @@ export const DesktopNav = (props) => {
                         className="orientation-change-element half-second"
                       >
                         Home
+                        <span className="half-second" />
                       </a>
                     </li>
                   )}
@@ -100,6 +99,7 @@ export const DesktopNav = (props) => {
                         className="orientation-change-element half-second"
                       >
                         About
+                        <span className="half-second" />
                       </a>
                     </li>
                   )}
@@ -114,6 +114,7 @@ export const DesktopNav = (props) => {
                         className="orientation-change-element half-second"
                       >
                         Adopt
+                        <span className="half-second" />
                       </a>
                     </li>
                   )}
@@ -128,6 +129,7 @@ export const DesktopNav = (props) => {
                         className="orientation-change-element half-second"
                       >
                         Contact
+                        <span className="half-second" />
                       </a>
                     </li>
                   )}
