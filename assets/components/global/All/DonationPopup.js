@@ -4,6 +4,8 @@
  *
  */
 
+import CloseDonationPopup from "@/assets/functions/dom/closers/CloseDonationPopup";
+
 import styles from "../../../styles/modules/All/All.module.css";
 
 export const DonationPopup = () => {
@@ -12,6 +14,9 @@ export const DonationPopup = () => {
       <div
         id="donationPopupDarken"
         className={`${styles.darken} full-second`}
+        onClick={() => {
+          CloseDonationPopup();
+        }}
       />
 
       <div
@@ -41,6 +46,9 @@ export const DonationPopup = () => {
           </ul>
 
           <button
+            onClick={() => {
+              CloseDonationPopup();
+            }}
             id="donationPopupCloser"
             className="orientation-change-element half-second"
           >

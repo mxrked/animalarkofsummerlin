@@ -6,6 +6,8 @@
 
 import { FaAmazon, FaFacebook, FaDonate } from "react-icons/fa";
 
+import ToggleDonationPopup from "@/assets/functions/dom/togglers/ToggleDonationPopup";
+
 import styles from "../../../../styles/modules/Nav/Nav.module.css";
 
 export const NavTop = () => {
@@ -36,7 +38,12 @@ export const NavTop = () => {
               className={`${styles.nav_top_inner_side} ${styles.nav_top_R} col-lg-6 col-md-6 col-sm-6 col-xs-6`}
             >
               <div className={`${styles.nav_top_inner_side_cnt}`}>
-                <button className="donation-toggler orientation-change-element half-second">
+                <button
+                  className="donation-toggler orientation-change-element half-second"
+                  onClick={() => {
+                    ToggleDonationPopup();
+                  }}
+                >
                   <span>Donate</span>
 
                   <FaDonate className={`${styles.icon}`} />
