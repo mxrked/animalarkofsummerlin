@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 
 // Component Imports
 import { PageHead } from "@/assets/components/global/All/PageHead";
+import { DonationPopup } from "@/assets/components/global/All/DonationPopup";
 import { NavTop } from "@/assets/components/global/Nav/Both/NavTop";
 
 // Style Imports
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <div id="PAGE" className="page overrides_Index full-second">
       <PageHead />
+      <DonationPopup />
       <NavTop />
 
       <main id="PAGE_CNT"></main>
