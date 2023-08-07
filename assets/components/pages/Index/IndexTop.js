@@ -29,8 +29,9 @@ export const IndexTop = () => {
           </h1>
 
           <p className="orientation-change-element half-second">
-            Animal Ark of Summerlin is a NC local dog rescue and adoption
-            shelter.
+            Animal Ark of Summerlin is a safe haven for abused, homeless, and
+            otherwise forgotten dogs to get the help needed to become a
+            well-loved adoptable pet.
           </p>
 
           <ul>
