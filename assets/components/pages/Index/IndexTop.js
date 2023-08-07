@@ -16,6 +16,8 @@ export const IndexTop = () => {
       <BackgroundImage
         src={INDEX_TOP_BG}
         className={`${styles.bg} orientation-change-element half-second`}
+        width="100%"
+        height="100%"
       />
 
       <div className={`${styles.index_top_overlay}`}>
