@@ -23,6 +23,7 @@
 
 // Desktop
 .index_top {
+  overflow: hidden;
   height: 900px;
   position: relative;
 
@@ -100,6 +101,84 @@
     }
   }
 }
+.index_about {
+  overflow: hidden;
+
+  .index_about_box {
+    padding: 0;
+
+    .index_about_row {
+      .index_about_side {
+        padding: 0;
+        height: 750px;
+        @include displayElement(flex, center, center);
+      }
+
+      .index_about_L {
+        .bg {
+          @include bGSU(cover, center);
+        }
+      }
+
+      .index_about_R {
+        .index_about_side_cnt {
+          text-align: center;
+          padding-left: 40px;
+          padding-right: 40px;
+          max-width: 900px;
+          @include quickCenter("relative");
+
+          h1 {
+            white-space: pre-wrap;
+            font-family: "Poppins Bold";
+            font-size: $Heading;
+            text-transform: uppercase;
+            line-height: 40px;
+            color: $EbonyClay;
+            margin-bottom: 40px;
+
+            span {
+              display: none;
+            }
+
+            .orange_text {
+              display: block;
+              color: $BurningOrange;
+            }
+          }
+
+          p {
+            white-space: pre-wrap;
+            font-family: "Lato Regular";
+            font-size: $Text;
+            color: $EbonyClay;
+            margin-top: 20px;
+            margin-bottom: 45px;
+            @include quickCenter("relative");
+            max-width: 890px;
+          }
+
+          a {
+            width: 100%;
+            max-width: 120px;
+            height: 45px;
+            @include quickCenter("relative");
+            @include displayElement(flex, center, center);
+            color: $Gallery;
+            font-family: "Lato Bold";
+            font-size: $Link;
+            text-decoration: none;
+            background-color: $BurningOrange;
+
+            &:hover {
+              background-color: $BrinkPink;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
@@ -163,6 +242,38 @@
       }
     }
   }
+  .index_about {
+    .index_about_box {
+      .index_about_row {
+        .index_about_side {
+          height: 620px;
+        }
+
+        .index_about_R {
+          .index_about_side_cnt {
+            max-width: 700px;
+
+            h1 {
+              font-size: clamp(51px, 59px, 59px);
+              line-height: 30px;
+            }
+
+            p {
+              font-size: clamp(21px, 23px, 23px);
+              max-width: 660px;
+              @include quickCenter("relative");
+            }
+
+            a {
+              @include quickCenter("relative");
+              height: 45px;
+              font-size: clamp(17px, 18px, 18px);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 991px) {
@@ -195,6 +306,48 @@
 
         ul {
           @include quickCenter("relative");
+        }
+      }
+    }
+  }
+  .index_about {
+    .index_about_box {
+      .index_about_row {
+        .index_about_side {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        .index_about_L {
+          height: 400px;
+          max-width: 600px;
+          @include quickCenter("relative");
+        }
+
+        .index_about_R {
+          height: 100%;
+          padding-top: 110px;
+          padding-bottom: 110px;
+
+          .index_about_side_cnt {
+            h1 {
+              font-size: clamp(3rem, 4vw, 4rem);
+              line-height: 25px;
+              max-width: 100%;
+              @include quickCenter("relative");
+            }
+
+            p {
+              font-size: clamp(19px, 21px, 21px);
+              @include quickCenter("relative");
+            }
+
+            a {
+              @include quickCenter("relative");
+              height: 45px;
+              font-size: clamp(17px, 18px, 18px);
+            }
+          }
         }
       }
     }
@@ -249,6 +402,49 @@
 
             .adopt_link {
               width: 117px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .index_about {
+    .index_about_box {
+      .index_about_row {
+        .index_about_side {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        .index_about_L {
+          height: 270px;
+          max-width: 400px;
+          @include quickCenter("relative");
+        }
+
+        .index_about_R {
+          height: 100%;
+          padding-top: 50px;
+          padding-bottom: 50px;
+
+          .index_about_side_cnt {
+            h1 {
+              font-size: clamp(2rem, 3vw, 3rem);
+              line-height: 15px;
+              max-width: 100%;
+              @include quickCenter("relative");
+            }
+
+            p {
+              font-size: clamp(17px, 19px, 19px);
+              @include quickCenter("relative");
+              max-width: 380px;
+            }
+
+            a {
+              height: 40px;
+              max-width: 110px;
+              font-size: clamp(16px, 17px, 17px);
             }
           }
         }
@@ -315,6 +511,53 @@
       }
     }
   }
+  .index_about {
+    .index_about_box {
+      .index_about_row {
+        .index_about_side {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        .index_about_L {
+          height: 195px;
+          max-width: 85%;
+          @include quickCenter("relative");
+        }
+
+        .index_about_R {
+          height: 100%;
+          padding-top: 50px;
+          padding-bottom: 50px;
+
+          .index_about_side_cnt {
+            h1 {
+              font-size: clamp(1.7rem, 2vw, 2rem);
+              line-height: 15px;
+              max-width: 100%;
+              @include quickCenter("relative");
+              margin-bottom: 30px;
+            }
+
+            p {
+              font-size: clamp(15px, 17px, 17px);
+              @include quickCenter("relative");
+              max-width: 380px;
+              margin-top: 0px;
+              margin-bottom: 30px;
+            }
+
+            a {
+              @include quickCenter("relative");
+              height: 37px;
+              max-width: 100px;
+              font-size: clamp(14px, 15px, 15px);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Pixel 2 XL
@@ -330,7 +573,7 @@
       justify-content: center;
 
       .index_top_overlay_cnt {
-        text-align: left;
+        text-align: center;
         padding-top: 20px;
         padding-left: 25px;
         padding-right: 25px;
@@ -340,7 +583,7 @@
           line-height: 37px;
           max-width: 300px;
           @include quickCenter("relative");
-          margin-left: 0;
+          // margin-left: 0;
         }
 
         p {
@@ -349,13 +592,13 @@
           @include quickCenter("relative");
           margin-top: 10px;
           margin-bottom: 30px;
-          margin-left: 0;
+          // margin-left: 0;
         }
 
         ul {
           display: flex;
           @include quickCenter("relative");
-          margin-left: 0;
+          // margin-left: 0;
           max-width: 220px;
 
           li {
