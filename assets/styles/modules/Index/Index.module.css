@@ -61,6 +61,7 @@
   color: #eeeeee;
   margin-top: 20px;
   margin-bottom: 45px;
+  max-width: 600px;
 }
 .index_top .index_top_overlay .index_top_overlay_cnt ul {
   display: flex;
