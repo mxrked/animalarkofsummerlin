@@ -37,12 +37,14 @@ export const DonationPopup = () => {
             <li className="orientation-change-element half-second">
               <span>PayPal</span>
             </li>
+            {/**
             <li className="orientation-change-element half-second">
               <span>Venmo</span>
             </li>
             <li className="orientation-change-element half-second">
               <span>Zelle</span>
             </li>
+            */}
           </ul>
 
           <button
