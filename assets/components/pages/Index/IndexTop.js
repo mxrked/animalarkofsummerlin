@@ -37,7 +37,7 @@ export const IndexTop = () => {
             <li>
               <a
                 href="/about"
-                className="orientation-change-element half-second"
+                className={`${styles.about_link} orientation-change-element half-second`}
               >
                 <span>About Us</span>
               </a>
@@ -45,7 +45,7 @@ export const IndexTop = () => {
             <li>
               <a
                 href="/adopt"
-                className="orientation-change-element half-second"
+                className={`${styles.adopt_link} orientation-change-element half-second`}
               >
                 <span>Adopt A Dog</span>
               </a>
