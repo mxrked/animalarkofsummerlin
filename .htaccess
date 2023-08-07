@@ -1,5 +1,5 @@
 # Enables CORS Policy for fonts, etc.
-Header add Access-Control-Allow-Origin "summerlinanimalark.com"
+Header add Access-Control-Allow-Origin "animalarkofsummerlin.com"
 
 # Browser Caching Expires - Helps boost performance with caching
 <IfModule mod_expires.c>
