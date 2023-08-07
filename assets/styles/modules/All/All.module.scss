@@ -81,7 +81,7 @@
       }
 
       ul {
-        @include displayElement(flex, space-between, center);
+        @include displayElement(flex, space-evenly, center);
         @include quickCenter("relative");
         margin-top: 45px;
         margin-bottom: 35px;
@@ -102,15 +102,15 @@
           }
 
           &:first-child {
-            max-width: 90px;
+            max-width: 105px;
           }
 
           &:nth-child(even) {
-            max-width: 90px;
+            max-width: 110px;
           }
 
           &:last-child {
-            max-width: 70px;
+            max-width: 90px;
           }
         }
       }
