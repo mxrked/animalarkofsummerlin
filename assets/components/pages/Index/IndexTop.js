@@ -23,7 +23,7 @@ export const IndexTop = () => {
           <h1 className="orientation-change-element half-second">
             Never
             <br />
-            <span>&nbsp;&nbsp;</span>Forgotten.
+            <span>&nbsp;</span>Forgotten.
           </h1>
 
           <p className="orientation-change-element half-second">
