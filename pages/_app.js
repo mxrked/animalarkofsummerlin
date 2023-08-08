@@ -18,6 +18,7 @@ import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorage
 import CheckUserDevice from "@/assets/functions/dom/checkers/CheckUserDevice";
 import CheckMobileNavMenuStatus from "@/assets/functions/dom/checkers/CheckMobileNavMenuStatus";
 import CheckScreenOrientation from "@/assets/functions/dom/checkers/CheckScreenOrientation";
+import ManipFadeFixClasses from "@/assets/functions/dom/manip/ManipFadeFixClasses";
 
 // Component Imports
 
@@ -99,13 +100,26 @@ function MyApp({ Component, pageProps }) {
     }
 
     if (sessionStorage.getItem("EA Fix")) {
+      const SS_VARIABLES = [
+        "Mobile Nav Opened",
+        "Donation Popup Opened",
+        "HREF",
+        "FM Loaded",
+        "Page Reload",
+        "Submission Sent",
+      ];
+
       RemoveStorageVariable("local", "ally-supports-cache");
-      RemoveStorageVariable("session", "Mobile Nav Opened");
-      RemoveStorageVariable("session", "Donation Popup Opened");
-      RemoveStorageVariable("session", "HREF");
-      RemoveStorageVariable("session", "FM Loaded");
-      RemoveStorageVariable("session", "Page Reload");
-      RemoveStorageVariable("session", "Submission Sent");
+      // RemoveStorageVariable("session", "Mobile Nav Opened");
+      // RemoveStorageVariable("session", "Donation Popup Opened");
+      // RemoveStorageVariable("session", "HREF");
+      // RemoveStorageVariable("session", "FM Loaded");
+      // RemoveStorageVariable("session", "Page Reload");
+      // RemoveStorageVariable("session", "Submission Sent");
+
+      SS_VARIABLES.forEach((variable) => {
+        RemoveStorageVariable("session", variable);
+      });
     }
   }, [router]);
 
@@ -119,6 +133,21 @@ function MyApp({ Component, pageProps }) {
       RemoveStorageVariable("session", "FM Loaded");
     });
   }, [router]);
+
+  //? MANIPS
+  //! Changing fade classes based on screen size
+  useEffect(() => {
+    const WINDOW_EVENTS = ["load", "resize"];
+
+    WINDOW_EVENTS.forEach((ev) => {
+      window.addEventListener(ev, () => {
+        ManipFadeFixClasses("fade-left", "fade-left-fix");
+        ManipFadeFixClasses("fade-right", "fade-right-fix");
+        ManipFadeFixClasses("fade-up", "fade-up-fix");
+        ManipFadeFixClasses("fade-down", "fade-down-fix");
+      });
+    });
+  }, []);
 
   //? CHECKERS
   //! Check Page Orientation
