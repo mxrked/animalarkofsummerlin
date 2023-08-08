@@ -3,14 +3,27 @@
  *  This is the Index Top
  *
  */
+import { useEffect } from "react";
 
 import { BackgroundImage } from "react-image-and-background-image-fade";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
+import { FADE_DOWN } from "../../../animations/FADES";
 import { INDEX_TOP_BG } from "@/assets/cdns/CDNBgs";
+
+import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
 
 import styles from "../../../styles/modules/Index/Index.module.css";
 
 export const IndexTop = () => {
+  const CONTROLS = useAnimation();
+  const [REF, INVIEW] = useInView();
+
+  useEffect(() => {
+    TriggerInViewMotion(CONTROLS, INVIEW);
+  }, [CONTROLS, INVIEW]);
+
   return (
     <section id="indexTop" className={`${styles.index_top} overrides_IndexTop`}>
       <BackgroundImage
@@ -21,7 +34,13 @@ export const IndexTop = () => {
       />
 
       <div className={`${styles.index_top_overlay}`}>
-        <div className={`${styles.index_top_overlay_cnt}`}>
+        <motion.div
+          ref={REF}
+          initial="hidden"
+          animate={CONTROLS}
+          variants={FADE_DOWN}
+          className={`${styles.index_top_overlay_cnt} fm-motion fade-down`}
+        >
           <h1 className="orientation-change-element half-second">
             Never
             <br />
@@ -52,7 +71,7 @@ export const IndexTop = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
