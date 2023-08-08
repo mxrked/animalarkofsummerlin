@@ -21,6 +21,7 @@ export const IndexAbout = () => {
   const CONTROLS = useAnimation();
   const [REF, INVIEW] = useInView();
 
+  // Triggering the scroll animations
   useEffect(() => {
     TriggerInViewMotion(CONTROLS, INVIEW);
   }, [CONTROLS, INVIEW]);
