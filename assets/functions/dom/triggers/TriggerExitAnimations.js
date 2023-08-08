@@ -23,8 +23,6 @@ function TriggerExitAnimations() {
         document.body.style.pointerEvents = "none";
 
         // Hiding elements/page
-        document.querySelector(".page").style.opacity = 0;
-        document.querySelector(".page").style.visibility = "hidden";
 
         document.querySelectorAll(".fm-motion").forEach((fm) => {
           // This is to prevent weird resizing/orientation change for elements with this class
@@ -33,9 +31,34 @@ function TriggerExitAnimations() {
           }
 
           setTimeout(() => {
-            fm.style.opacity = 0;
+            // fm.style.opacity = 0;
+
+            if (fm.classList.contains("fade-right")) {
+              fm.style.transform = "translateX(-10%)";
+              fm.style.opacity = 0;
+            }
+
+            if (fm.classList.contains("fade-left")) {
+              fm.style.transform = "translateX(10%)";
+              fm.style.opacity = 0;
+            }
+
+            if (fm.classList.contains("fade-up")) {
+              fm.style.transform = "translateY(10%)";
+              fm.style.opacity = 0;
+            }
+
+            if (fm.classList.contains("fade-down")) {
+              fm.style.transform = "translateY(-10%)";
+              fm.style.opacity = 0;
+            }
           }, 500);
         });
+
+        setTimeout(() => {
+          document.querySelector(".page").style.opacity = 0;
+          document.querySelector(".page").style.visibility = "hidden";
+        }, 600);
 
         // Removing background color of navs
         // document.getElementById("desktopNav").style.backgroundColor =
