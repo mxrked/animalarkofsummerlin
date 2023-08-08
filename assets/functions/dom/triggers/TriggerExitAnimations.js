@@ -23,13 +23,13 @@ function TriggerExitAnimations() {
         document.body.style.pointerEvents = "none";
 
         // Hiding elements/page
-
         document.querySelectorAll(".fm-motion").forEach((fm) => {
           // This is to prevent weird resizing/orientation change for elements with this class
           if (!fm.classList.contains("full-second")) {
             fm.classList.add("full-second");
           }
 
+          // Checking/Exiting each specific animation
           setTimeout(() => {
             // fm.style.opacity = 0;
 
