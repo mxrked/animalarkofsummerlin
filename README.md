@@ -12,7 +12,7 @@ This is the Animal Ark of Summerlin website.
 
 ---
 
-Demo: summerlinanimalark.com
+Demo: animalarkofsummerlin.com
 
 ===
 
@@ -26,6 +26,6 @@ Demo: summerlinanimalark.com
 
 ## Status
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0cc88dc2-ced4-483b-92d1-be792c924f40/deploy-status)](https://app.netlify.com/sites/jade-haupia-66d992/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/47f535c3-a881-4218-b0e4-790a92a66ea6/deploy-status)](https://app.netlify.com/sites/chimerical-tanuki-0f0805/deploys)
 
 ===
