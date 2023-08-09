@@ -175,6 +175,8 @@ export default function Dog({ DOG }) {
           Dog Adoption Status:
           <span> {DOG._dogAdoptStatus}</span>
         </span>
+        <br />
+        <br />
         {DOG._dogAdoptStatus === "Available" ? (
           <button
             onClick={() => {
