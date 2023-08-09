@@ -48,6 +48,7 @@ export const NavTop = () => {
               className={`${styles.nav_top_inner_side} ${styles.nav_top_R} col-lg-6 col-md-6 col-sm-6 col-xs-6`}
             >
               <div className={`${styles.nav_top_inner_side_cnt}`}>
+                {/** 
                 <button
                   className="donation-toggler orientation-change-element half-second"
                   onClick={() => {
@@ -58,6 +59,7 @@ export const NavTop = () => {
 
                   <FaDonate className={`${styles.icon}`} />
                 </button>
+                */}
 
                 <ul>
                   <li className="orientation-change-element half-second">
