@@ -185,6 +185,161 @@
     }
   }
 }
+.index_adopt {
+  margin-top: 100px;
+  margin-bottom: 350px;
+
+  .index_adopt_top {
+    max-width: 1500px;
+    @include quickCenter("relative");
+    text-align: center;
+    height: 550px;
+    @include displayElement(flex, center, center);
+
+    .index_adopt_top_cnt {
+      h1 {
+        white-space: pre-wrap;
+        font-family: "Poppins Bold";
+        font-size: $Heading;
+        text-transform: uppercase;
+        line-height: 40px;
+        color: $EbonyClay;
+        margin-bottom: 40px;
+
+        span {
+          color: $BurningOrange;
+        }
+      }
+
+      p {
+        white-space: pre-wrap;
+        font-family: "Lato Regular";
+        font-size: $Text;
+        color: $EbonyClay;
+        margin-top: 20px;
+        margin-bottom: 45px;
+        @include quickCenter("relative");
+        max-width: 890px;
+      }
+
+      a {
+        width: 100%;
+        max-width: 145px;
+        height: 45px;
+        @include quickCenter("relative");
+        @include displayElement(flex, center, center);
+        color: $Gallery;
+        font-family: "Lato Bold";
+        font-size: $Link;
+        text-decoration: none;
+        background-color: $BurningOrange;
+
+        &:hover {
+          background-color: $BrinkPink;
+        }
+      }
+    }
+  }
+
+  .index_adopt_main {
+    max-width: 1470px;
+    @include quickCenter("relative");
+    @include displayElement(flex, center, center);
+
+    .index_adopt_main_box {
+      .index_adopt_main_row {
+        .index_adopt_dog {
+          .index_adopt_dog_inner {
+            max-width: 93%;
+            @include quickCenter("relative");
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.168);
+            border-radius: 10px;
+            overflow: hidden;
+
+            .index_adopt_dog_inner_bg_holder {
+              height: 270px;
+              width: 100%;
+
+              .bg {
+                @include bGSU(cover, center);
+              }
+            }
+
+            .index_adopt_dog_inner_details {
+              height: 320px;
+              width: 100%;
+              text-align: center;
+              @include displayElement(flex, center, center);
+
+              .index_adopt_dog_inner_details_cnt {
+                .dog_name {
+                  font-family: "Poppins Bold";
+                  font-size: clamp(35px, 38px, 38px);
+                  display: block;
+                }
+
+                .dog_breed {
+                  display: block;
+                  margin-top: 5px;
+                  margin-bottom: 40px;
+                  font-family: "Lato Bold";
+                  font-size: clamp(21px, 21px, 21px);
+                  opacity: 0.6;
+                }
+
+                .dog_adoption_status_holder {
+                  display: grid;
+                  text-align: center;
+                  margin-bottom: 30px;
+
+                  .dog_adoption_status {
+                    font-family: "Lato Bold";
+                    font-size: clamp(21px, 21px, 21px);
+
+                    .dog_adoption_status_top_text {
+                      display: block;
+                      font-size: clamp(16px, 16px, 16px);
+                      margin-bottom: 5px;
+                    }
+
+                    .available {
+                      color: green;
+                    }
+
+                    .pending {
+                      color: $BurningOrange;
+                    }
+
+                    .adopted {
+                      color: red;
+                    }
+                  }
+                }
+
+                a {
+                  width: 100%;
+                  max-width: 65px;
+                  height: 45px;
+                  @include quickCenter("relative");
+                  @include displayElement(flex, center, center);
+                  color: $Gallery;
+                  font-family: "Lato Bold";
+                  font-size: $Link;
+                  text-decoration: none;
+                  background-color: $BurningOrange;
+
+                  &:hover {
+                    background-color: $BrinkPink;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {

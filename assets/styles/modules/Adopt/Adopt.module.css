@@ -13,4 +13,8 @@
 @font-face {
   font-family: "Lato Regular";
   src: url("../../../fonts/Lato-Regular.ttf");
+}
+.dog_img {
+  max-width: 240px;
+  max-height: 120px;
 }/*# sourceMappingURL=Adopt.module.css.map */
