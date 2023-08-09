@@ -484,7 +484,7 @@
   }
   .index_top .index_top_overlay .index_top_overlay_cnt {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 0px;
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -522,6 +522,46 @@
   .index_top .index_top_overlay .index_top_overlay_cnt ul li .adopt_link {
     width: 114px;
     margin-bottom: 0;
+  }
+  .index_about .index_about_box .index_about_row .index_about_side {
+    max-width: 100%;
+    width: 100%;
+  }
+  .index_about .index_about_box .index_about_row .index_about_L {
+    height: 355px;
+    max-width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R {
+    height: 355px;
+    width: 100%;
+    max-width: 55%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt h1 {
+    font-size: clamp(1.7rem, 2vw, 2rem);
+    line-height: 15px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt p {
+    font-size: 16px;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    height: 37px;
+    margin-bottom: 0px;
+    font-size: 15px;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
@@ -578,6 +618,46 @@
     width: 123px;
     margin-bottom: 0;
   }
+  .index_about .index_about_box .index_about_row .index_about_side {
+    max-width: 100%;
+    width: 100%;
+  }
+  .index_about .index_about_box .index_about_row .index_about_L {
+    height: 405px;
+    max-width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R {
+    height: 405px;
+    width: 100%;
+    max-width: 55%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt h1 {
+    font-size: 34px;
+    line-height: 18px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt p {
+    font-size: 17px;
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    max-width: 115px;
+    margin-bottom: 0px;
+    font-size: 17px;
+  }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   .index_top {
@@ -632,6 +712,45 @@
   .index_top .index_top_overlay .index_top_overlay_cnt ul li .adopt_link {
     width: 118px;
     margin-bottom: 0;
+  }
+  .index_about .index_about_box .index_about_row .index_about_side {
+    max-width: 100%;
+    width: 100%;
+  }
+  .index_about .index_about_box .index_about_row .index_about_L {
+    height: 385px;
+    max-width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R {
+    height: 385px;
+    width: 100%;
+    max-width: 55%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt h1 {
+    font-size: 34px;
+    line-height: 19px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt p {
+    font-size: 17px;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    margin-bottom: 0px;
+    font-size: 17px;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
@@ -688,6 +807,45 @@
     width: 124px;
     margin-bottom: 0;
   }
+  .index_about .index_about_box .index_about_row .index_about_side {
+    max-width: 100%;
+    width: 100%;
+  }
+  .index_about .index_about_box .index_about_row .index_about_L {
+    height: 485px;
+    max-width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R {
+    height: 485px;
+    width: 100%;
+    max-width: 55%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt h1 {
+    font-size: 37px;
+    line-height: 20px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt p {
+    font-size: 18px;
+    max-width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    margin-bottom: 0px;
+    font-size: 17px;
+  }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .index_top {
@@ -743,6 +901,46 @@
     width: 124px;
     margin-bottom: 0;
   }
+  .index_about .index_about_box .index_about_row .index_about_side {
+    max-width: 100%;
+    width: 100%;
+  }
+  .index_about .index_about_box .index_about_row .index_about_L {
+    height: 485px;
+    max-width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R {
+    height: 485px;
+    width: 100%;
+    max-width: 55%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt h1 {
+    font-size: 38px;
+    line-height: 20px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt p {
+    font-size: 18px;
+    max-width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    margin-bottom: 0px;
+    max-width: 115px;
+    font-size: 17px;
+  }
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .index_top {
@@ -797,5 +995,45 @@
   .index_top .index_top_overlay .index_top_overlay_cnt ul li .adopt_link {
     width: 124px;
     margin-bottom: 0;
+  }
+  .index_about .index_about_box .index_about_row .index_about_side {
+    max-width: 100%;
+    width: 100%;
+  }
+  .index_about .index_about_box .index_about_row .index_about_L {
+    height: 515px;
+    max-width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R {
+    height: 515px;
+    width: 100%;
+    max-width: 55%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt h1 {
+    font-size: 46px;
+    line-height: 23px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt p {
+    font-size: 20px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt a {
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    max-width: 118px;
   }
 }/*# sourceMappingURL=Index.module.css.map */
