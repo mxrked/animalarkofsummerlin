@@ -8,6 +8,8 @@ import Head from "next/head";
 // Data/Functions/Images Imports
 import { TriggerExitAnimations } from "@/assets/functions/dom/triggers/TriggerExitAnimations";
 import { ADOPT_KWS } from "@/assets/data/variables/ARRAYS";
+import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
+import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
 
 // Component Imports
 // import { PageHead } from "@/assets/components/global/All/PageHead";
@@ -18,6 +20,7 @@ import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMenu";
 
 // Style Imports
+import styles from "../../assets/styles/modules/Adopt/Adopt.module.css";
 import "../../assets/styles/modules/Adopt/Adopt.module.css";
 
 export async function getStaticPaths() {
@@ -157,8 +160,38 @@ export default function Dog({ DOG }) {
       <MobileNavMenu disableLink="/adopt" />
 
       <main id="PAGE_CNT">
-        <h1>{DOG._dogName}</h1>
-        <h1>{DOG._dogID}</h1>
+        {/** <img data-src={DOG._dogImg[0]} className="lazyload" /> */}
+        <h1>Dog ID: {DOG._dogID}</h1>
+        Dog Imgs:
+        {DOG._dogImg.map((img) => (
+          <img data-src={img} className={`${styles.dog_img} lazyload`} />
+        ))}
+        <br />
+        <h1>Dog Name: {DOG._dogName}</h1>
+        <h1>Dog Breed: {DOG._dogBreed}</h1>
+        <p>Dog Weight: {DOG._dogWeight}</p>
+        <p>Dog Desc: {DOG._dogDesc}</p>
+        <span>
+          Dog Adoption Status:
+          <span> {DOG._dogAdoptStatus}</span>
+        </span>
+        {DOG._dogAdoptStatus === "Available" ? (
+          <button
+            onClick={() => {
+              // Setting the dog that is selected to be adopted for the contact page
+              RemoveStorageVariable("session", "Adopt Select");
+              DeclareStorageVariable("session", "Adopt Select", DOG._dogName);
+
+              setTimeout(() => {
+                window.location.href = "/contact";
+              }, 300);
+            }}
+          >
+            Adopt
+          </button>
+        ) : (
+          ""
+        )}
       </main>
     </div>
   );

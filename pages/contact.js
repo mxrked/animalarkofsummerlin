@@ -18,12 +18,33 @@ import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMe
 // Style Imports
 import "../assets/styles/modules/Contact/Contact.module.css";
 
-export default function Contact() {
+export const getStaticProps = async () => {
+  const DOGS_RES = await fetch(
+    "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/json/dogs/Dogs.json"
+  );
+
+  const DOGS_RES_DATA = await DOGS_RES.json();
+
+  return {
+    props: {
+      dogs_data: DOGS_RES_DATA,
+    },
+  };
+};
+
+export default function Contact({ dogs_data }) {
   const router = useRouter();
 
   // Triggering exit animations
   useEffect(() => {
     TriggerExitAnimations();
+  }, []);
+
+  useEffect(() => {
+    if (document.getElementById("adoptSelection")) {
+      document.getElementById("adoptSelection").innerText =
+        sessionStorage.getItem("Adopt Select");
+    }
   }, []);
 
   return (
@@ -35,7 +56,21 @@ export default function Contact() {
       <MobileNav />
       <MobileNavMenu disableLink="/contact" />
 
-      <main id="PAGE_CNT"></main>
+      <main id="PAGE_CNT">
+        {/**
+        <span>
+          Adopt Selection: <span id="adoptSelection"></span>
+        </span>
+        */}
+
+        {/** 
+          <select>
+          {dogs_data.map((dog) => (
+            <option>{dog._dogName}</option>
+          ))}
+        </select>
+        */}
+      </main>
     </div>
   );
 }
