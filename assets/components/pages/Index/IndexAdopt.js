@@ -10,7 +10,7 @@ import { BackgroundImage } from "react-image-and-background-image-fade";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import { FADE_LEFT, FADE_RIGHT } from "../../../animations/FADES";
+import { FADE_DOWN, FADE_LEFT, FADE_RIGHT } from "../../../animations/FADES";
 
 import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
 
@@ -34,8 +34,8 @@ export const IndexAdopt = (props) => {
         ref={REF}
         initial="hidden"
         animate={CONTROLS}
-        variants={FADE_RIGHT}
-        className={`${styles.motion} fm-motion fade-right`}
+        variants={FADE_DOWN}
+        className={`${styles.motion} fm-motion fade-down`}
       >
         <div className={`${styles.index_adopt_top}`}>
           <div className={`${styles.index_adopt_top_cnt}`}>
@@ -66,7 +66,7 @@ export const IndexAdopt = (props) => {
                       className={`${styles.index_adopt_dog_inner_bg_holder}`}
                     >
                       <BackgroundImage
-                        src={dog.getDogImg}
+                        src={dog._dogImg[0]}
                         className={`${styles.bg}`}
                         width="100%"
                         height="100%"
@@ -74,46 +74,62 @@ export const IndexAdopt = (props) => {
                     </div>
 
                     <div className={`${styles.index_adopt_dog_inner_details}`}>
-                      <span
-                        className={`${styles.dog_name} orientation-change-element half-second`}
+                      <div
+                        className={`${styles.index_adopt_dog_inner_details_cnt}`}
                       >
-                        {dog._dogName}
-                      </span>
-
-                      <span
-                        className={`${styles.dog_breed} orientation-change-element half-second`}
-                      >
-                        {dog._dogBreed}
-                      </span>
-
-                      <div className={`${styles.dog_adoption_status_holder}`}>
                         <span
-                          className={`${styles.dog_adoption_status} orientation-change-element half-second`}
+                          className={`${styles.dog_name} orientation-change-element half-second`}
                         >
-                          {dog._dogAdoptStatus === "Available" ? (
-                            <span>Available For Adoption</span>
-                          ) : dog._dogAdoptStatus === "Pending" ? (
-                            <span>Pending</span>
-                          ) : dog._dogAdoptStatus === "Adopted" ? (
-                            <span>Adopted</span>
-                          ) : (
-                            <span>ERROR</span>
-                          )}
+                          {dog._dogName}
+                        </span>
 
-                          {/** dog._dogAdoptStatus === "Pending" ? (
+                        <span
+                          className={`${styles.dog_breed} orientation-change-element half-second`}
+                        >
+                          {dog._dogBreed}
+                        </span>
+
+                        <div className={`${styles.dog_adoption_status_holder}`}>
+                          <span
+                            className={`${styles.dog_adoption_status} orientation-change-element half-second`}
+                          >
+                            <span
+                              className={`${styles.dog_adoption_status_top_text}`}
+                            >
+                              Adoption Status
+                            </span>
+
+                            {dog._dogAdoptStatus === "Available" ? (
+                              <span className={`${styles.available}`}>
+                                Available
+                              </span>
+                            ) : dog._dogAdoptStatus === "Pending" ? (
+                              <span className={`${styles.pending}`}>
+                                Pending
+                              </span>
+                            ) : dog._dogAdoptStatus === "Adopted" ? (
+                              <span className={`${styles.adopted}`}>
+                                Adopted
+                              </span>
+                            ) : (
+                              <span>ERROR</span>
+                            )}
+
+                            {/** dog._dogAdoptStatus === "Pending" ? (
                             <span>Pending</span>
                           ) : dog._dogAdoptStatus === "Adopted" ? (
                             <span>Adopted</span>
                           ) : */}
-                        </span>
-                      </div>
+                          </span>
+                        </div>
 
-                      <a
-                        href={`/adopt#${dog._dogID}`}
-                        className={`${styles.dog_adopt_link} orientation-change-element half-second`}
-                      >
-                        <span>View</span>
-                      </a>
+                        <a
+                          href={`/adopt/${dog._dogID}`}
+                          className={`${styles.dog_adopt_link} orientation-change-element half-second`}
+                        >
+                          <span>View</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
