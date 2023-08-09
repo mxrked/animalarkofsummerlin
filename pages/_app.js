@@ -107,18 +107,20 @@ function MyApp({ Component, pageProps }) {
         "FM Loaded",
         "Page Reload",
         "Submission Sent",
+        "ph_foZTeM1AW8dh5WkaofxTYiInBhS4XzTzRqLs50kVziw_posthog",
       ];
+      const LS_VARIABLES = ["ally-supports-cache"];
 
-      RemoveStorageVariable("local", "ally-supports-cache");
-      // RemoveStorageVariable("session", "Mobile Nav Opened");
-      // RemoveStorageVariable("session", "Donation Popup Opened");
-      // RemoveStorageVariable("session", "HREF");
-      // RemoveStorageVariable("session", "FM Loaded");
-      // RemoveStorageVariable("session", "Page Reload");
-      // RemoveStorageVariable("session", "Submission Sent");
+      // Removing the Adopt Select if user is not on contact page
+      if (router.pathname !== "/contact") {
+        RemoveStorageVariable("session", "Adopt Select");
+      }
 
       SS_VARIABLES.forEach((variable) => {
         RemoveStorageVariable("session", variable);
+      });
+      LS_VARIABLES.forEach((variable) => {
+        RemoveStorageVariable("local", variable);
       });
     }
   }, [router]);
