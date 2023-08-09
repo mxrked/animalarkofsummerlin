@@ -91,9 +91,26 @@ const CONTACT_KWS = [
   "question form",
   "concern form",
 ];
+const DONTATE_KWS = [
+  "donate",
+  "give back",
+  "help a dog",
+  "donate Animal Ark of Summerlin",
+  "Amazon wishlist",
+  "help out donate",
+  "PayPal donate button",
+  "support dog rescue",
+  "animal shelter donations",
+  "charitable giving",
+  "donation options",
+  "contribute to animals",
+  "financial support",
+  "donation methods",
+  "help save dogs",
+];
 
 const INDEX_DOGS = [OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE];
 const DOGS = [OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE];
 
-export { INDEX_KWS, ABOUT_KWS, ADOPT_KWS, CONTACT_KWS };
+export { INDEX_KWS, ABOUT_KWS, ADOPT_KWS, CONTACT_KWS, DONTATE_KWS };
 export { INDEX_DOGS, DOGS };
