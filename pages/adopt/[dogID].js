@@ -163,8 +163,12 @@ export default function Dog({ DOG }) {
         {/** <img data-src={DOG._dogImg[0]} className="lazyload" /> */}
         <h1>Dog ID: {DOG._dogID}</h1>
         Dog Imgs:
-        {DOG._dogImg.map((img) => (
-          <img data-src={img} className={`${styles.dog_img} lazyload`} />
+        {DOG._dogImg.map((img, index) => (
+          <img
+            key={index}
+            data-src={img}
+            className={`${styles.dog_img} lazyload`}
+          />
         ))}
         <br />
         <h1>Dog Name: {DOG._dogName}</h1>
