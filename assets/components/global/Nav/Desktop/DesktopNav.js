@@ -118,6 +118,21 @@ export const DesktopNav = (props) => {
                       </a>
                     </li>
                   )}
+                  {props.disableLink === "/donate" ? (
+                    <li className={`${styles.deactive}`}>
+                      <span>Donate</span>
+                    </li>
+                  ) : (
+                    <li className={`${styles.active}`}>
+                      <a
+                        href="/donate"
+                        className="orientation-change-element half-second"
+                      >
+                        Donate
+                        <span className="half-second" />
+                      </a>
+                    </li>
+                  )}
                   {props.disableLink === "/contact" ? (
                     <li className={`${styles.deactive}`}>
                       <span>Contact</span>
