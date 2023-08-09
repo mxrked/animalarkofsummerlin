@@ -13,6 +13,7 @@ import {
   ABOUT_KWS,
   CONTACT_KWS,
   ADOPT_KWS,
+  DONTATE_KWS,
 } from "@/assets/data/variables/ARRAYS";
 
 export const PageHead = () => {
@@ -23,11 +24,19 @@ export const PageHead = () => {
     "Animal Ark: Summerlin's Pet Shelter & Animal Rescue. Find loving owners, adoptable pets, and community support. Join us in fostering responsible pet ownership!";
   const ABOUT_DESC =
     "Meet Susan Allison: The Compassionate Creator behind Animal Ark of Summerlin - A Remarkable Dog Rescue & Adoption Center. Join us in transforming neglected dogs' lives with love and dedication. Witness heartwarming tales of hope and a brighter future.";
+  const DONTATE_DESC =
+    "Help save dogs in need by donating to Animal Ark of Summerlin. Give back through charitable giving and explore donation options like Amazon wishlist and PayPal donate button. Your support makes a difference in rescuing and caring for these dogs.";
   const CONTACT_DESC =
     "Adopting a Dog? Contact Us! Fill out the Inquiry Form to find your perfect match and simplify the adoption process.";
   const ADOPT_DESC =
     "Adopt your perfect dog today! Browse adoptable dogs, get details, and simplify the adoption process. Find a loving companion for life";
-  const DESCS = [INDEX_DESC, ABOUT_DESC, CONTACT_DESC, ADOPT_DESC];
+  const DESCS = [
+    INDEX_DESC,
+    ABOUT_DESC,
+    CONTACT_DESC,
+    ADOPT_DESC,
+    DONTATE_DESC,
+  ];
 
   let desc;
   let kws;
@@ -91,6 +100,20 @@ export const PageHead = () => {
     }
 
     kws = ADOPT_KWS;
+  }
+  // Donate Page
+  if (router.pathname == "/donate") {
+    title = "Animal Ark of Summerlin - Donate";
+    robots = "index, follow";
+    url = router.pathname;
+
+    if (ADOPT_DESC.length > 0) {
+      desc = DESCS[4];
+    } else {
+      desc = DESCS[4];
+    }
+
+    kws = DONTATE_KWS;
   }
 
   // 404 Page
