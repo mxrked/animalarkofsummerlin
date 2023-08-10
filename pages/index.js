@@ -18,6 +18,7 @@ import { IndexTop } from "@/assets/components/pages/Index/IndexTop";
 import { IndexAbout } from "@/assets/components/pages/Index/IndexAbout";
 import { IndexAdopt } from "@/assets/components/pages/Index/IndexAdopt";
 import { IndexContact } from "@/assets/components/pages/Index/IndexContact";
+import { Footer } from "@/assets/components/global/Footer/Footer";
 
 // Style Imports
 import "../assets/styles/modules/Index/Index.module.css";
@@ -59,6 +60,8 @@ export default function Home({ index_dogs_data }) {
         <IndexAdopt indexDogs={index_dogs_data} />
         <IndexContact />
       </main>
+
+      <Footer disableLink="/" />
     </div>
   );
 }
