@@ -116,7 +116,7 @@ export const MobileNavMenu = (props) => {
             ) : (
               <li className={`${styles.active}`}>
                 <a
-                  href="/contact"
+                  href="/contact#contact_form"
                   className="nav-link orientation-change-element half-second"
                 >
                   Contact

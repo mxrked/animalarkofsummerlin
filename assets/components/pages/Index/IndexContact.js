@@ -57,7 +57,7 @@ export const IndexContact = () => {
               </p>
 
               <a
-                href="/contact"
+                href="/contact#contact_form"
                 className="orientation-change-element half-second"
               >
                 <span>Learn More</span>

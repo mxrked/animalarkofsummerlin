@@ -140,7 +140,7 @@ export const DesktopNav = (props) => {
                   ) : (
                     <li className={`${styles.active}`}>
                       <a
-                        href="/contact"
+                        href="/contact#contact_form"
                         className="orientation-change-element half-second"
                       >
                         Contact
