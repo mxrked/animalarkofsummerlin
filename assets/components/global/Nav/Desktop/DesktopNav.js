@@ -81,7 +81,7 @@ export const DesktopNav = (props) => {
                     <li className={`${styles.active}`}>
                       <a
                         href="/"
-                        className="orientation-change-element half-second"
+                        className="orientation-change-element selected half-second"
                       >
                         Home
                         <span className="half-second" />
@@ -96,7 +96,7 @@ export const DesktopNav = (props) => {
                     <li className={`${styles.active}`}>
                       <a
                         href="/about"
-                        className="orientation-change-element half-second"
+                        className="orientation-change-element selected half-second"
                       >
                         About
                         <span className="half-second" />
@@ -111,7 +111,7 @@ export const DesktopNav = (props) => {
                     <li className={`${styles.active}`}>
                       <a
                         href="/adopt"
-                        className="orientation-change-element half-second"
+                        className="orientation-change-element selected half-second"
                       >
                         Adopt
                         <span className="half-second" />
@@ -126,7 +126,7 @@ export const DesktopNav = (props) => {
                     <li className={`${styles.active}`}>
                       <a
                         href="/donate"
-                        className="orientation-change-element half-second"
+                        className="orientation-change-element selected half-second"
                       >
                         Donate
                         <span className="half-second" />
@@ -141,7 +141,7 @@ export const DesktopNav = (props) => {
                     <li className={`${styles.active}`}>
                       <a
                         href="/contact#contact_form"
-                        className="orientation-change-element half-second"
+                        className="orientation-change-element selected half-second"
                       >
                         Contact
                         <span className="half-second" />
