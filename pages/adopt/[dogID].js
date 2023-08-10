@@ -189,7 +189,7 @@ export default function Dog({ DOG }) {
               DeclareStorageVariable("session", "Adopt Select", DOG._dogName);
 
               setTimeout(() => {
-                window.location.href = "/contact";
+                window.location.href = "/contact#adopt_form";
               }, 300);
             }}
           >
