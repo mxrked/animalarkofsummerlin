@@ -15,6 +15,9 @@ import { DesktopNav } from "@/assets/components/global/Nav/Desktop/DesktopNav";
 import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMenu";
 import { Footer } from "@/assets/components/global/Footer/Footer";
+import { ContactTop } from "@/assets/components/pages/Contact/ContactTop";
+import { ContactForm } from "@/assets/components/pages/Contact/ContactForm";
+import { ContactAdoptForm } from "@/assets/components/pages/Contact/ContactAdoptForm";
 
 // Style Imports
 import "../assets/styles/modules/Contact/Contact.module.css";
@@ -71,6 +74,10 @@ export default function Contact({ dogs_data }) {
           ))}
         </select>
         */}
+
+        <ContactTop />
+        <ContactForm />
+        <ContactAdoptForm dogs={dogs_data} />
       </main>
 
       <Footer disableLink="/contact" />

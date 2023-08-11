@@ -17,6 +17,8 @@ import { DesktopNav } from "@/assets/components/global/Nav/Desktop/DesktopNav";
 import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMenu";
 import { Footer } from "@/assets/components/global/Footer/Footer";
+import { AdoptTop } from "@/assets/components/pages/Adopt/AdoptTop";
+import { AdoptDogs } from "@/assets/components/pages/Adopt/AdoptDogs";
 
 // Style Imports
 import "../../assets/styles/modules/Adopt/Adopt.module.css";
@@ -53,7 +55,8 @@ export default function Adopt({ dogs_data }) {
       <MobileNavMenu disableLink="/adopt" />
 
       <main id="PAGE_CNT">
-        {dogs_data.map((dog, index) => (
+        {/**
+          {dogs_data.map((dog, index) => (
           <div key={index}>
             <h1>Dog ID: {dog._dogID}</h1>
             Dog Imgs:
@@ -94,6 +97,10 @@ export default function Adopt({ dogs_data }) {
             )}
           </div>
         ))}
+        */}
+
+        <AdoptTop />
+        <AdoptDogs dogs={dogs_data} />
       </main>
 
       <Footer disableLink="/adopt" />

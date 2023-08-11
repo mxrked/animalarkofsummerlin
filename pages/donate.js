@@ -15,6 +15,8 @@ import { DesktopNav } from "@/assets/components/global/Nav/Desktop/DesktopNav";
 import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMenu";
 import { Footer } from "@/assets/components/global/Footer/Footer";
+import { DonateTop } from "@/assets/components/pages/Donate/DontateTop";
+import { DonateTypes } from "@/assets/components/pages/Donate/DonateTypes";
 
 // Style Imports
 import "../assets/styles/modules/Donate/Donate.module.css";
@@ -36,7 +38,10 @@ export default function Donate() {
       <MobileNav />
       <MobileNavMenu disableLink="/donate" />
 
-      <main id="PAGE_CNT"></main>
+      <main id="PAGE_CNT">
+        <DonateTop />
+        <DonateTypes />
+      </main>
 
       <Footer disableLink="/donate" />
     </div>

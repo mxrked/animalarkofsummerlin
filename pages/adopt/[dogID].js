@@ -18,6 +18,7 @@ import { NavTop } from "@/assets/components/global/Nav/Both/NavTop";
 import { DesktopNav } from "@/assets/components/global/Nav/Desktop/DesktopNav";
 import { MobileNav } from "@/assets/components/global/Nav/Mobile/MobileNav";
 import { MobileNavMenu } from "@/assets/components/global/Nav/Mobile/MobileNavMenu";
+import { DogMain } from "@/assets/components/pages/Dog/DogMain";
 
 // Style Imports
 import styles from "../../assets/styles/modules/Adopt/Adopt.module.css";
@@ -161,7 +162,9 @@ export default function Dog({ DOG }) {
 
       <main id="PAGE_CNT">
         {/** <img data-src={DOG._dogImg[0]} className="lazyload" /> */}
-        <h1>Dog ID: {DOG._dogID}</h1>
+        {/**
+      
+          <h1>Dog ID: {DOG._dogID}</h1>
         Dog Imgs:
         {DOG._dogImg.map((img, index) => (
           <img
@@ -198,6 +201,10 @@ export default function Dog({ DOG }) {
         ) : (
           ""
         )}
+      
+        */}
+
+        <DogMain dog={DOG} />
       </main>
     </div>
   );
