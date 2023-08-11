@@ -6,6 +6,6 @@
 
 import styles from "../../../styles/modules/Contact/Contact.module.css";
 
-export const ContactAdoptForm = () => {
+export const ContactAdoptForm = (dogs) => {
   return "";
 };
