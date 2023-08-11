@@ -6,6 +6,6 @@
 
 import styles from "../../../styles/modules/Dog/Dog.module.css";
 
-export const DogMain = () => {
+export const DogMain = (dog) => {
   return "";
 };
