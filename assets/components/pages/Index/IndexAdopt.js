@@ -25,6 +25,77 @@ export const IndexAdopt = (props) => {
     TriggerInViewMotion(CONTROLS, INVIEW);
   }, [CONTROLS, INVIEW]);
 
+  // Listing out all of the dogs
+  useEffect(() => {
+    let dogIDS = [];
+    let dogNames = [];
+    let dogBreeds = [];
+    let dogWeights = [];
+    let dogDescs = [];
+    let dogImgs = [];
+    let dogAdoptStatuses = [];
+
+    const DOGS_LIST = [];
+
+    // Adding each dogs info to a specific array
+    props.indexDogs.forEach((dog) => {
+      dogIDS.push(dog._dogID);
+      dogNames.push(dog._dogName);
+      dogBreeds.push(dog._dogBreed);
+      dogWeights.push(dog._dogWeight);
+      dogDescs.push(dog._dogDesc);
+      dogImgs.push(dog._dogImgs);
+      dogAdoptStatuses.push(dog._dogAdoptStatus);
+    });
+
+    // Removing duplicates
+    dogIDS = Array.from(new Set(dogIDS));
+    dogNames = Array.from(new Set(dogNames));
+    dogBreeds = Array.from(new Set(dogBreeds));
+    // dogWeights = Array.from(new Set(dogWeights));
+    dogDescs = Array.from(new Set(dogDescs));
+    // dogImgs = Array.from(new Set(dogImgs));
+    // dogAdoptStatuses = Array.from(new Set(dogAdoptStatuses));
+
+    // Creating a object for each dog
+    for (let i = 0; i < dogIDS.length; i++) {
+      // console.log("Dog ID: " + dogIDS[i]);
+      // console.log("Dog Name: " + dogNames[i]);
+      // console.log("Dog Breed: " + dogBreeds[i]);
+
+      const DOG = {
+        _dogID: dogIDS[i],
+        _dogName: dogNames[i],
+        _dogBreed: dogBreeds[i],
+        _dogWeight: dogWeights[i],
+        _dogDesc: dogDescs[i],
+        // _dogImgs: dogImgs[i],
+        _dogAdoptStatus: dogAdoptStatuses[i],
+      };
+
+      // Adding dog to a single array
+      DOGS_LIST.push(DOG);
+    }
+
+    // Removing duplicates
+    const UNIQUE_DOGS_LIST = Array.from(new Set(DOGS_LIST));
+
+    // Displaying each dog to console
+    UNIQUE_DOGS_LIST.forEach((dog) => {
+      if (dog._dogAdoptStatus == "Available") {
+        console.table(dog);
+      }
+
+      if (dog._dogAdoptStatus == "Pending") {
+        console.table(dog);
+      }
+
+      if (dog._dogAdoptStatus == "Adopted") {
+        console.table(dog);
+      }
+    });
+  }, []);
+
   return (
     <section
       id="indexAdopt"
