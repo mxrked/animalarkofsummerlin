@@ -2,6 +2,9 @@
  *
  *  This is used to check what device the user is on
  *
+ *  @param {boolean} mobile - The mobile variable
+ *  @param {boolean} desktop - The desktop variable
+ *
  */
 
 // Function imports

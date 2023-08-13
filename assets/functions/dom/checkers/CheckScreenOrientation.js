@@ -2,6 +2,9 @@
  *
  *  This is used to check if the screen's orientation changes and will remove/add classes
  *
+ *  @param {string} elements - The name for each element in the elements array
+ *  @param {string} className - The class name string for the class added to each element
+ *
  */
 
 function RemoveAddClass(elements, className) {
