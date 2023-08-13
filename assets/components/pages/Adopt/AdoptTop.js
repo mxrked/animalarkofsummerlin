@@ -66,6 +66,14 @@ export const AdoptTop = () => {
                 ALL_DOGS.forEach((dog) => {
                   dog.style.display = "block";
                 });
+
+                CreateAdoptDogsHint(
+                  ALL_DOGS,
+                  "adoptDogsInner",
+                  "span",
+                  "no-dogs-hint",
+                  "No Dogs!"
+                );
               }
             }}
             className={`${styles.btn} ${styles.all_btn} adopt-btn orientation-change-element half-second`}
