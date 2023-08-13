@@ -80,6 +80,7 @@
 
 .adopt_dogs {
   margin-bottom: 250px;
+  position: relative;
 }
 .adopt_dogs .adopt_dogs_inner {
   max-width: 1470px;
