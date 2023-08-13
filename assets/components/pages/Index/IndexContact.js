@@ -41,7 +41,7 @@ export const IndexContact = () => {
               initial="hidden"
               animate={CONTROLS}
               variants={FADE_RIGHT}
-              className={`${styles.index_contact_side_cnt} fm-motion fade-right`}
+              className={`${styles.index_contact_side_cnt} fm-motion fade-right-fix fade-right`}
             >
               <h1 className="orientation-change-element half-second">
                 <span className={`${styles.orange_text}`}>Get In</span>
@@ -72,7 +72,7 @@ export const IndexContact = () => {
               initial="hidden"
               animate={CONTROLS}
               variants={FADE_LEFT}
-              className={`${styles.index_contact_side_cnt} fm-motion fade-left`}
+              className={`${styles.index_contact_side_cnt} fm-motion fade-left-fix fade-left`}
             >
               <BackgroundImage
                 src={INDEX_CONTACT_BG}

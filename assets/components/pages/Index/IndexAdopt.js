@@ -35,7 +35,7 @@ export const IndexAdopt = (props) => {
         initial="hidden"
         animate={CONTROLS}
         variants={FADE_DOWN}
-        className={`${styles.motion} fm-motion fade-down`}
+        className={`${styles.motion} fm-motion fade-down-fix fade-down`}
       >
         <div className={`${styles.index_adopt_top}`}>
           <div className={`${styles.index_adopt_top_cnt}`}>

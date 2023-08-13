@@ -41,7 +41,7 @@ export const IndexAbout = () => {
               initial="hidden"
               animate={CONTROLS}
               variants={FADE_RIGHT}
-              className={`${styles.index_about_side_cnt} fm-motion fade-right`}
+              className={`${styles.index_about_side_cnt} fm-motion fade-right-fix fade-right`}
             >
               <BackgroundImage
                 src={INDEX_ABOUT_BG}
@@ -59,7 +59,7 @@ export const IndexAbout = () => {
               initial="hidden"
               animate={CONTROLS}
               variants={FADE_LEFT}
-              className={`${styles.index_about_side_cnt} fm-motion fade-left`}
+              className={`${styles.index_about_side_cnt} fm-motion fade-left-fix fade-left`}
             >
               <h1 className="orientation-change-element half-second">
                 <span className={`${styles.orange_text}`}>AAOS's</span>

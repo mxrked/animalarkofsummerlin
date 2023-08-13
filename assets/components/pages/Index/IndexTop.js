@@ -39,7 +39,7 @@ export const IndexTop = () => {
           initial="hidden"
           animate={CONTROLS}
           variants={FADE_DOWN}
-          className={`${styles.index_top_overlay_cnt} fm-motion fade-down`}
+          className={`${styles.index_top_overlay_cnt} fm-motion fade-down-fix fade-down`}
         >
           <h1 className="orientation-change-element half-second">
             Never
