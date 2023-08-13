@@ -79,10 +79,10 @@
   font-family: "Lato Bold";
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   text-decoration: none;
-  background-color: #ff6f3c;
+  background-color: #645caa;
 }
 .index_top .index_top_overlay .index_top_overlay_cnt ul li a:hover {
-  background-color: #f85f73;
+  background-color: #6639a6;
 }
 .index_top .index_top_overlay .index_top_overlay_cnt ul li .about_link {
   width: 110px;
@@ -135,7 +135,7 @@
 }
 .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt h1 .orange_text {
   display: block;
-  color: #ff6f3c;
+  color: #6639a6;
 }
 .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt p {
   white-space: pre-wrap;
@@ -161,10 +161,10 @@
   font-family: "Lato Bold";
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   text-decoration: none;
-  background-color: #ff6f3c;
+  background-color: #645caa;
 }
 .index_about .index_about_box .index_about_row .index_about_R .index_about_side_cnt a:hover {
-  background-color: #f85f73;
+  background-color: #6639a6;
 }
 
 .index_adopt {
@@ -193,7 +193,7 @@
   margin-bottom: 40px;
 }
 .index_adopt .index_adopt_top .index_adopt_top_cnt h1 span {
-  color: #ff6f3c;
+  color: #6639a6;
 }
 .index_adopt .index_adopt_top .index_adopt_top_cnt p {
   white-space: pre-wrap;
@@ -219,10 +219,10 @@
   font-family: "Lato Bold";
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   text-decoration: none;
-  background-color: #ff6f3c;
+  background-color: #645caa;
 }
 .index_adopt .index_adopt_top .index_adopt_top_cnt a:hover {
-  background-color: #f85f73;
+  background-color: #6639a6;
 }
 .index_adopt .index_adopt_main {
   max-width: 1470px;
@@ -263,6 +263,7 @@
   font-family: "Poppins Bold";
   font-size: 38px;
   display: block;
+  color: #07689f;
 }
 .index_adopt .index_adopt_main .index_adopt_main_box .index_adopt_main_row .index_adopt_dog .index_adopt_dog_inner .index_adopt_dog_inner_details .index_adopt_dog_inner_details_cnt .dog_breed {
   display: block;
@@ -271,6 +272,7 @@
   font-family: "Lato Bold";
   font-size: 21px;
   opacity: 0.6;
+  color: #3d84a8;
 }
 .index_adopt .index_adopt_main .index_adopt_main_box .index_adopt_main_row .index_adopt_dog .index_adopt_dog_inner .index_adopt_dog_inner_details .index_adopt_dog_inner_details_cnt .dog_adoption_status_holder {
   display: grid;
@@ -287,13 +289,14 @@
   margin-bottom: 5px;
 }
 .index_adopt .index_adopt_main .index_adopt_main_box .index_adopt_main_row .index_adopt_dog .index_adopt_dog_inner .index_adopt_dog_inner_details .index_adopt_dog_inner_details_cnt .dog_adoption_status_holder .dog_adoption_status .available {
-  color: green;
+  color: #3d84a8;
 }
 .index_adopt .index_adopt_main .index_adopt_main_box .index_adopt_main_row .index_adopt_dog .index_adopt_dog_inner .index_adopt_dog_inner_details .index_adopt_dog_inner_details_cnt .dog_adoption_status_holder .dog_adoption_status .pending {
-  color: #ff6f3c;
+  color: #3d84a8;
 }
 .index_adopt .index_adopt_main .index_adopt_main_box .index_adopt_main_row .index_adopt_dog .index_adopt_dog_inner .index_adopt_dog_inner_details .index_adopt_dog_inner_details_cnt .dog_adoption_status_holder .dog_adoption_status .adopted {
-  color: red;
+  color: #3d84a8;
+  text-decoration: line-through;
 }
 .index_adopt .index_adopt_main .index_adopt_main_box .index_adopt_main_row .index_adopt_dog .index_adopt_dog_inner .index_adopt_dog_inner_details .index_adopt_dog_inner_details_cnt a {
   width: 100%;
@@ -308,10 +311,10 @@
   font-family: "Lato Bold";
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   text-decoration: none;
-  background-color: #ff6f3c;
+  background-color: #645caa;
 }
 .index_adopt .index_adopt_main .index_adopt_main_box .index_adopt_main_row .index_adopt_dog .index_adopt_dog_inner .index_adopt_dog_inner_details .index_adopt_dog_inner_details_cnt a:hover {
-  background-color: #f85f73;
+  background-color: #6639a6;
 }
 
 .index_contact {
@@ -358,7 +361,7 @@
 }
 .index_contact .index_contact_box .index_contact_row .index_contact_L .index_contact_side_cnt h1 .orange_text {
   display: block;
-  color: #ff6f3c;
+  color: #6639a6;
 }
 .index_contact .index_contact_box .index_contact_row .index_contact_L .index_contact_side_cnt p {
   white-space: pre-wrap;
@@ -384,10 +387,10 @@
   font-family: "Lato Bold";
   font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   text-decoration: none;
-  background-color: #ff6f3c;
+  background-color: #645caa;
 }
 .index_contact .index_contact_box .index_contact_row .index_contact_L .index_contact_side_cnt a:hover {
-  background-color: #f85f73;
+  background-color: #6639a6;
 }
 
 @media all and (max-width: 1995px) {

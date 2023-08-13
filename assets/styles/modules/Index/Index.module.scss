@@ -83,10 +83,10 @@
             font-family: "Lato Bold";
             font-size: $Link;
             text-decoration: none;
-            background-color: $BurningOrange;
+            background-color: $Scampi;
 
             &:hover {
-              background-color: $BrinkPink;
+              background-color: $RoyalPurple;
             }
           }
 
@@ -149,7 +149,7 @@
 
             .orange_text {
               display: block;
-              color: $BurningOrange;
+              color: $RoyalPurple;
             }
           }
 
@@ -174,10 +174,10 @@
             font-family: "Lato Bold";
             font-size: $Link;
             text-decoration: none;
-            background-color: $BurningOrange;
+            background-color: $Scampi;
 
             &:hover {
-              background-color: $BrinkPink;
+              background-color: $RoyalPurple;
             }
           }
         }
@@ -209,7 +209,7 @@
         margin-bottom: 40px;
 
         span {
-          color: $BurningOrange;
+          color: $RoyalPurple;
         }
       }
 
@@ -234,10 +234,10 @@
         font-family: "Lato Bold";
         font-size: $Link;
         text-decoration: none;
-        background-color: $BurningOrange;
+        background-color: $Scampi;
 
         &:hover {
-          background-color: $BrinkPink;
+          background-color: $RoyalPurple;
         }
       }
     }
@@ -280,6 +280,7 @@
                   font-family: "Poppins Bold";
                   font-size: clamp(35px, 38px, 38px);
                   display: block;
+                  color: $BahamaBlue;
                 }
 
                 .dog_breed {
@@ -289,6 +290,7 @@
                   font-family: "Lato Bold";
                   font-size: clamp(21px, 21px, 21px);
                   opacity: 0.6;
+                  color: $BostonBlue;
                 }
 
                 .dog_adoption_status_holder {
@@ -307,15 +309,16 @@
                     }
 
                     .available {
-                      color: green;
+                      color: $BostonBlue;
                     }
 
                     .pending {
-                      color: $BurningOrange;
+                      color: $BostonBlue;
                     }
 
                     .adopted {
-                      color: red;
+                      color: $BostonBlue;
+                      text-decoration: line-through;
                     }
                   }
                 }
@@ -330,10 +333,10 @@
                   font-family: "Lato Bold";
                   font-size: $Link;
                   text-decoration: none;
-                  background-color: $BurningOrange;
+                  background-color: $Scampi;
 
                   &:hover {
-                    background-color: $BrinkPink;
+                    background-color: $RoyalPurple;
                   }
                 }
               }
@@ -391,7 +394,7 @@
 
             .orange_text {
               display: block;
-              color: $BurningOrange;
+              color: $RoyalPurple;
             }
           }
 
@@ -416,10 +419,10 @@
             font-family: "Lato Bold";
             font-size: $Link;
             text-decoration: none;
-            background-color: $BurningOrange;
+            background-color: $Scampi;
 
             &:hover {
-              background-color: $BrinkPink;
+              background-color: $RoyalPurple;
             }
           }
         }

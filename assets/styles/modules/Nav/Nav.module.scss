@@ -65,6 +65,7 @@
               li {
                 font-size: clamp(16px, 17px, 17px);
                 cursor: default;
+                color: $RoyalPurple;
               }
             }
           }
@@ -100,11 +101,11 @@
 
               li {
                 font-size: clamp(20px, 21px, 21px);
-                color: $BrightGray;
+                color: $Scampi;
                 cursor: pointer;
 
                 &:hover {
-                  color: $BrinkPink;
+                  color: $RoyalPurple;
                 }
               }
             }
@@ -152,14 +153,14 @@
                   color: $EbonyClay;
 
                   span {
-                    color: $BurningOrange;
+                    color: $RoyalPurple;
                   }
                 }
 
                 .bottom_text {
                   font-family: "Poppins Bold";
                   font-size: clamp(16px, 16px, 16px);
-                  color: $BrightGray;
+                  color: $BostonBlue;
                   opacity: 0.7;
                 }
               }
@@ -183,13 +184,13 @@
 
               .deactive {
                 opacity: 0.5;
-                color: $BurningOrange;
+                color: $RoyalPurple;
                 padding-bottom: 0px;
               }
 
               .active {
                 a {
-                  color: $EbonyClay;
+                  color: $Scampi;
                   text-decoration: none;
                   padding-bottom: 6px;
                   position: relative;
@@ -202,7 +203,7 @@
                     width: 0;
                     height: 3px;
                     display: block;
-                    background-color: $BurningOrange;
+                    background-color: $RoyalPurple;
                   }
 
                   &:hover {
@@ -232,7 +233,7 @@
     .mobile_nav_inner_box {
       .mobile_nav_inner_row {
         .mobile_nav_inner_side {
-          height: 120px;
+          height: 150px;
           display: flex;
           align-items: center;
           padding: 0;
@@ -259,14 +260,14 @@
                   color: $EbonyClay;
 
                   span {
-                    color: $BurningOrange;
+                    color: $RoyalPurple;
                   }
                 }
 
                 .bottom_text {
                   font-family: "Poppins Bold";
                   font-size: clamp(15px, 15px, 15px);
-                  color: $BrightGray;
+                  color: $BostonBlue;
                   opacity: 0.7;
                 }
               }
@@ -285,7 +286,7 @@
               span {
                 width: 32px;
                 height: 4px;
-                background-color: $EbonyClay;
+                background-color: $RoyalPurple;
                 display: block;
                 @include quickCenter("relative");
 
@@ -344,7 +345,7 @@
       }
 
       button {
-        background-color: $EbonyClay;
+        background-color: $Scampi;
         width: 35px;
         height: 35px;
         @include displayElement(flex, center, center);
@@ -353,7 +354,7 @@
         font-size: $Text;
 
         &:hover {
-          background-color: $BurningOrange;
+          background-color: $RoyalPurple;
         }
       }
 
@@ -369,13 +370,13 @@
 
         .deactive {
           opacity: 0.5;
-          color: $BurningOrange;
+          color: $RoyalPurple;
           padding-bottom: 5px;
         }
 
         .active {
           a {
-            color: $EbonyClay;
+            color: $Scampi;
             text-decoration: none;
             padding-bottom: 6px;
             position: relative;
@@ -388,7 +389,7 @@
               width: 0;
               height: 3px;
               display: block;
-              background-color: $BurningOrange;
+              background-color: $RoyalPurple;
             }
 
             &:hover {

@@ -62,7 +62,7 @@
                     color: $Gallery;
 
                     span {
-                      color: $BurningOrange;
+                      color: $RoyalPurple;
                     }
                   }
 
@@ -115,7 +115,7 @@
 
                   .deactive {
                     opacity: 0.5;
-                    color: $BurningOrange;
+                    color: $RoyalPurple;
                     padding-bottom: 0px;
                   }
 
@@ -134,7 +134,7 @@
                         width: 0;
                         height: 3px;
                         display: block;
-                        background-color: $BurningOrange;
+                        background-color: $RoyalPurple;
                       }
 
                       &:hover {
@@ -164,7 +164,7 @@
                     cursor: pointer;
 
                     &:hover {
-                      color: $BrinkPink;
+                      color: $RoyalPurple;
                     }
                   }
                 }
@@ -202,11 +202,11 @@
 
         span {
           text-decoration: underline;
-          color: $BurningOrange;
+          color: $Turquoise;
           cursor: pointer;
 
           &:hover {
-            color: $BrinkPink;
+            color: $BostonBlue;
           }
         }
       }
