@@ -14,6 +14,7 @@ import { FADE_DOWN } from "../../../animations/FADES";
 import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
 
 import styles from "../../../styles/modules/Adopt/Adopt.module.css";
+import { CreateAdoptDogsHint } from "@/assets/functions/dom/creates/CreateAdoptDogsHint";
 
 export const AdoptTop = () => {
   const CONTROLS = useAnimation();
@@ -41,6 +42,106 @@ export const AdoptTop = () => {
           Select one of them to get to know their details and decide if you
           would like to adopt one.
         </p>
+
+        <div className={`${styles.adopt_top_cnt_btns}`}>
+          <button
+            id="allBtn"
+            onClick={() => {
+              if (document.querySelector(".dog")) {
+                const ALL_DOGS = document.querySelectorAll(".dog");
+
+                ALL_DOGS.forEach((dog) => {
+                  dog.style.display = "block";
+                });
+              }
+            }}
+            className={`${styles.btn} ${styles.all_btn} orientation-change-element half-second`}
+          >
+            <span>All</span>
+          </button>
+          <button
+            id="availableBtn"
+            onClick={() => {
+              if (document.querySelector(".dog")) {
+                const ALL_DOGS = document.querySelectorAll(".dog");
+                const AVAILABLE_DOGS =
+                  document.querySelectorAll(".dog-available");
+
+                ALL_DOGS.forEach((dog) => {
+                  dog.style.display = "none";
+                });
+                AVAILABLE_DOGS.forEach((dog) => {
+                  dog.style.display = "block";
+                });
+
+                CreateAdoptDogsHint(
+                  AVAILABLE_DOGS,
+                  "adoptDogsInner",
+                  "span",
+                  "no-available-hint",
+                  "No Available Dogs!"
+                );
+              }
+            }}
+            className={`${styles.btn} ${styles.available_btn} orientation-change-element half-second`}
+          >
+            <span>Available</span>
+          </button>
+          <button
+            id="pendingBtn"
+            onClick={() => {
+              if (document.querySelector(".dog")) {
+                const ALL_DOGS = document.querySelectorAll(".dog");
+                const PENDING_DOGS = document.querySelectorAll(".dog-pending");
+
+                ALL_DOGS.forEach((dog) => {
+                  dog.style.display = "none";
+                });
+                PENDING_DOGS.forEach((dog) => {
+                  dog.style.display = "block";
+                });
+
+                CreateAdoptDogsHint(
+                  PENDING_DOGS,
+                  "adoptDogsInner",
+                  "span",
+                  "no-pending-hint",
+                  "No Pending Dogs!"
+                );
+              }
+            }}
+            className={`${styles.btn} ${styles.pending_btn} orientation-change-element half-second`}
+          >
+            <span>Pending</span>
+          </button>
+          <button
+            id="adoptedBtn"
+            onClick={() => {
+              if (document.querySelector(".dog")) {
+                const ALL_DOGS = document.querySelectorAll(".dog");
+                const ADOPTED_DOGS = document.querySelectorAll(".dog-adopted");
+
+                ALL_DOGS.forEach((dog) => {
+                  dog.style.display = "none";
+                });
+                ADOPTED_DOGS.forEach((dog) => {
+                  dog.style.display = "block";
+                });
+
+                CreateAdoptDogsHint(
+                  ADOPTED_DOGS,
+                  "adoptDogsInner",
+                  "span",
+                  "no-adopted-hint",
+                  "No Adopted Dogs!"
+                );
+              }
+            }}
+            className={`${styles.btn} ${styles.adopted_btn} orientation-change-element half-second`}
+          >
+            <span>Adopted</span>
+          </button>
+        </div>
       </motion.div>
     </section>
   );

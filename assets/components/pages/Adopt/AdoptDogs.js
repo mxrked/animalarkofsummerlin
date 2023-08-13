@@ -94,12 +94,21 @@ export const AdoptDogs = (props) => {
     });
   }, []);
 
+  // // Triggering the adoptTopBtns
+  // useEffect(() => {
+  //   const ALL_BTN = document.getElementById("allBtn");
+  //   const AVAILABLE_BTN = document.getElementById("availableBtn");
+  //   const PENDING_BTN = document.getElementById("pendingBtn");
+  //   const ADOPTED_BTN = document.getElementById("adoptedBtn");
+  // }, []);
+
   return (
     <section
       id="adoptDogs"
       className={`${styles.adopt_dogs} overrides_AdoptDogs`}
     >
       <motion.div
+        id="adoptDogsInner"
         ref={REF}
         initial="hidden"
         animate={CONTROLS}
@@ -110,7 +119,17 @@ export const AdoptDogs = (props) => {
           <div className={`${styles.adopt_dogs_inner_row} row`}>
             {props.dogs.map((dog) => (
               <div
-                className={`${styles.adopt_dog} col-lg-4 col-md-4 col-sm-6 col-xs-12`}
+                className={`${
+                  styles.adopt_dog
+                } dog col-lg-4 col-md-4 col-sm-6 col-xs-12 ${
+                  dog._dogAdoptStatus === "Available"
+                    ? "dog-available"
+                    : dog._dogAdoptStatus === "Pending"
+                    ? "dog-pending"
+                    : dog._dogAdoptStatus === "Adopted"
+                    ? "dog-adopted"
+                    : ""
+                }`}
               >
                 <div className={`${styles.adopt_dog_inner}`}>
                   <div className={`${styles.adopt_dog_inner_bg_holder}`}>
