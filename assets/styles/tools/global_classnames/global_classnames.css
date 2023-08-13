@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Lato Bold";
+  src: url("../../../fonts/Lato-Bold.ttf");
+}
 .full-second {
   transition: 1s ease-in-out !important;
 }
@@ -23,4 +27,13 @@
 .selected::-moz-selection {
   color: #eeeeee;
   background-color: #6639a6;
+}
+
+.adopt-hint {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: "Lato Bold";
+  font-size: 18px;
 }/*# sourceMappingURL=global_classnames.css.map */
