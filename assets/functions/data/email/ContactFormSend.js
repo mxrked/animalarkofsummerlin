@@ -1,6 +1,9 @@
 /**
  *
  *  This is used to send an contact form to an email
+ *  @param {Object} input - The input element
+ *  @param {Object} rooter - The router variable
+ *  @param {Object} formTarget - The form variable
  *
  */
 

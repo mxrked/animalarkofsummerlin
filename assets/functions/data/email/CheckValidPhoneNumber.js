@@ -1,6 +1,7 @@
 /**
  *
  *  This is used to check if the form phone number is valid
+ *  @param {Object} phone - The phone input variable
  *
  */
 

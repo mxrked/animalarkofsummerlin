@@ -1,6 +1,7 @@
 /**
  *
  *  This is used to check if the form email address is valid
+ *  @param {Object} email - The email input variable
  *
  */
 
