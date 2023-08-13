@@ -12,9 +12,10 @@ import { useInView } from "react-intersection-observer";
 import { FADE_DOWN } from "../../../animations/FADES";
 
 import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
+import { CreateAdoptDogsHint } from "@/assets/functions/dom/creates/CreateAdoptDogsHint";
+import ManipBtn from "@/assets/functions/dom/manip/ManipBtn";
 
 import styles from "../../../styles/modules/Adopt/Adopt.module.css";
-import { CreateAdoptDogsHint } from "@/assets/functions/dom/creates/CreateAdoptDogsHint";
 
 export const AdoptTop = () => {
   const CONTROLS = useAnimation();
@@ -23,6 +24,12 @@ export const AdoptTop = () => {
   useEffect(() => {
     TriggerInViewMotion(CONTROLS, INVIEW);
   }, [CONTROLS, INVIEW]);
+
+  // Disabling All btn
+  useEffect(() => {
+    document.getElementById("allBtn").style.opacity = 0.5;
+    document.getElementById("allBtn").style.pointerEvents = "none";
+  }, []);
 
   return (
     <section id="adoptTop" className={`${styles.adopt_top} overrides_AdoptTop`}>
@@ -46,22 +53,28 @@ export const AdoptTop = () => {
         <div className={`${styles.adopt_top_cnt_btns}`}>
           <button
             id="allBtn"
-            onClick={() => {
+            onClick={(e) => {
               if (document.querySelector(".dog")) {
                 const ALL_DOGS = document.querySelectorAll(".dog");
+
+                ManipBtn(
+                  e.currentTarget,
+                  "disable",
+                  document.querySelectorAll(".adopt-btn")
+                );
 
                 ALL_DOGS.forEach((dog) => {
                   dog.style.display = "block";
                 });
               }
             }}
-            className={`${styles.btn} ${styles.all_btn} orientation-change-element half-second`}
+            className={`${styles.btn} ${styles.all_btn} adopt-btn orientation-change-element half-second`}
           >
             <span>All</span>
           </button>
           <button
             id="availableBtn"
-            onClick={() => {
+            onClick={(e) => {
               if (document.querySelector(".dog")) {
                 const ALL_DOGS = document.querySelectorAll(".dog");
                 const AVAILABLE_DOGS =
@@ -74,6 +87,12 @@ export const AdoptTop = () => {
                   dog.style.display = "block";
                 });
 
+                ManipBtn(
+                  e.currentTarget,
+                  "disable",
+                  document.querySelectorAll(".adopt-btn")
+                );
+
                 CreateAdoptDogsHint(
                   AVAILABLE_DOGS,
                   "adoptDogsInner",
@@ -83,13 +102,13 @@ export const AdoptTop = () => {
                 );
               }
             }}
-            className={`${styles.btn} ${styles.available_btn} orientation-change-element half-second`}
+            className={`${styles.btn} ${styles.available_btn} adopt-btn orientation-change-element half-second`}
           >
             <span>Available</span>
           </button>
           <button
             id="pendingBtn"
-            onClick={() => {
+            onClick={(e) => {
               if (document.querySelector(".dog")) {
                 const ALL_DOGS = document.querySelectorAll(".dog");
                 const PENDING_DOGS = document.querySelectorAll(".dog-pending");
@@ -101,6 +120,12 @@ export const AdoptTop = () => {
                   dog.style.display = "block";
                 });
 
+                ManipBtn(
+                  e.currentTarget,
+                  "disable",
+                  document.querySelectorAll(".adopt-btn")
+                );
+
                 CreateAdoptDogsHint(
                   PENDING_DOGS,
                   "adoptDogsInner",
@@ -110,13 +135,13 @@ export const AdoptTop = () => {
                 );
               }
             }}
-            className={`${styles.btn} ${styles.pending_btn} orientation-change-element half-second`}
+            className={`${styles.btn} ${styles.pending_btn} adopt-btn orientation-change-element half-second`}
           >
             <span>Pending</span>
           </button>
           <button
             id="adoptedBtn"
-            onClick={() => {
+            onClick={(e) => {
               if (document.querySelector(".dog")) {
                 const ALL_DOGS = document.querySelectorAll(".dog");
                 const ADOPTED_DOGS = document.querySelectorAll(".dog-adopted");
@@ -128,6 +153,12 @@ export const AdoptTop = () => {
                   dog.style.display = "block";
                 });
 
+                ManipBtn(
+                  e.currentTarget,
+                  "disable",
+                  document.querySelectorAll(".adopt-btn")
+                );
+
                 CreateAdoptDogsHint(
                   ADOPTED_DOGS,
                   "adoptDogsInner",
@@ -137,7 +168,7 @@ export const AdoptTop = () => {
                 );
               }
             }}
-            className={`${styles.btn} ${styles.adopted_btn} orientation-change-element half-second`}
+            className={`${styles.btn} ${styles.adopted_btn} adopt-btn orientation-change-element half-second`}
           >
             <span>Adopted</span>
           </button>
