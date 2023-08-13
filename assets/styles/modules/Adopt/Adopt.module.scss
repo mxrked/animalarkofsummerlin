@@ -31,6 +31,7 @@
   height: 555px;
   @include displayElement(flex, center, center);
   text-align: center;
+  margin-bottom: 50px;
 
   .adopt_top_cnt {
     h1 {
@@ -56,6 +57,42 @@
       margin-bottom: 45px;
       @include quickCenter("relative");
       max-width: 890px;
+    }
+
+    .adopt_top_cnt_btns {
+      width: 100%;
+      max-width: 600px;
+      @include quickCenter("relative");
+      @include displayElement(flex, space-evenly, center);
+
+      button {
+        height: 45px;
+        font-family: "Lato Bold";
+        font-size: clamp(17px, 19px, 19px);
+        background-color: $Scampi;
+        color: $Gallery;
+        width: 100%;
+
+        &:hover {
+          background-color: $RoyalPurple;
+        }
+      }
+
+      .all_btn {
+        max-width: 70px;
+      }
+
+      .available_btn {
+        max-width: 120px;
+      }
+
+      .pending_btn {
+        max-width: 110px;
+      }
+
+      .adopted_btn {
+        max-width: 110px;
+      }
     }
   }
 }
