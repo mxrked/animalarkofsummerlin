@@ -246,7 +246,7 @@
 
 @media all and (max-width: 991px) {
   .adopt_top {
-    height: 410px;
+    height: 470px;
 
     .adopt_top_cnt {
       max-width: 600px;
@@ -261,6 +261,16 @@
       p {
         font-size: clamp(19px, 21px, 21px);
         @include quickCenter("relative");
+      }
+
+      .adopt_top_cnt_btns {
+        max-width: 250px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        button {
+          margin: 5px;
+        }
       }
     }
   }
@@ -297,7 +307,7 @@
 // Desktop Window (Smallest)
 @media all and (max-width: 768px) {
   .adopt_top {
-    height: 370px;
+    height: 510px;
 
     .adopt_top_cnt {
       max-width: 600px;
@@ -313,6 +323,33 @@
         font-size: clamp(17px, 19px, 19px);
         @include quickCenter("relative");
         max-width: 380px;
+      }
+
+      .adopt_top_cnt_btns {
+        display: block;
+
+        button {
+          display: block;
+          font-size: clamp(15px, 15px, 15px);
+          @include quickCenter("relative");
+          margin-bottom: 4px;
+        }
+
+        .all_btn {
+          max-width: 60px;
+        }
+
+        .available_btn {
+          max-width: 100px;
+        }
+
+        .pending_btn {
+          max-width: 90px;
+        }
+
+        .adopted_btn {
+          max-width: 90px;
+        }
       }
     }
   }
@@ -368,7 +405,8 @@
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
   .adopt_top {
-    height: 290px;
+    height: 470px;
+    margin-bottom: 0;
 
     .adopt_top_cnt {
       max-width: 80%;
@@ -387,6 +425,34 @@
         max-width: 380px;
         margin-top: 0px;
         margin-bottom: 30px;
+      }
+
+      .adopt_top_cnt_btns {
+        display: block;
+
+        button {
+          display: block;
+          font-size: clamp(14px, 14px, 14px);
+          @include quickCenter("relative");
+          margin-bottom: 4px;
+          height: 40px;
+        }
+
+        .all_btn {
+          max-width: 50px;
+        }
+
+        .available_btn {
+          max-width: 90px;
+        }
+
+        .pending_btn {
+          max-width: 80px;
+        }
+
+        .adopted_btn {
+          max-width: 80px;
+        }
       }
     }
   }
@@ -454,7 +520,8 @@
 // Pixel 2 XL
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .adopt_top {
-    height: 210px;
+    height: 240px;
+    margin-bottom: 45px;
 
     .adopt_top_cnt {
       max-width: 100%;
@@ -473,6 +540,35 @@
         @include quickCenter("relative");
         margin-top: 10px;
         margin-bottom: 30px;
+      }
+
+      .adopt_top_cnt_btns {
+        display: flex;
+        max-width: 400px;
+
+        button {
+          display: block;
+          font-size: clamp(14px, 14px, 14px);
+          @include quickCenter("relative");
+          margin-bottom: 4px;
+          height: 40px;
+        }
+
+        .all_btn {
+          max-width: 50px;
+        }
+
+        .available_btn {
+          max-width: 90px;
+        }
+
+        .pending_btn {
+          max-width: 80px;
+        }
+
+        .adopted_btn {
+          max-width: 80px;
+        }
       }
     }
   }
@@ -545,7 +641,7 @@
 // Ipad
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .adopt_top {
-    height: 310px;
+    height: 350px;
 
     .adopt_top_cnt {
       max-width: 100%;
@@ -563,6 +659,35 @@
         @include quickCenter("relative");
         margin-top: 2px;
         margin-bottom: 30px;
+      }
+
+      .adopt_top_cnt_btns {
+        display: flex;
+        max-width: 450px;
+
+        button {
+          display: block;
+          font-size: clamp(15px, 15px, 15px);
+          @include quickCenter("relative");
+          margin-bottom: 4px;
+          height: 45px;
+        }
+
+        .all_btn {
+          max-width: 60px;
+        }
+
+        .available_btn {
+          max-width: 100px;
+        }
+
+        .pending_btn {
+          max-width: 90px;
+        }
+
+        .adopted_btn {
+          max-width: 90px;
+        }
       }
     }
   }
@@ -653,6 +778,35 @@
         @include quickCenter("relative");
         margin-top: 10px;
         margin-bottom: 30px;
+      }
+
+      .adopt_top_cnt_btns {
+        display: flex;
+        max-width: 450px;
+
+        button {
+          display: block;
+          font-size: clamp(15px, 15px, 15px);
+          @include quickCenter("relative");
+          margin-bottom: 4px;
+          height: 45px;
+        }
+
+        .all_btn {
+          max-width: 60px;
+        }
+
+        .available_btn {
+          max-width: 100px;
+        }
+
+        .pending_btn {
+          max-width: 90px;
+        }
+
+        .adopted_btn {
+          max-width: 90px;
+        }
       }
     }
   }
@@ -745,6 +899,35 @@
         margin-top: 10px;
         margin-bottom: 30px;
       }
+
+      .adopt_top_cnt_btns {
+        display: flex;
+        max-width: 450px;
+
+        button {
+          display: block;
+          font-size: clamp(15px, 15px, 15px);
+          @include quickCenter("relative");
+          margin-bottom: 4px;
+          height: 45px;
+        }
+
+        .all_btn {
+          max-width: 60px;
+        }
+
+        .available_btn {
+          max-width: 100px;
+        }
+
+        .pending_btn {
+          max-width: 90px;
+        }
+
+        .adopted_btn {
+          max-width: 90px;
+        }
+      }
     }
   }
   .adopt_dogs {
@@ -834,6 +1017,35 @@
         @include quickCenter("relative");
         margin-top: 10px;
         margin-bottom: 30px;
+      }
+
+      .adopt_top_cnt_btns {
+        display: flex;
+        max-width: 450px;
+
+        button {
+          display: block;
+          font-size: clamp(15px, 15px, 15px);
+          @include quickCenter("relative");
+          margin-bottom: 4px;
+          height: 45px;
+        }
+
+        .all_btn {
+          max-width: 60px;
+        }
+
+        .available_btn {
+          max-width: 100px;
+        }
+
+        .pending_btn {
+          max-width: 90px;
+        }
+
+        .adopted_btn {
+          max-width: 90px;
+        }
       }
     }
   }
@@ -925,6 +1137,35 @@
         @include quickCenter("relative");
         margin-top: 10px;
         margin-bottom: 30px;
+      }
+
+      .adopt_top_cnt_btns {
+        display: flex;
+        max-width: 450px;
+
+        button {
+          display: block;
+          font-size: clamp(15px, 15px, 15px);
+          @include quickCenter("relative");
+          margin-bottom: 4px;
+          height: 45px;
+        }
+
+        .all_btn {
+          max-width: 60px;
+        }
+
+        .available_btn {
+          max-width: 100px;
+        }
+
+        .pending_btn {
+          max-width: 90px;
+        }
+
+        .adopted_btn {
+          max-width: 90px;
+        }
       }
     }
   }

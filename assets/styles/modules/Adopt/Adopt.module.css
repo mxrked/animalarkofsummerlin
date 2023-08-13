@@ -204,7 +204,7 @@
 }
 @media all and (max-width: 991px) {
   .adopt_top {
-    height: 410px;
+    height: 470px;
   }
   .adopt_top .adopt_top_cnt {
     max-width: 600px;
@@ -220,6 +220,14 @@
     font-size: 21px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns {
+    max-width: 250px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns button {
+    margin: 5px;
   }
   .adopt_dogs {
     margin-bottom: 70px;
@@ -241,7 +249,7 @@
 }
 @media all and (max-width: 768px) {
   .adopt_top {
-    height: 370px;
+    height: 510px;
   }
   .adopt_top .adopt_top_cnt {
     max-width: 600px;
@@ -258,6 +266,28 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 380px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns {
+    display: block;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns button {
+    display: block;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .all_btn {
+    max-width: 60px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .available_btn {
+    max-width: 100px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .pending_btn {
+    max-width: 90px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .adopted_btn {
+    max-width: 90px;
   }
   .adopt_dogs {
     margin-bottom: 70px;
@@ -293,7 +323,8 @@
 }
 @media all and (max-width: 419px) {
   .adopt_top {
-    height: 290px;
+    height: 470px;
+    margin-bottom: 0;
   }
   .adopt_top .adopt_top_cnt {
     max-width: 80%;
@@ -313,6 +344,29 @@
     max-width: 380px;
     margin-top: 0px;
     margin-bottom: 30px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns {
+    display: block;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns button {
+    display: block;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    height: 40px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .all_btn {
+    max-width: 50px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .available_btn {
+    max-width: 90px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .pending_btn {
+    max-width: 80px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .adopted_btn {
+    max-width: 80px;
   }
   .adopt_dogs {
     margin-bottom: 50px;
@@ -359,7 +413,8 @@
 }
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .adopt_top {
-    height: 210px;
+    height: 240px;
+    margin-bottom: 45px;
   }
   .adopt_top .adopt_top_cnt {
     max-width: 100%;
@@ -379,6 +434,30 @@
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 30px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns {
+    display: flex;
+    max-width: 400px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns button {
+    display: block;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    height: 40px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .all_btn {
+    max-width: 50px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .available_btn {
+    max-width: 90px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .pending_btn {
+    max-width: 80px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .adopted_btn {
+    max-width: 80px;
   }
   .adopt_dogs {
     margin-bottom: 50px;
@@ -429,7 +508,7 @@
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .adopt_top {
-    height: 310px;
+    height: 350px;
   }
   .adopt_top .adopt_top_cnt {
     max-width: 100%;
@@ -448,6 +527,30 @@
     margin-right: auto;
     margin-top: 2px;
     margin-bottom: 30px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns {
+    display: flex;
+    max-width: 450px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns button {
+    display: block;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    height: 45px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .all_btn {
+    max-width: 60px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .available_btn {
+    max-width: 100px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .pending_btn {
+    max-width: 90px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .adopted_btn {
+    max-width: 90px;
   }
   .adopt_dogs {
     margin-bottom: 50px;
@@ -519,6 +622,30 @@
     margin-top: 10px;
     margin-bottom: 30px;
   }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns {
+    display: flex;
+    max-width: 450px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns button {
+    display: block;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    height: 45px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .all_btn {
+    max-width: 60px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .available_btn {
+    max-width: 100px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .pending_btn {
+    max-width: 90px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .adopted_btn {
+    max-width: 90px;
+  }
   .adopt_dogs {
     margin-bottom: 50px;
   }
@@ -588,6 +715,30 @@
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 30px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns {
+    display: flex;
+    max-width: 450px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns button {
+    display: block;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    height: 45px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .all_btn {
+    max-width: 60px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .available_btn {
+    max-width: 100px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .pending_btn {
+    max-width: 90px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .adopted_btn {
+    max-width: 90px;
   }
   .adopt_dogs {
     margin-bottom: 110px;
@@ -659,6 +810,30 @@
     margin-top: 10px;
     margin-bottom: 30px;
   }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns {
+    display: flex;
+    max-width: 450px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns button {
+    display: block;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    height: 45px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .all_btn {
+    max-width: 60px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .available_btn {
+    max-width: 100px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .pending_btn {
+    max-width: 90px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .adopted_btn {
+    max-width: 90px;
+  }
   .adopt_dogs {
     margin-bottom: 110px;
   }
@@ -728,6 +903,30 @@
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 30px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns {
+    display: flex;
+    max-width: 450px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns button {
+    display: block;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    height: 45px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .all_btn {
+    max-width: 60px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .available_btn {
+    max-width: 100px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .pending_btn {
+    max-width: 90px;
+  }
+  .adopt_top .adopt_top_cnt .adopt_top_cnt_btns .adopted_btn {
+    max-width: 90px;
   }
   .adopt_dogs {
     margin-bottom: 110px;
