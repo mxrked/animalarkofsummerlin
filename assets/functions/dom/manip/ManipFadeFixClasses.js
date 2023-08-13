@@ -2,6 +2,9 @@
  *
  *  This is used to add/remove a fade fix class to a Framer motion component
  *
+ *  @param {string} fmClass - The name for the fmClass
+ *  @param {string} fixClass - The name for the fix class
+ *
  */
 
 export default function ManipFadeFixClasses(fmClass, fixClass) {

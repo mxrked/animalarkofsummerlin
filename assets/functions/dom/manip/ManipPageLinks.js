@@ -2,6 +2,10 @@
  *
  *  This is used to change the behavior of certain page link(s)
  *
+ *  @param {string} manipState - The string for the state (enable, disable)
+ *  @param {string} type - The string for the type (single, multiple)
+ *  @param {string} linkClass - The className for the link
+ *
  */
 
 export default function ManipPageLink(manipState, type, linkClass) {
