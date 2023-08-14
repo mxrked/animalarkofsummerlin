@@ -2,6 +2,10 @@
 
 import {
   PLACEHOLDER,
+  PLACEHOLDER_BLUE,
+  PLACEHOLDER_GREEN,
+  PLACEHOLDER_PURPLE,
+  PLACEHOLDER_RED,
   MERLIN_1,
   PHOENIX_1,
   PHOENIX_2,
@@ -18,7 +22,7 @@ const OBJ_MERLIN = new Dog(
   "Aussie/Border Collie",
   "?",
   "This Black and white beauty is Merlin, a part Aussie, part Border Collie who is 2 years old.",
-  [MERLIN_1, PLACEHOLDER, PLACEHOLDER, PLACEHOLDER],
+  [MERLIN_1, PLACEHOLDER_GREEN, PLACEHOLDER_PURPLE, PLACEHOLDER_RED],
   "Available"
 );
 const OBJ_PHOENIX = new Dog(
@@ -27,7 +31,7 @@ const OBJ_PHOENIX = new Dog(
   "Beagle",
   "?",
   "Phoenix is now a beautiful happy Beagle who loves life.",
-  [PHOENIX_1, PHOENIX_2, PLACEHOLDER, PLACEHOLDER],
+  [PHOENIX_1, PHOENIX_2, PLACEHOLDER_PURPLE, PLACEHOLDER_RED],
   "Available"
 );
 const OBJ_SOPHIE = new Dog(
@@ -36,7 +40,7 @@ const OBJ_SOPHIE = new Dog(
   "Pit Mix",
   "?",
   "The Pit mix is Sophie who is also 2yo, tan and white, housetrained, and shy.",
-  [SOPHIE_1, SOPHIE_2, SOPHIE_3, PLACEHOLDER],
+  [SOPHIE_1, SOPHIE_2, SOPHIE_3, PLACEHOLDER_RED],
   "Available"
 );
 
