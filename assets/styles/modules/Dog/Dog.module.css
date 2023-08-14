@@ -13,4 +13,164 @@
 @font-face {
   font-family: "Lato Regular";
   src: url("../../../fonts/Lato-Regular.ttf");
+}
+.dog_main {
+  width: 100%;
+  height: 100%;
+  margin-top: 110px;
+  margin-bottom: 215px;
+}
+.dog_main .dog_main_inner {
+  height: 100%;
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dog_main .dog_main_inner .dog_id {
+  text-align: center;
+  display: block;
+  font-family: "Lato Bold";
+  font-size: 15px;
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+.dog_main .dog_main_inner .dog_main_inner_top_img_holder {
+  height: 500px;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  position: relative;
+}
+.dog_main .dog_main_inner .dog_main_inner_top_img_holder .bg {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.dog_main .dog_main_inner .dog_main_inner_imgs_holder .dog_main_inner_imgs_holder_inner {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dog_main .dog_main_inner .dog_main_inner_imgs_holder .dog_main_inner_imgs_holder_inner .dog_main_inner_imgs_holder_inner_row .dog_main_inner_imgs_holder_inner_img {
+  height: 120px;
+  padding: 0;
+  border: 3px solid white;
+  position: relative;
+}
+.dog_main .dog_main_inner .dog_main_inner_imgs_holder .dog_main_inner_imgs_holder_inner .dog_main_inner_imgs_holder_inner_row .dog_main_inner_imgs_holder_inner_img:first-child {
+  border-left: 0;
+}
+.dog_main .dog_main_inner .dog_main_inner_imgs_holder .dog_main_inner_imgs_holder_inner .dog_main_inner_imgs_holder_inner_row .dog_main_inner_imgs_holder_inner_img:last-child {
+  border-right: 0;
+}
+.dog_main .dog_main_inner .dog_main_inner_imgs_holder .dog_main_inner_imgs_holder_inner .dog_main_inner_imgs_holder_inner_row .dog_main_inner_imgs_holder_inner_img .bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.dog_main .dog_main_inner .dog_main_inner_imgs_holder .dog_main_inner_imgs_holder_inner .dog_main_inner_imgs_holder_inner_row .dog_main_inner_imgs_holder_inner_img button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eeeeee;
+  font-size: 21px;
+}
+.dog_main .dog_main_inner .dog_main_inner_details {
+  text-align: center;
+  margin-top: 50px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt {
+  width: 100%;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt .dog_name {
+  font-family: "Poppins Bold";
+  font-size: 38px;
+  display: block;
+  color: #07689f;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt .dog_breed {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  font-family: "Lato Bold";
+  font-size: 21px;
+  opacity: 0.6;
+  color: #3d84a8;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt .dog_weight {
+  display: block;
+  font-size: 19px;
+  margin-bottom: 5px;
+  font-family: "Lato Regular";
+  margin-bottom: 25px;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt .dog_weight strong {
+  font-weight: bold;
+  opacity: 0.7;
+  margin-right: 5px;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt p {
+  display: block;
+  font-size: 19px;
+  margin-bottom: 5px;
+  font-family: "Lato Regular";
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt .dog_adoption_status_holder {
+  display: grid;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt .dog_adoption_status_holder .dog_adoption_status {
+  font-family: "Lato Bold";
+  font-size: 21px;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt .dog_adoption_status_holder .dog_adoption_status .dog_adoption_status_top_text {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt .dog_adoption_status_holder .dog_adoption_status .available {
+  color: #3d84a8;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt .dog_adoption_status_holder .dog_adoption_status .pending {
+  color: #3d84a8;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt .dog_adoption_status_holder .dog_adoption_status .adopted {
+  color: #3d84a8;
+  text-decoration: line-through;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt button {
+  width: 100%;
+  max-width: 75px;
+  height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eeeeee;
+  font-family: "Lato Bold";
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  text-decoration: none;
+  background-color: #645caa;
+}
+.dog_main .dog_main_inner .dog_main_inner_details .dog_main_inner_details_cnt button:hover {
+  background-color: #6639a6;
 }/*# sourceMappingURL=Dog.module.css.map */

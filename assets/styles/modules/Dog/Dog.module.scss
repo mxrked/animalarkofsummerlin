@@ -22,6 +22,182 @@
 }
 
 // Desktop
+.dog_main {
+  width: 100%;
+  height: 100%;
+  margin-top: 110px;
+  margin-bottom: 215px;
+
+  .dog_main_inner {
+    height: 100%;
+    width: 100%;
+    max-width: 1600px;
+    @include quickCenter("relative");
+
+    .dog_id {
+      text-align: center;
+      display: block;
+      font-family: "Lato Bold";
+      font-size: clamp(14px, 15px, 15px);
+      margin-bottom: 15px;
+      opacity: 0.5;
+    }
+
+    .dog_main_inner_top_img_holder {
+      height: 500px;
+      width: 100%;
+      max-width: 700px;
+      @include quickCenter("relative");
+      margin-bottom: 5px;
+      position: relative;
+
+      .bg {
+        height: 500px;
+        width: 100%;
+        // background-image: url("https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/dogs/merlin-1.webp");
+        @include bGSU(cover, center);
+      }
+    }
+
+    .dog_main_inner_imgs_holder {
+      .dog_main_inner_imgs_holder_inner {
+        width: 100%;
+        max-width: 700px;
+        @include quickCenter("relative");
+
+        .dog_main_inner_imgs_holder_inner_row {
+          .dog_main_inner_imgs_holder_inner_img {
+            height: 120px;
+            padding: 0;
+            border: 3px solid white;
+            position: relative;
+
+            &:first-child {
+              border-left: 0;
+            }
+
+            &:last-child {
+              border-right: 0;
+            }
+
+            .bg {
+              @include bGSU(cover, center);
+            }
+
+            button {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
+              background-color: rgba(0, 0, 0, 0.4);
+              @include displayElement(flex, center, center);
+              color: $Gallery;
+              font-size: clamp(20px, 21px, 21px);
+            }
+          }
+        }
+      }
+    }
+
+    .dog_main_inner_details {
+      text-align: center;
+      margin-top: 50px;
+      height: 300px;
+      @include displayElement(flex, center, center);
+
+      .dog_main_inner_details_cnt {
+        width: 100%;
+
+        .dog_name {
+          font-family: "Poppins Bold";
+          font-size: clamp(35px, 38px, 38px);
+          display: block;
+          color: $BahamaBlue;
+        }
+
+        .dog_breed {
+          display: block;
+          margin-top: 5px;
+          margin-bottom: 40px;
+          font-family: "Lato Bold";
+          font-size: clamp(21px, 21px, 21px);
+          opacity: 0.6;
+          color: $BostonBlue;
+        }
+
+        .dog_weight {
+          display: block;
+          font-size: clamp(18px, 19px, 19px);
+          margin-bottom: 5px;
+          font-family: "Lato Regular";
+          margin-bottom: 25px;
+
+          strong {
+            font-weight: bold;
+            opacity: 0.7;
+            margin-right: 5px;
+          }
+        }
+
+        p {
+          display: block;
+          font-size: clamp(18px, 19px, 19px);
+          margin-bottom: 5px;
+          font-family: "Lato Regular";
+        }
+
+        .dog_adoption_status_holder {
+          display: grid;
+          text-align: center;
+          margin-top: 30px;
+          margin-bottom: 30px;
+
+          .dog_adoption_status {
+            font-family: "Lato Bold";
+            font-size: clamp(21px, 21px, 21px);
+
+            .dog_adoption_status_top_text {
+              display: block;
+              font-size: clamp(16px, 16px, 16px);
+              margin-bottom: 5px;
+            }
+
+            .available {
+              color: $BostonBlue;
+            }
+
+            .pending {
+              color: $BostonBlue;
+            }
+
+            .adopted {
+              color: $BostonBlue;
+              text-decoration: line-through;
+            }
+          }
+        }
+
+        button {
+          width: 100%;
+          max-width: 75px;
+          height: 45px;
+          @include quickCenter("relative");
+          @include displayElement(flex, center, center);
+          color: $Gallery;
+          font-family: "Lato Bold";
+          font-size: $Link;
+          text-decoration: none;
+          background-color: $Scampi;
+
+          &:hover {
+            background-color: $RoyalPurple;
+          }
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
