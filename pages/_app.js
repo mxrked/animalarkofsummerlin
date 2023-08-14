@@ -213,6 +213,8 @@ function MyApp({ Component, pageProps }) {
       "li",
       "img",
       "br",
+      "strong",
+      "button",
     ];
 
     ELEMENT_TYPES.forEach((eT) => {
