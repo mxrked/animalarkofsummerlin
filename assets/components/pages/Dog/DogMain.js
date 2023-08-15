@@ -34,6 +34,138 @@ export const DogMain = (props) => {
     ).style.backgroundImage = `url(${props.dog._dogImg[0]})`;
   }, []);
 
+  // Hiding placeholders
+  useEffect(() => {
+    const DOG_IMG_HOLDERS = document.querySelectorAll(".dog-img-holder");
+    const COMPUTED_STYLES = [
+      window.getComputedStyle(DOG_IMG_HOLDERS[0]),
+      window.getComputedStyle(DOG_IMG_HOLDERS[1]),
+      window.getComputedStyle(DOG_IMG_HOLDERS[2]),
+      window.getComputedStyle(DOG_IMG_HOLDERS[3]),
+    ];
+    const PLACEHOLDER_URLS = [
+      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/placeholders/blue.webp",
+      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/placeholders/green.webp",
+      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/placeholders/purple.webp",
+      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/placeholders/red.webp",
+    ];
+    const COLUMN_CLASSES = ["col-lg-3", "col-md-3", "col-sm-6", "col-xs-6"];
+    const SINGLE_COLUMN = ["col-lg-12", "col-md-12", "col-sm-12", "col-xs-12"];
+    const DOUBLE_COLUMN = ["col-lg-6", "col-md-6", "col-sm-6", "col-xs-6"];
+    const TRIPLE_COLUMN = ["col-lg-4", "col-md-4", "col-sm-4", "col-xs-4"];
+    // const QUAD_COLUMN = ["col-lg-3", "col-md-3", "col-sm-6", "col-xs-6"];
+
+    // Hidden placeholder markers
+    let validImg1 = true;
+    let validImg2 = true;
+    let validImg3 = true;
+    let validImg4 = true;
+
+    // Detecting and hiding placeholders
+    DOG_IMG_HOLDERS.forEach((holder) => {
+      const DOG_IMG = holder.querySelector(".dog-img");
+      const DOG_IMG_ARIA_LABEL = DOG_IMG.getAttribute("aria-label");
+
+      PLACEHOLDER_URLS.forEach((url) => {
+        if (DOG_IMG_ARIA_LABEL === url) {
+          holder.style.display = "none"; // Hiding the placeholder
+        }
+      });
+    });
+
+    // Marking hidden placeholders
+    setTimeout(() => {
+      if (COMPUTED_STYLES[0].display === "none") {
+        validImg1 = false;
+      }
+      if (COMPUTED_STYLES[1].display === "none") {
+        validImg2 = false;
+      }
+      if (COMPUTED_STYLES[2].display === "none") {
+        validImg3 = false;
+      }
+      if (COMPUTED_STYLES[3].display === "none") {
+        validImg4 = false;
+      }
+    }, 400);
+
+    // Changing column classes for non-hidden images and removing right borders
+    setTimeout(() => {
+      // All valid
+      if (validImg1 && validImg2 && validImg3 && validImg4) {
+        DOG_IMG_HOLDERS[3].style.borderRight = "none";
+      }
+
+      // None valid
+      if (!validImg1 && !validImg2 && !validImg3 && !validImg4) {
+        return;
+      }
+
+      // 1 valid
+      if (validImg1 && !validImg2 && !validImg3 && !validImg4) {
+        COLUMN_CLASSES.forEach((column) => {
+          DOG_IMG_HOLDERS[0].classList.remove(column);
+        });
+
+        SINGLE_COLUMN.forEach((column) => {
+          DOG_IMG_HOLDERS[0].classList.add(column);
+        });
+
+        DOG_IMG_HOLDERS[0].style.borderRight = "none";
+      }
+
+      // 1,2 valid
+      if (validImg1 && validImg2 && !validImg3 && !validImg4) {
+        COLUMN_CLASSES.forEach((column) => {
+          DOG_IMG_HOLDERS[0].classList.remove(column);
+        });
+
+        DOUBLE_COLUMN.forEach((column) => {
+          DOG_IMG_HOLDERS[0].classList.add(column);
+        });
+
+        COLUMN_CLASSES.forEach((column) => {
+          DOG_IMG_HOLDERS[1].classList.remove(column);
+        });
+
+        DOUBLE_COLUMN.forEach((column) => {
+          DOG_IMG_HOLDERS[1].classList.add(column);
+        });
+
+        DOG_IMG_HOLDERS[1].style.borderRight = "none";
+      }
+
+      // 1,2,3 valid
+      if (validImg1 && validImg2 && validImg3 && !validImg4) {
+        COLUMN_CLASSES.forEach((column) => {
+          DOG_IMG_HOLDERS[0].classList.remove(column);
+        });
+
+        TRIPLE_COLUMN.forEach((column) => {
+          DOG_IMG_HOLDERS[0].classList.add(column);
+        });
+
+        COLUMN_CLASSES.forEach((column) => {
+          DOG_IMG_HOLDERS[1].classList.remove(column);
+        });
+
+        TRIPLE_COLUMN.forEach((column) => {
+          DOG_IMG_HOLDERS[1].classList.add(column);
+        });
+
+        COLUMN_CLASSES.forEach((column) => {
+          DOG_IMG_HOLDERS[2].classList.remove(column);
+        });
+
+        TRIPLE_COLUMN.forEach((column) => {
+          DOG_IMG_HOLDERS[2].classList.add(column);
+        });
+
+        DOG_IMG_HOLDERS[2].style.borderRight = "none";
+      }
+    }, 650);
+  }, []);
+
   // const FIRST_IMG = props.dog._dogImg[0];
   // const SECOND_IMG = props.dog._dogImg[1];
   // const THIRD_IMG = props.dog._dogImg[2];
@@ -71,11 +203,12 @@ export const DogMain = (props) => {
               className={`${styles.dog_main_inner_imgs_holder_inner_row} row`}
             >
               <div
-                className={`${styles.dog_main_inner_imgs_holder_inner_img} col-lg-3 col-md-3 col-sm-6 col-xs-6`}
+                className={`${styles.dog_main_inner_imgs_holder_inner_img} dog-img-holder col-lg-3 col-md-3 col-sm-6 col-xs-6`}
               >
                 <BackgroundImage
+                  aria-label={props.dog._dogImg[0]}
                   src={props.dog._dogImg[0]}
-                  className={`${styles.bg}`}
+                  className={`${styles.bg} dog-img`}
                   width="100%"
                   height="100%"
                 />
@@ -90,11 +223,12 @@ export const DogMain = (props) => {
                 </button>
               </div>
               <div
-                className={`${styles.dog_main_inner_imgs_holder_inner_img} col-lg-3 col-md-3 col-sm-6 col-xs-6`}
+                className={`${styles.dog_main_inner_imgs_holder_inner_img} dog-img-holder col-lg-3 col-md-3 col-sm-6 col-xs-6`}
               >
                 <BackgroundImage
+                  aria-label={props.dog._dogImg[1]}
                   src={props.dog._dogImg[1]}
-                  className={`${styles.bg}`}
+                  className={`${styles.bg} dog-img`}
                   width="100%"
                   height="100%"
                 />
@@ -109,11 +243,12 @@ export const DogMain = (props) => {
                 </button>
               </div>
               <div
-                className={`${styles.dog_main_inner_imgs_holder_inner_img} col-lg-3 col-md-3 col-sm-6 col-xs-6`}
+                className={`${styles.dog_main_inner_imgs_holder_inner_img} dog-img-holder col-lg-3 col-md-3 col-sm-6 col-xs-6`}
               >
                 <BackgroundImage
+                  aria-label={props.dog._dogImg[2]}
                   src={props.dog._dogImg[2]}
-                  className={`${styles.bg}`}
+                  className={`${styles.bg} dog-img`}
                   width="100%"
                   height="100%"
                 />
@@ -128,11 +263,12 @@ export const DogMain = (props) => {
                 </button>
               </div>
               <div
-                className={`${styles.dog_main_inner_imgs_holder_inner_img} col-lg-3 col-md-3 col-sm-6 col-xs-6`}
+                className={`${styles.dog_main_inner_imgs_holder_inner_img} dog-img-holder col-lg-3 col-md-3 col-sm-6 col-xs-6`}
               >
                 <BackgroundImage
+                  aria-label={props.dog._dogImg[3]}
                   src={props.dog._dogImg[3]}
-                  className={`${styles.bg}`}
+                  className={`${styles.bg} dog-img`}
                   width="100%"
                   height="100%"
                 />
