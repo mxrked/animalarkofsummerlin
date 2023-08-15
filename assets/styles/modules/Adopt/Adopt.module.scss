@@ -582,6 +582,8 @@
 
       .adopt_dogs_inner_box {
         .adopt_dogs_inner_row {
+          justify-content: space-evenly;
+
           .adopt_dog {
             margin-bottom: 20px;
             width: 100%;

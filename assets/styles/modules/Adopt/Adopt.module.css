@@ -467,6 +467,9 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+  .adopt_dogs .adopt_dogs_inner .adopt_dogs_inner_box .adopt_dogs_inner_row {
+    justify-content: space-evenly;
+  }
   .adopt_dogs .adopt_dogs_inner .adopt_dogs_inner_box .adopt_dogs_inner_row .adopt_dog {
     margin-bottom: 20px;
     width: 100%;
