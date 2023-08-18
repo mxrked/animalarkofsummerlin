@@ -215,6 +215,10 @@ function MyApp({ Component, pageProps }) {
       "br",
       "strong",
       "button",
+      "label",
+      "select",
+      "input",
+      "textarea",
     ];
 
     ELEMENT_TYPES.forEach((eT) => {
