@@ -83,6 +83,12 @@
     }
   }
 }
+.contact_form {
+  display: block;
+}
+.contact_adopt_form {
+  display: none;
+}
 
 // Responsive
 @media all and (max-width: 1995px) {

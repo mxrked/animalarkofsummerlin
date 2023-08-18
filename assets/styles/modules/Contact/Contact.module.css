@@ -70,4 +70,12 @@
 }
 .contact_top .contact_top_cnt .contact_top_cnt_btns .adopt_form_btn {
   max-width: 170px;
+}
+
+.contact_form {
+  display: block;
+}
+
+.contact_adopt_form {
+  display: none;
 }/*# sourceMappingURL=Contact.module.css.map */
