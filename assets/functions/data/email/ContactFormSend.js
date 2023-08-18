@@ -13,9 +13,9 @@ import CheckValidEmail from "./CheckValidEmail";
 import CheckValidPhoneNumber from "./CheckValidPhoneNumber";
 import DeclareStorageVariable from "../storage/DeclareStorageVariable";
 
-const SERVICE_ID = "service_wedyf2o";
-const TEMPLATE_ID = "template_qnueymf";
-const PUBLIC_KEY = "lei2lUPnqstll0drA";
+const SERVICE_ID = "service_tlh6l1k";
+const TEMPLATE_ID = "template_l3gtaqp";
+const PUBLIC_KEY = "A9GRxn5M7wJP0-VZ6";
 
 emailjs.init(PUBLIC_KEY);
 
@@ -30,7 +30,7 @@ function CheckForSpaceInFirstCharacter(input) {
 }
 
 export default function EmailSend(rooter, formTarget) {
-  const FORM_NOTICE = document.getElementById("formNotice");
+  const FORM_NOTICE = document.getElementById("contactFormNotice");
   const FIRST_NAME = document.getElementById("emailFirstName");
   const LAST_NAME = document.getElementById("emailLastName");
   const CLIENT_EMAIL_ADDRESS = document.getElementById("emailClientEmail");
@@ -130,27 +130,27 @@ export default function EmailSend(rooter, formTarget) {
             });
         } else {
           noSpacesAsFirstCharacter = false;
-          //   FORM_NOTICE.style.color = "red";
-          //   FORM_NOTICE.style.opacity = 1;
-          //   FORM_NOTICE.innerHTML =
-          //     "Error: You cannot have a space as the first character in an input.";
+          FORM_NOTICE.style.color = "red";
+          FORM_NOTICE.style.opacity = 1;
+          FORM_NOTICE.innerHTML =
+            "Error: You cannot have a space as the first character in an input.";
         }
       } else {
         validPhone = false;
-        // FORM_NOTICE.style.color = "red";
-        // FORM_NOTICE.style.opacity = 1;
-        // FORM_NOTICE.innerHTML = "Error: That is an invalid phone number.";
+        FORM_NOTICE.style.color = "red";
+        FORM_NOTICE.style.opacity = 1;
+        FORM_NOTICE.innerHTML = "Error: That is an invalid phone number.";
       }
     } else {
       validEmail = false;
-      //   FORM_NOTICE.style.color = "red";
-      //   FORM_NOTICE.style.opacity = 1;
-      //   FORM_NOTICE.innerHTML = "Error: That is an invalid email address.";
+      FORM_NOTICE.style.color = "red";
+      FORM_NOTICE.style.opacity = 1;
+      FORM_NOTICE.innerHTML = "Error: That is an invalid email address.";
     }
   } else {
     nonEmptyInputs = false;
-    // FORM_NOTICE.style.color = "red";
-    // FORM_NOTICE.style.opacity = 1;
-    // FORM_NOTICE.innerHTML = "Error: You cannot have empty inputs.";
+    FORM_NOTICE.style.color = "red";
+    FORM_NOTICE.style.opacity = 1;
+    FORM_NOTICE.innerHTML = "Error: You cannot have empty inputs.";
   }
 }

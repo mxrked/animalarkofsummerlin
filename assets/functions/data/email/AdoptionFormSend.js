@@ -15,9 +15,9 @@ import CheckValidPhoneNumber from "./CheckValidPhoneNumber";
 import CheckValidZip from "./CheckValidZip";
 import DeclareStorageVariable from "../storage/DeclareStorageVariable";
 
-const SERVICE_ID = "service_zswk7hi";
-const TEMPLATE_ID = "template_91auihg";
-const PUBLIC_KEY = "lei2lUPnqstll0drA";
+const SERVICE_ID = "service_3litgbb";
+const TEMPLATE_ID = "template_m8plvso";
+const PUBLIC_KEY = "A9GRxn5M7wJP0-VZ6";
 
 emailjs.init(PUBLIC_KEY);
 
@@ -32,7 +32,7 @@ function CheckForSpaceInFirstCharacter(input) {
 }
 
 export default function EmailSend(rooter, formTarget) {
-  const FORM_NOTICE = document.getElementById("formNotice");
+  const FORM_NOTICE = document.getElementById("adoptFormNotice");
   const FIRST_NAME = document.getElementById("emailFirstName");
   const LAST_NAME = document.getElementById("emailLastName");
   const DOG_NAME = document.getElementById("emailDogName");
@@ -49,14 +49,14 @@ export default function EmailSend(rooter, formTarget) {
   const FULL_NAME = LAST_NAME.value + ", " + FIRST_NAME.value;
 
   const TEMPLATE_PARAMS = {
-    emailFullName: FULL_NAME,
     emailDogName: DOG_NAME.options[DOG_NAME_SELECTED_INDEX].text,
-    emailStreetAddress: STREET_ADDRESS.value,
-    emailState: STATE.options[STATE_SELECTED_INDEX].text,
-    emailCity: CITY.value,
-    emailZipCode: ZIP_CODE.value,
+    emailFullName: FULL_NAME,
     emailPhoneNumber: PHONE_NUMBER.value,
     emailClientEmail: CLIENT_EMAIL_ADDRESS.value,
+    emailStreetAddress: STREET_ADDRESS.value,
+    emailCity: CITY.value,
+    emailState: STATE.options[STATE_SELECTED_INDEX].text,
+    emailZipCode: ZIP_CODE.value,
     emailMessage: MESSAGE.value,
   };
 
@@ -85,6 +85,8 @@ export default function EmailSend(rooter, formTarget) {
 
   // Prevents the form send
   formTarget.preventDefault();
+
+  // Sending the email
 
   // Sending for after all valid checks
   if (
@@ -127,15 +129,11 @@ export default function EmailSend(rooter, formTarget) {
             !SPACE_LAST_NAME &&
             !SPACE_EMAIL &&
             !SPACE_MESSAGE &&
-            // !SPACE_STATE &&
             !SPACE_CITY &&
             !SPACE_STREET_ADDRESS &&
             !SPACE_ZIP_CODE
           ) {
             noSpacesAsFirstCharacter = true;
-
-            // Style form notice
-            // ....
 
             formTarget.preventDefault();
 
@@ -160,33 +158,33 @@ export default function EmailSend(rooter, formTarget) {
               });
           } else {
             noSpacesAsFirstCharacter = false;
-            //   FORM_NOTICE.style.color = "red";
-            //   FORM_NOTICE.style.opacity = 1;
-            //   FORM_NOTICE.innerHTML =
-            //     "Error: You cannot have a space as the first character in an input.";
+            FORM_NOTICE.style.color = "red";
+            FORM_NOTICE.style.opacity = 1;
+            FORM_NOTICE.innerHTML =
+              "Error: You cannot have a space as the first character in an input.";
           }
         } else {
           validZip = false;
-          // FORM_NOTICE.style.color = "red";
-          // FORM_NOTICE.style.opacity = 1;
-          // FORM_NOTICE.innerHTML = "Error: That is an invalid zip code.";
+          FORM_NOTICE.style.color = "red";
+          FORM_NOTICE.style.opacity = 1;
+          FORM_NOTICE.innerHTML = "Error: That is an invalid zip code.";
         }
       } else {
         validPhone = false;
-        // FORM_NOTICE.style.color = "red";
-        // FORM_NOTICE.style.opacity = 1;
-        // FORM_NOTICE.innerHTML = "Error: That is an invalid phone number.";
+        FORM_NOTICE.style.color = "red";
+        FORM_NOTICE.style.opacity = 1;
+        FORM_NOTICE.innerHTML = "Error: That is an invalid phone number.";
       }
     } else {
       validEmail = false;
-      //   FORM_NOTICE.style.color = "red";
-      //   FORM_NOTICE.style.opacity = 1;
-      //   FORM_NOTICE.innerHTML = "Error: That is an invalid email address.";
+      FORM_NOTICE.style.color = "red";
+      FORM_NOTICE.style.opacity = 1;
+      FORM_NOTICE.innerHTML = "Error: That is an invalid email address.";
     }
   } else {
     nonEmptyInputs = false;
-    // FORM_NOTICE.style.color = "red";
-    // FORM_NOTICE.style.opacity = 1;
-    // FORM_NOTICE.innerHTML = "Error: You cannot have empty inputs.";
+    FORM_NOTICE.style.color = "red";
+    FORM_NOTICE.style.opacity = 1;
+    FORM_NOTICE.innerHTML = "Error: You cannot have empty inputs.";
   }
 }
