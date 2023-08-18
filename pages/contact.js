@@ -44,13 +44,6 @@ export default function Contact({ dogs_data }) {
     TriggerExitAnimations();
   }, []);
 
-  useEffect(() => {
-    if (document.getElementById("adoptSelection")) {
-      document.getElementById("adoptSelection").innerText =
-        sessionStorage.getItem("Adopt Select");
-    }
-  }, []);
-
   return (
     <div id="PAGE" className="page overrides_Contact full-second">
       <PageHead />
