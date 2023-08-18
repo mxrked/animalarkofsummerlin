@@ -22,6 +22,67 @@
 }
 
 // Desktop
+.contact_top {
+  height: 615px;
+  @include displayElement(flex, center, center);
+  text-align: center;
+  margin-bottom: 50px;
+
+  .contact_top_cnt {
+    h1 {
+      white-space: pre-wrap;
+      font-family: "Poppins Bold";
+      font-size: $Heading;
+      text-transform: uppercase;
+      line-height: 40px;
+      color: $EbonyClay;
+      margin-bottom: 40px;
+
+      span {
+        color: $RoyalPurple;
+      }
+    }
+
+    p {
+      white-space: pre-wrap;
+      font-family: "Lato Regular";
+      font-size: $Text;
+      color: $EbonyClay;
+      margin-top: 20px;
+      margin-bottom: 45px;
+      @include quickCenter("relative");
+      max-width: 890px;
+    }
+
+    .contact_top_cnt_btns {
+      width: 100%;
+      max-width: 400px;
+      @include quickCenter("relative");
+      @include displayElement(flex, space-evenly, center);
+
+      button {
+        height: 45px;
+        font-family: "Lato Bold";
+        font-size: clamp(17px, 19px, 19px);
+        background-color: $Scampi;
+        color: $Gallery;
+        width: 100%;
+
+        &:hover {
+          background-color: $RoyalPurple;
+        }
+      }
+
+      .contact_form_btn {
+        max-width: 155px;
+      }
+
+      .adopt_form_btn {
+        max-width: 170px;
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {

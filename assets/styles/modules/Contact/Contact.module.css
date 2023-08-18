@@ -13,4 +13,61 @@
 @font-face {
   font-family: "Lato Regular";
   src: url("../../../fonts/Lato-Regular.ttf");
+}
+.contact_top {
+  height: 615px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.contact_top .contact_top_cnt h1 {
+  white-space: pre-wrap;
+  font-family: "Poppins Bold";
+  font-size: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+  text-transform: uppercase;
+  line-height: 40px;
+  color: #222831;
+  margin-bottom: 40px;
+}
+.contact_top .contact_top_cnt h1 span {
+  color: #6639a6;
+}
+.contact_top .contact_top_cnt p {
+  white-space: pre-wrap;
+  font-family: "Lato Regular";
+  font-size: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  color: #222831;
+  margin-top: 20px;
+  margin-bottom: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 890px;
+}
+.contact_top .contact_top_cnt .contact_top_cnt_btns {
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contact_top .contact_top_cnt .contact_top_cnt_btns button {
+  height: 45px;
+  font-family: "Lato Bold";
+  font-size: 19px;
+  background-color: #645caa;
+  color: #eeeeee;
+  width: 100%;
+}
+.contact_top .contact_top_cnt .contact_top_cnt_btns button:hover {
+  background-color: #6639a6;
+}
+.contact_top .contact_top_cnt .contact_top_cnt_btns .contact_form_btn {
+  max-width: 155px;
+}
+.contact_top .contact_top_cnt .contact_top_cnt_btns .adopt_form_btn {
+  max-width: 170px;
 }/*# sourceMappingURL=Contact.module.css.map */
