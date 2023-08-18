@@ -13,10 +13,15 @@ import { FADE_UP } from "../../../animations/FADES";
 
 import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
 import ManipElement from "@/assets/functions/dom/manip/ManipElement";
+import EmailSend from "@/assets/functions/data/email/AdoptionFormSend";
 
 import styles from "../../../styles/modules/Contact/Contact.module.css";
+import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
+import DeclareStorageVariable from "@/assets/functions/data/storage/DeclareStorageVariable";
 
 export const ContactAdoptForm = (props) => {
+  const router = useRouter();
+
   const CONTROLS = useAnimation();
   const [REF, INVIEW] = useInView();
 
@@ -41,6 +46,8 @@ export const ContactAdoptForm = (props) => {
       ManipElement(DOGS_SELECT_LABEL, "disable");
       ManipElement(DOGS_SELECT, "disable");
     }
+
+    console.log(document.getElementById("emailDogName").selectedIndex);
   }, []);
 
   const STATES_ARRAY = [
@@ -109,7 +116,32 @@ export const ContactAdoptForm = (props) => {
         variants={FADE_UP}
         className={`${styles.contact_adopt_form_cnt} fm-motion fade-up fade-up-fix`}
       >
-        <form>
+        <span
+          id="adoptFormNotice"
+          className={`${styles.form_notice} orientation-change-element half-second`}
+        >
+          INSERT_ERROR_HERE
+        </span>
+
+        <form
+          id="adoptionForm"
+          noValidate="noValidate"
+          autoComplete={"false"}
+          onSubmit={(e) => {
+            EmailSend(router, e);
+          }}
+          onReset={(e) => {
+            // Removing Adopt Select cookie
+            RemoveStorageVariable("session", "Adopt Select");
+
+            // Enabling the first input field and label
+            ManipElement(
+              document.getElementById("emailDogNameLabel"),
+              "enable"
+            );
+            ManipElement(document.getElementById("emailDogName"), "enable");
+          }}
+        >
           <div className={`${styles.form_box} container-fluid`}>
             <div className={`${styles.form_row} ${styles.single_row} row`}>
               <div
@@ -128,6 +160,20 @@ export const ContactAdoptForm = (props) => {
                     name="emailDogName"
                     id="emailDogName"
                     className="orientation-change-element half-second"
+                    onChange={(e) => {
+                      // Changing Adopt Select cookie on selection change
+                      if (e.currentTarget.selectedIndex !== 0) {
+                        RemoveStorageVariable("session", "Adopt Select");
+                        DeclareStorageVariable(
+                          "session",
+                          "Adopt Select",
+                          e.currentTarget.options[e.currentTarget.selectedIndex]
+                            .text
+                        );
+                      } else {
+                        RemoveStorageVariable("session", "Adopt Select");
+                      }
+                    }}
                   >
                     <option>-- NOT SELECTED --</option>
 
@@ -277,7 +323,11 @@ export const ContactAdoptForm = (props) => {
                     State
                   </label>
 
-                  <select>
+                  <select
+                    id="emailState"
+                    name="emailState"
+                    className="orientation-change-element half-second"
+                  >
                     <option>-- NOT SELECTED --</option>
 
                     {STATES_ARRAY.map((s) => (
@@ -310,8 +360,29 @@ export const ContactAdoptForm = (props) => {
             <div className={`${styles.form_row} ${styles.single_row} row`}>
               <div
                 className={`${styles.form_side} col-lg-12 col-md-12 col-sm-12 col-xs-12`}
-              ></div>
+              >
+                <div className={`${styles.form_side_cnt}`}>
+                  <label
+                    for="emailMessage"
+                    id="emailMessageLabel"
+                    className="orientation-change-element half-second"
+                  >
+                    Message/Details
+                  </label>
+
+                  <textarea
+                    id="emailMessage"
+                    name="emailMessage"
+                    className="orientation-change-element half-second"
+                  />
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div className={`${styles.form_btns}`}>
+            <button type={"submit"}>Send</button>
+            <button type={"reset"}>Clear</button>
           </div>
         </form>
       </motion.div>

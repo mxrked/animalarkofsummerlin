@@ -37,10 +37,20 @@ export const ContactTop = () => {
       router.asPath.indexOf("/contact") > -1 ||
       router.asPath.indexOf("#contact_form") > -1
     ) {
+      setTimeout(() => {
+        document.getElementById("contactForm").style.display = "block";
+        document.getElementById("contactAdoptForm").style.display = "none";
+      }, 400);
+
       ManipBtn(BTNS[0], "disable", BTNS);
     }
 
     if (router.asPath.indexOf("#adopt_form") > -1) {
+      setTimeout(() => {
+        document.getElementById("contactForm").style.display = "none";
+        document.getElementById("contactAdoptForm").style.display = "block";
+      }, 400);
+
       ManipBtn(BTNS[1], "disable", BTNS);
     }
   }, []);
@@ -75,6 +85,10 @@ export const ContactTop = () => {
                 document.getElementById("adoptFormBtn"),
               ];
 
+              document.getElementById("contactAdoptForm").style.display =
+                "none";
+              document.getElementById("contactForm").style.display = "block";
+
               ManipBtn(BTNS[0], "disable", BTNS);
             }}
             id="contactFormBtn"
@@ -88,6 +102,10 @@ export const ContactTop = () => {
                 document.getElementById("contactFormBtn"),
                 document.getElementById("adoptFormBtn"),
               ];
+
+              document.getElementById("contactAdoptForm").style.display =
+                "block";
+              document.getElementById("contactForm").style.display = "none";
 
               ManipBtn(BTNS[1], "disable", BTNS);
             }}
