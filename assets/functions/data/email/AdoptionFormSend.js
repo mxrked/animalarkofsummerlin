@@ -12,6 +12,7 @@ import emailjs from "@emailjs/browser";
 
 import CheckValidEmail from "./CheckValidEmail";
 import CheckValidPhoneNumber from "./CheckValidPhoneNumber";
+import CheckValidZip from "./CheckValidZip";
 import DeclareStorageVariable from "../storage/DeclareStorageVariable";
 
 const SERVICE_ID = "service_zswk7hi";
@@ -37,7 +38,9 @@ export default function EmailSend(rooter, formTarget) {
   const DOG_NAME = document.getElementById("emailDogName");
   const DOG_NAME_SELECTED_INDEX = DOG_NAME.selectedIndex;
   const STREET_ADDRESS = document.getElementById("emailStreetAddress");
+  const CITY = document.getElementById("emailCity");
   const STATE = document.getElementById("emailState");
+  const STATE_SELECTED_INDEX = STATE.selectedIndex;
   const ZIP_CODE = document.getElementById("emailZipCode");
   const CLIENT_EMAIL_ADDRESS = document.getElementById("emailClientEmail");
   const PHONE_NUMBER = document.getElementById("emailPhoneNumber");
@@ -49,7 +52,8 @@ export default function EmailSend(rooter, formTarget) {
     emailFullName: FULL_NAME,
     emailDogName: DOG_NAME.options[DOG_NAME_SELECTED_INDEX].text,
     emailStreetAddress: STREET_ADDRESS.value,
-    emailState: STATE.value,
+    emailState: STATE.options[STATE_SELECTED_INDEX].text,
+    emailCity: CITY.value,
     emailZipCode: ZIP_CODE.value,
     emailPhoneNumber: PHONE_NUMBER.value,
     emailClientEmail: CLIENT_EMAIL_ADDRESS.value,
@@ -59,21 +63,24 @@ export default function EmailSend(rooter, formTarget) {
   // Value checkers
   const CHECK_PHONE_NUMBER = CheckValidPhoneNumber(PHONE_NUMBER);
   const CHECK_EMAIL = CheckValidEmail(CLIENT_EMAIL_ADDRESS);
+  const CHECK_ZIP = CheckValidZip(ZIP_CODE);
 
   // Value spacers
   const SPACE_FIRST_NAME = CheckForSpaceInFirstCharacter(FIRST_NAME);
   const SPACE_LAST_NAME = CheckForSpaceInFirstCharacter(LAST_NAME);
   const SPACE_EMAIL = CheckForSpaceInFirstCharacter(CLIENT_EMAIL_ADDRESS);
   const SPACE_MESSAGE = CheckForSpaceInFirstCharacter(MESSAGE);
+  const SPACE_CITY = CheckForSpaceInFirstCharacter(CITY);
   const SPACE_STREET_ADDRESS = CheckForSpaceInFirstCharacter(STREET_ADDRESS);
   const SPACE_ZIP_CODE = CheckForSpaceInFirstCharacter(ZIP_CODE);
-  const SPACE_STATE = CheckForSpaceInFirstCharacter(STATE);
+  // const SPACE_STATE = CheckForSpaceInFirstCharacter(STATE);
 
   // Validation checks
   let nonEmptyInputs = false;
   let noSpacesAsFirstCharacter = false;
   let validEmail = false;
   let validPhone = false;
+  let validZip = false;
   let sentSuccess = false; // This is used to determine if the email was sent successfully
 
   // Prevents the form send
@@ -86,8 +93,9 @@ export default function EmailSend(rooter, formTarget) {
     CLIENT_EMAIL_ADDRESS.value != "" &&
     DOG_NAME.value != "-- NOT SELECTED --" &&
     STREET_ADDRESS.value != "" &&
+    CITY.value != "" &&
     ZIP_CODE.value != "" &&
-    STATE.value != "" &&
+    STATE.value != "-- NOT SELECTED --" &&
     PHONE_NUMBER.value != "" &&
     MESSAGE.value != ""
   ) {
@@ -108,47 +116,60 @@ export default function EmailSend(rooter, formTarget) {
         // Style form notice
         // ....
 
-        if (
-          !SPACE_FIRST_NAME &&
-          !SPACE_LAST_NAME &&
-          !SPACE_EMAIL &&
-          !SPACE_MESSAGE &&
-          !SPACE_STATE &&
-          !SPACE_STREET_ADDRESS &&
-          !SPACE_ZIP_CODE
-        ) {
-          noSpacesAsFirstCharacter = true;
+        if (CHECK_ZIP) {
+          validZip = true;
 
           // Style form notice
           // ....
 
-          formTarget.preventDefault();
+          if (
+            !SPACE_FIRST_NAME &&
+            !SPACE_LAST_NAME &&
+            !SPACE_EMAIL &&
+            !SPACE_MESSAGE &&
+            // !SPACE_STATE &&
+            !SPACE_CITY &&
+            !SPACE_STREET_ADDRESS &&
+            !SPACE_ZIP_CODE
+          ) {
+            noSpacesAsFirstCharacter = true;
 
-          // Sending the email
-          emailjs
-            .send(SERVICE_ID, TEMPLATE_ID, TEMPLATE_PARAMS)
-            .then((res) => {
-              console.log("Email sent successfully: " + res);
+            // Style form notice
+            // ....
 
-              sentSuccess = true;
+            formTarget.preventDefault();
 
-              DeclareStorageVariable("session", "Submission Sent", true);
+            // Sending the email
+            emailjs
+              .send(SERVICE_ID, TEMPLATE_ID, TEMPLATE_PARAMS)
+              .then((res) => {
+                console.log("Email sent successfully: " + res);
 
-              setTimeout(() => {
-                if (sentSuccess) {
-                  rooter.reload();
-                }
-              }, 300);
-            })
-            .catch((error) => {
-              console.error("Error sending email: " + error);
-            });
+                sentSuccess = true;
+
+                DeclareStorageVariable("session", "Submission Sent", true);
+
+                setTimeout(() => {
+                  if (sentSuccess) {
+                    rooter.reload();
+                  }
+                }, 300);
+              })
+              .catch((error) => {
+                console.error("Error sending email: " + error);
+              });
+          } else {
+            noSpacesAsFirstCharacter = false;
+            //   FORM_NOTICE.style.color = "red";
+            //   FORM_NOTICE.style.opacity = 1;
+            //   FORM_NOTICE.innerHTML =
+            //     "Error: You cannot have a space as the first character in an input.";
+          }
         } else {
-          noSpacesAsFirstCharacter = false;
-          //   FORM_NOTICE.style.color = "red";
-          //   FORM_NOTICE.style.opacity = 1;
-          //   FORM_NOTICE.innerHTML =
-          //     "Error: You cannot have a space as the first character in an input.";
+          validZip = false;
+          // FORM_NOTICE.style.color = "red";
+          // FORM_NOTICE.style.opacity = 1;
+          // FORM_NOTICE.innerHTML = "Error: That is an invalid zip code.";
         }
       } else {
         validPhone = false;
