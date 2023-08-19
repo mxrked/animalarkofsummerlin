@@ -33,18 +33,18 @@ function CheckForSpaceInFirstCharacter(input) {
 
 export default function EmailSend(rooter, formTarget) {
   const FORM_NOTICE = document.getElementById("adoptFormNotice");
-  const FIRST_NAME = document.getElementById("emailFirstName");
-  const LAST_NAME = document.getElementById("emailLastName");
+  const FIRST_NAME = document.getElementById("emailFirstName_A");
+  const LAST_NAME = document.getElementById("emailLastName_A");
   const DOG_NAME = document.getElementById("emailDogName");
   const DOG_NAME_SELECTED_INDEX = DOG_NAME.selectedIndex;
-  const STREET_ADDRESS = document.getElementById("emailStreetAddress");
-  const CITY = document.getElementById("emailCity");
+  const STREET_ADDRESS = document.getElementById("emailStreetAddress_A");
+  const CITY = document.getElementById("emailCity_A");
   const STATE = document.getElementById("emailState");
   const STATE_SELECTED_INDEX = STATE.selectedIndex;
-  const ZIP_CODE = document.getElementById("emailZipCode");
-  const CLIENT_EMAIL_ADDRESS = document.getElementById("emailClientEmail");
-  const PHONE_NUMBER = document.getElementById("emailPhoneNumber");
-  const MESSAGE = document.getElementById("emailMessage");
+  const ZIP_CODE = document.getElementById("emailZipCode_A");
+  const CLIENT_EMAIL_ADDRESS = document.getElementById("emailClientEmail_A");
+  const PHONE_NUMBER = document.getElementById("emailPhoneNumber_A");
+  const MESSAGE = document.getElementById("emailMessage_A");
 
   const FULL_NAME = LAST_NAME.value + ", " + FIRST_NAME.value;
 

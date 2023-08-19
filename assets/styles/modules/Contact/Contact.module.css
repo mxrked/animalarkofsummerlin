@@ -74,8 +74,319 @@
 
 .contact_form {
   display: block;
+  margin-bottom: 250px;
+}
+.contact_form .contact_form_cnt {
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.contact_form .contact_form_cnt h1 {
+  white-space: pre-wrap;
+  font-family: "Poppins Bold";
+  font-size: clamp(2.5rem, 2.8vw, 2.8rem);
+  text-transform: uppercase;
+  line-height: 40px;
+  color: #222831;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.contact_form .contact_form_cnt .form_notice {
+  white-space: pre-wrap;
+  font-family: "Lato Bold";
+  font-size: 16px;
+  line-height: 40px;
+  color: #222831;
+  margin-bottom: 40px;
+  text-align: center;
+  display: block;
+}
+.contact_form .contact_form_cnt form .form_box .form_row .form_side {
+  height: 120px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact_form .contact_form_cnt form .form_box .form_row .form_side .form_side_cnt {
+  max-width: 97%;
+  text-align: left;
+}
+.contact_form .contact_form_cnt form .form_box .form_row .form_side_R {
+  justify-content: flex-end;
+}
+.contact_form .contact_form_cnt form .form_box .single_row {
+  margin-bottom: 25px;
+}
+.contact_form .contact_form_cnt form .form_box .single_row .form_side {
+  width: 100%;
+  max-width: 100%;
+}
+.contact_form .contact_form_cnt form .form_box .single_row .form_side .form_side_cnt {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+.contact_form .contact_form_cnt form .form_box .single_row .form_side .form_side_cnt label {
+  font-family: "Lato Bold";
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  color: #645caa;
+  display: block;
+  cursor: pointer;
+}
+.contact_form .contact_form_cnt form .form_box .single_row .form_side .form_side_cnt label span {
+  font-size: 15px;
+}
+.contact_form .contact_form_cnt form .form_box .single_row .form_side .form_side_cnt input {
+  height: 35px;
+  background-color: #eeeeee;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: "Lato Regular";
+}
+.contact_form .contact_form_cnt form .form_box .single_row .form_side .form_side_cnt textarea {
+  height: 115px;
+  background-color: #eeeeee;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 5px;
+  padding: 8px;
+  font-family: "Lato Regular";
+  resize: none;
+}
+.contact_form .contact_form_cnt form .form_box .double_row .form_side {
+  max-width: 50%;
+  width: 100%;
+}
+.contact_form .contact_form_cnt form .form_box .double_row .form_side .form_side_cnt {
+  display: block;
+  width: 100%;
+}
+.contact_form .contact_form_cnt form .form_box .double_row .form_side .form_side_cnt label {
+  font-family: "Lato Bold";
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  color: #645caa;
+  display: block;
+  cursor: pointer;
+}
+.contact_form .contact_form_cnt form .form_box .double_row .form_side .form_side_cnt label span {
+  font-size: 15px;
+}
+.contact_form .contact_form_cnt form .form_box .double_row .form_side .form_side_cnt input {
+  height: 35px;
+  background-color: #eeeeee;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: "Lato Regular";
+}
+.contact_form .contact_form_cnt form .form_btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+}
+.contact_form .contact_form_cnt form .form_btns button {
+  height: 45px;
+  color: #eeeeee;
+  font-family: "Lato Bold";
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+}
+.contact_form .contact_form_cnt form .form_btns .send {
+  background-color: #645caa;
+  width: 100%;
+  max-width: 80px;
+}
+.contact_form .contact_form_cnt form .form_btns .send:hover {
+  background-color: #6639a6;
+}
+.contact_form .contact_form_cnt form .form_btns .reset {
+  background-color: #3d84a8;
+  width: 100%;
+  max-width: 80px;
+}
+.contact_form .contact_form_cnt form .form_btns .reset:hover {
+  background-color: #07689f;
 }
 
 .contact_adopt_form {
   display: none;
+  margin-bottom: 250px;
+}
+.contact_adopt_form .contact_adopt_form_cnt {
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.contact_adopt_form .contact_adopt_form_cnt h1 {
+  white-space: pre-wrap;
+  font-family: "Poppins Bold";
+  font-size: clamp(2.5rem, 2.8vw, 2.8rem);
+  text-transform: uppercase;
+  line-height: 40px;
+  color: #222831;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.contact_adopt_form .contact_adopt_form_cnt .form_notice {
+  white-space: pre-wrap;
+  font-family: "Lato Bold";
+  font-size: 16px;
+  line-height: 40px;
+  color: #222831;
+  margin-bottom: 40px;
+  text-align: center;
+  display: block;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .form_row .form_side {
+  height: 120px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .form_row .form_side .form_side_cnt {
+  max-width: 97%;
+  text-align: left;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .form_row .form_side_R {
+  justify-content: flex-end;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row .form_side {
+  width: 100%;
+  max-width: 100%;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row .form_side .form_side_cnt {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row .form_side .form_side_cnt label {
+  font-family: "Lato Bold";
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  color: #645caa;
+  display: block;
+  cursor: pointer;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row .form_side .form_side_cnt label span {
+  font-size: 15px;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row .form_side .form_side_cnt select {
+  height: 35px;
+  background-color: #eeeeee;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: "Lato Regular";
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row .form_side .form_side_cnt input {
+  height: 35px;
+  background-color: #eeeeee;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: "Lato Regular";
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row .form_side .form_side_cnt textarea {
+  height: 115px;
+  background-color: #eeeeee;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 5px;
+  padding: 8px;
+  font-family: "Lato Regular";
+  resize: none;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side {
+  max-width: 50%;
+  width: 100%;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side .form_side_cnt {
+  display: block;
+  width: 100%;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side .form_side_cnt label {
+  font-family: "Lato Bold";
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  color: #645caa;
+  display: block;
+  cursor: pointer;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side .form_side_cnt label span {
+  font-size: 15px;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side .form_side_cnt select {
+  height: 35px;
+  background-color: #eeeeee;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: "Lato Regular";
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side .form_side_cnt input {
+  height: 35px;
+  background-color: #eeeeee;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: "Lato Regular";
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_btns button {
+  height: 45px;
+  color: #eeeeee;
+  font-family: "Lato Bold";
+  font-size: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_btns .send {
+  background-color: #645caa;
+  width: 100%;
+  max-width: 80px;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_btns .send:hover {
+  background-color: #6639a6;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_btns .reset {
+  background-color: #3d84a8;
+  width: 100%;
+  max-width: 80px;
+}
+.contact_adopt_form .contact_adopt_form_cnt form .form_btns .reset:hover {
+  background-color: #07689f;
 }/*# sourceMappingURL=Contact.module.css.map */

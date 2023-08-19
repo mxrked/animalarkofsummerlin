@@ -85,9 +85,376 @@
 }
 .contact_form {
   display: block;
+  margin-bottom: 250px;
+
+  .contact_form_cnt {
+    max-width: 840px;
+    @include quickCenter("relative");
+    padding-left: 30px;
+    padding-right: 30px;
+
+    h1 {
+      white-space: pre-wrap;
+      font-family: "Poppins Bold";
+      font-size: clamp(2.5rem, 2.8vw, 2.8rem);
+      text-transform: uppercase;
+      line-height: 40px;
+      color: $EbonyClay;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .form_notice {
+      white-space: pre-wrap;
+      font-family: "Lato Bold";
+      font-size: clamp(15px, 16px, 16px);
+      // text-transform: uppercase;
+      line-height: 40px;
+      color: $EbonyClay;
+      margin-bottom: 40px;
+      text-align: center;
+      display: block;
+    }
+
+    form {
+      .form_box {
+        .form_row {
+          .form_side {
+            height: 120px;
+            @include displayElement(flex, flex-start, center);
+
+            .form_side_cnt {
+              max-width: 97%;
+              text-align: left;
+            }
+          }
+
+          .form_side_R {
+            justify-content: flex-end;
+          }
+        }
+
+        .single_row {
+          margin-bottom: 25px;
+
+          .form_side {
+            width: 100%;
+            max-width: 100%;
+
+            .form_side_cnt {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+
+              label {
+                font-family: "Lato Bold";
+                font-size: $Link;
+                color: $Scampi;
+                display: block;
+                cursor: pointer;
+
+                span {
+                  font-size: clamp(14px, 15px, 15px);
+                }
+              }
+
+              input {
+                height: 35px;
+                background-color: $Gallery;
+                width: 100%;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-family: "Lato Regular";
+              }
+
+              textarea {
+                height: 115px;
+                background-color: $Gallery;
+                width: 100%;
+                margin-top: 15px;
+                border-radius: 5px;
+                padding: 8px;
+                font-family: "Lato Regular";
+                resize: none;
+              }
+            }
+          }
+        }
+
+        .double_row {
+          .form_side {
+            max-width: 50%;
+            width: 100%;
+
+            .form_side_cnt {
+              display: block;
+              width: 100%;
+
+              label {
+                font-family: "Lato Bold";
+                font-size: $Link;
+                color: $Scampi;
+                display: block;
+                cursor: pointer;
+
+                span {
+                  font-size: clamp(14px, 15px, 15px);
+                }
+              }
+
+              input {
+                height: 35px;
+                background-color: $Gallery;
+                width: 100%;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-family: "Lato Regular";
+              }
+            }
+          }
+        }
+      }
+
+      .form_btns {
+        @include displayElement(flex, space-evenly, center);
+        max-width: 240px;
+        @include quickCenter("relative");
+        margin-top: 70px;
+
+        button {
+          height: 45px;
+          color: $Gallery;
+          font-family: "Lato Bold";
+          font-size: $Link;
+        }
+
+        .send {
+          background-color: $Scampi;
+          width: 100%;
+          max-width: 80px;
+
+          &:hover {
+            background-color: $RoyalPurple;
+          }
+        }
+
+        .reset {
+          background-color: $BostonBlue;
+          width: 100%;
+          max-width: 80px;
+
+          &:hover {
+            background-color: $BahamaBlue;
+          }
+        }
+      }
+    }
+  }
 }
 .contact_adopt_form {
   display: none;
+  margin-bottom: 250px;
+
+  .contact_adopt_form_cnt {
+    max-width: 840px;
+    @include quickCenter("relative");
+    padding-left: 30px;
+    padding-right: 30px;
+
+    h1 {
+      white-space: pre-wrap;
+      font-family: "Poppins Bold";
+      font-size: clamp(2.5rem, 2.8vw, 2.8rem);
+      text-transform: uppercase;
+      line-height: 40px;
+      color: $EbonyClay;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .form_notice {
+      white-space: pre-wrap;
+      font-family: "Lato Bold";
+      font-size: clamp(15px, 16px, 16px);
+      // text-transform: uppercase;
+      line-height: 40px;
+      color: $EbonyClay;
+      margin-bottom: 40px;
+      text-align: center;
+      display: block;
+    }
+
+    form {
+      .form_box {
+        .form_row {
+          .form_side {
+            height: 120px;
+            @include displayElement(flex, flex-start, center);
+
+            .form_side_cnt {
+              max-width: 97%;
+              text-align: left;
+            }
+          }
+
+          .form_side_R {
+            justify-content: flex-end;
+          }
+        }
+
+        .single_row {
+          margin-top: 30px;
+          margin-bottom: 0px;
+
+          .form_side {
+            width: 100%;
+            max-width: 100%;
+
+            .form_side_cnt {
+              display: block;
+              width: 100%;
+              max-width: 100%;
+
+              label {
+                font-family: "Lato Bold";
+                font-size: $Link;
+                color: $Scampi;
+                display: block;
+                cursor: pointer;
+
+                span {
+                  font-size: clamp(14px, 15px, 15px);
+                }
+              }
+
+              select {
+                height: 35px;
+                background-color: $Gallery;
+                width: 100%;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-family: "Lato Regular";
+              }
+
+              input {
+                height: 35px;
+                background-color: $Gallery;
+                width: 100%;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-family: "Lato Regular";
+              }
+
+              textarea {
+                height: 115px;
+                background-color: $Gallery;
+                width: 100%;
+                margin-top: 15px;
+                border-radius: 5px;
+                padding: 8px;
+                font-family: "Lato Regular";
+                resize: none;
+              }
+            }
+          }
+        }
+
+        .double_row {
+          .form_side {
+            max-width: 50%;
+            width: 100%;
+
+            .form_side_cnt {
+              display: block;
+              width: 100%;
+
+              label {
+                font-family: "Lato Bold";
+                font-size: $Link;
+                color: $Scampi;
+                display: block;
+                cursor: pointer;
+
+                span {
+                  font-size: clamp(14px, 15px, 15px);
+                }
+              }
+
+              select {
+                height: 35px;
+                background-color: $Gallery;
+                width: 100%;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-family: "Lato Regular";
+              }
+
+              input {
+                height: 35px;
+                background-color: $Gallery;
+                width: 100%;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                padding-left: 8px;
+                padding-right: 8px;
+                font-family: "Lato Regular";
+              }
+            }
+          }
+        }
+      }
+
+      .form_btns {
+        @include displayElement(flex, space-evenly, center);
+        max-width: 240px;
+        @include quickCenter("relative");
+        margin-top: 70px;
+
+        button {
+          height: 45px;
+          color: $Gallery;
+          font-family: "Lato Bold";
+          font-size: $Link;
+        }
+
+        .send {
+          background-color: $Scampi;
+          width: 100%;
+          max-width: 80px;
+
+          &:hover {
+            background-color: $RoyalPurple;
+          }
+        }
+
+        .reset {
+          background-color: $BostonBlue;
+          width: 100%;
+          max-width: 80px;
+
+          &:hover {
+            background-color: $BahamaBlue;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Responsive
