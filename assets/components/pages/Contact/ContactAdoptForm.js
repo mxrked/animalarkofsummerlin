@@ -116,11 +116,15 @@ export const ContactAdoptForm = (props) => {
         variants={FADE_UP}
         className={`${styles.contact_adopt_form_cnt} fm-motion fade-up fade-up-fix`}
       >
+        <h1 className="orientation-change-element half-second">
+          Adoption Form
+        </h1>
+
         <span
           id="adoptFormNotice"
           className={`${styles.form_notice} orientation-change-element half-second`}
         >
-          INSERT_ERROR_HERE
+          &nbsp;
         </span>
 
         <form
@@ -177,20 +181,22 @@ export const ContactAdoptForm = (props) => {
                   >
                     <option>-- NOT SELECTED --</option>
 
-                    {props.dogs.map((dog) => (
-                      <option>{dog._dogName}</option>
-                    ))}
+                    {props.dogs.map((dog) =>
+                      dog._dogAdoptStatus === "Available" ? (
+                        <option>{dog._dogName}</option>
+                      ) : null
+                    )}
                   </select>
                 </div>
               </div>
             </div>
             <div className={`${styles.form_row} ${styles.double_row} row`}>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_L} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
-                    for="emailFirstName"
+                    for="emailFirstName_A"
                     id="emailFirstNameLabel"
                     className="orientation-change-element half-second"
                   >
@@ -199,18 +205,18 @@ export const ContactAdoptForm = (props) => {
 
                   <input
                     type="text"
-                    id="emailFirstName"
+                    id="emailFirstName_A"
                     name="emailFirstName"
                     className="orientation-change-element half-second"
                   />
                 </div>
               </div>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_R} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
-                    for="emailLastName"
+                    for="emailLastName_A"
                     id="emailLastNameLabel"
                     className="orientation-change-element half-second"
                   >
@@ -219,7 +225,7 @@ export const ContactAdoptForm = (props) => {
 
                   <input
                     type="text"
-                    id="emailLastName"
+                    id="emailLastName_A"
                     name="emailLastName"
                     className="orientation-change-element half-second"
                   />
@@ -228,11 +234,11 @@ export const ContactAdoptForm = (props) => {
             </div>
             <div className={`${styles.form_row} ${styles.double_row} row`}>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_L} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
-                    for="emailClientEmail"
+                    for="emailClientEmail_A"
                     id="emailClientEmailLabel"
                     className="orientation-change-element half-second"
                   >
@@ -241,18 +247,18 @@ export const ContactAdoptForm = (props) => {
 
                   <input
                     type="email"
-                    id="emailClientEmail"
+                    id="emailClientEmail_A"
                     name="emailClientEmail"
                     className="orientation-change-element half-second"
                   />
                 </div>
               </div>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_R} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
-                    for="emailPhoneNumber"
+                    for="emailPhoneNumber_A"
                     id="emailPhoneNumberLabel"
                     className="orientation-change-element half-second"
                   >
@@ -261,7 +267,7 @@ export const ContactAdoptForm = (props) => {
 
                   <input
                     type="tel"
-                    id="emailPhoneNumber"
+                    id="emailPhoneNumber_A"
                     name="emailPhoneNumber"
                     className="orientation-change-element half-second"
                   />
@@ -270,11 +276,11 @@ export const ContactAdoptForm = (props) => {
             </div>
             <div className={`${styles.form_row} ${styles.double_row} row`}>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_L} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
-                    for="emailStreetAddress"
+                    for="emailStreetAddress_A"
                     id="emailStreetAddressLabel"
                     className="orientation-change-element half-second"
                   >
@@ -283,18 +289,18 @@ export const ContactAdoptForm = (props) => {
 
                   <input
                     type="text"
-                    id="emailStreetAddress"
+                    id="emailStreetAddress_A"
                     name="emailStreetAddress"
                     className="orientation-change-element half-second"
                   />
                 </div>
               </div>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_R} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
-                    for="emailCity"
+                    for="emailCity_A"
                     id="emailCityLabel"
                     className="orientation-change-element half-second"
                   >
@@ -303,7 +309,7 @@ export const ContactAdoptForm = (props) => {
 
                   <input
                     type="text"
-                    id="emailCity"
+                    id="emailCity_A"
                     name="emailCity"
                     className="orientation-change-element half-second"
                   />
@@ -312,7 +318,7 @@ export const ContactAdoptForm = (props) => {
             </div>
             <div className={`${styles.form_row} ${styles.double_row} row`}>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_L} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
@@ -337,11 +343,11 @@ export const ContactAdoptForm = (props) => {
                 </div>
               </div>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_R} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
-                    for="emailZipCode"
+                    for="emailZipCode_A"
                     id="emailZipCodeLabel"
                     className="orientation-change-element half-second"
                   >
@@ -350,7 +356,7 @@ export const ContactAdoptForm = (props) => {
 
                   <input
                     type="text"
-                    id="emailZipCode"
+                    id="emailZipCode_A"
                     name="emailZipCode"
                     className="orientation-change-element half-second"
                   />
@@ -363,7 +369,7 @@ export const ContactAdoptForm = (props) => {
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
-                    for="emailMessage"
+                    for="emailMessage_A"
                     id="emailMessageLabel"
                     className="orientation-change-element half-second"
                   >
@@ -371,7 +377,7 @@ export const ContactAdoptForm = (props) => {
                   </label>
 
                   <textarea
-                    id="emailMessage"
+                    id="emailMessage_A"
                     name="emailMessage"
                     className="orientation-change-element half-second"
                   />
@@ -381,8 +387,18 @@ export const ContactAdoptForm = (props) => {
           </div>
 
           <div className={`${styles.form_btns}`}>
-            <button type={"submit"}>Send</button>
-            <button type={"reset"}>Clear</button>
+            <button
+              type={"submit"}
+              className={`${styles.send} half-second orientation-change-element`}
+            >
+              Send
+            </button>
+            <button
+              type={"reset"}
+              className={`${styles.reset} half-second orientation-change-element`}
+            >
+              Clear
+            </button>
           </div>
         </form>
       </motion.div>

@@ -38,11 +38,13 @@ export const ContactForm = () => {
         variants={FADE_UP}
         className={`${styles.contact_form_cnt} fm-motion fade-up fade-up-fix`}
       >
+        <h1 className="orientation-change-element half-second">Contact Form</h1>
+
         <span
           id="contactFormNotice"
           className={`${styles.form_notice} orientation-change-element half-second`}
         >
-          INSERT_ERROR_HERE
+          &nbsp;
         </span>
 
         <form
@@ -56,7 +58,7 @@ export const ContactForm = () => {
           <div className={`${styles.form_box} container-fluid`}>
             <div className={`${styles.form_row} ${styles.double_row} row`}>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_L} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
@@ -76,7 +78,7 @@ export const ContactForm = () => {
                 </div>
               </div>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_R} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
@@ -98,7 +100,7 @@ export const ContactForm = () => {
             </div>
             <div className={`${styles.form_row} ${styles.double_row} row`}>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_L} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
@@ -118,7 +120,7 @@ export const ContactForm = () => {
                 </div>
               </div>
               <div
-                className={`${styles.form_side} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
+                className={`${styles.form_side} ${styles.form_side_R} col-lg-6 col-md-6 col-sm-12 col-xs-12`}
               >
                 <div className={`${styles.form_side_cnt}`}>
                   <label
@@ -184,8 +186,18 @@ export const ContactForm = () => {
           </div>
 
           <div className={`${styles.form_btns}`}>
-            <button type={"submit"}>Send</button>
-            <button type={"reset"}>Clear</button>
+            <button
+              type={"submit"}
+              className={`${styles.send} half-second orientation-change-element`}
+            >
+              Send
+            </button>
+            <button
+              type={"reset"}
+              className={`${styles.reset} half-second orientation-change-element`}
+            >
+              Clear
+            </button>
           </div>
         </form>
       </motion.div>
