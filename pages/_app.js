@@ -261,12 +261,10 @@ function MyApp({ Component, pageProps }) {
 
   //! Showing Page after some time
   useEffect(() => {
-    setTimeout(() => {
-      document.querySelectorAll(".page").forEach((page) => {
-        page.style.opacity = 1;
-        page.style.visibility = "visible";
-      });
-    }, 500);
+    document.querySelectorAll(".page").forEach((page) => {
+      page.style.opacity = 1;
+      page.style.visibility = "visible";
+    });
   }, [router]);
 
   return <Component {...pageProps} />;
