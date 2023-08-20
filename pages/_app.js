@@ -19,6 +19,7 @@ import CheckUserDevice from "@/assets/functions/dom/checkers/CheckUserDevice";
 import CheckMobileNavMenuStatus from "@/assets/functions/dom/checkers/CheckMobileNavMenuStatus";
 import CheckScreenOrientation from "@/assets/functions/dom/checkers/CheckScreenOrientation";
 import ManipFadeFixClasses from "@/assets/functions/dom/manip/ManipFadeFixClasses";
+import CheckPageClass from "@/assets/functions/dom/checkers/CheckPageClass";
 
 // Component Imports
 
@@ -27,7 +28,6 @@ import "../assets/styles/tools/global_classnames/global_classnames.css";
 import "../assets/styles/tools/overrides/overrides.css";
 import "../assets/styles/tools/resets/resets.css";
 import "../assets/styles/tools/library_styles/nprogress/nprogress.css";
-import CheckPageClass from "@/assets/functions/dom/checkers/CheckPageClass";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
