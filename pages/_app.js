@@ -105,6 +105,19 @@ function MyApp({ Component, pageProps }) {
     });
   }, [router]);
 
+  //! Reload Page if page is not visible
+  useEffect(() => {
+    setTimeout(() => {
+      if (sessionStorage.getItem("EA Fix")) {
+        if (document.querySelector(".page").style.visibility !== "visible") {
+          router.reload();
+        } else {
+          console.log("No need to refresh. The page is already visible.");
+        }
+      }
+    }, 1500);
+  }, []);
+
   //? DATA
   //! Session/Local Storage Clearing
   useEffect(() => {
