@@ -55,10 +55,12 @@ function TriggerExitAnimations() {
           }, 500);
         });
 
-        // setTimeout(() => {
-        //   document.querySelector(".page").style.opacity = 0;
-        //   document.querySelector(".page").style.visibility = "hidden";
-        // }, 600);
+        setTimeout(() => {
+          if (document.querySelector(".page")) {
+            document.querySelector(".page").style.opacity = 0;
+            document.querySelector(".page").style.visibility = "hidden";
+          }
+        }, 600);
 
         // Removing background color of navs
         // document.getElementById("desktopNav").style.backgroundColor =
@@ -97,9 +99,11 @@ function TriggerExitAnimations() {
             fm.style.opacity = 0;
           });
 
-          // Hiding elements
-          // document.querySelector(".page").style.opacity = 0;
-          // document.querySelector(".page").style.visibility = "hidden";
+          if (document.querySelector(".page")) {
+            // Hiding elements
+            document.querySelector(".page").style.opacity = 0;
+            document.querySelector(".page").style.visibility = "hidden";
+          }
         }, 2120);
 
         // Removing background color of navs
@@ -123,9 +127,11 @@ function TriggerExitAnimations_NON_LINKS() {
   document.body.style.overflowY = "hidden";
   document.body.style.pointerEvents = "none";
 
-  // Hiding page
-  // document.querySelector(".page").style.opacity = 0;
-  // document.querySelector(".page").style.visibility = "hidden";
+  if (document.querySelector(".page")) {
+    // Hiding page
+    document.querySelector(".page").style.opacity = 0;
+    document.querySelector(".page").style.visibility = "hidden";
+  }
 
   // Hiding elements
   document.querySelectorAll(".fm-motion").forEach((fm) => {
