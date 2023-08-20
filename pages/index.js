@@ -51,7 +51,7 @@ export default function Home({ index_dogs_data }) {
   }, []);
 
   return (
-    <div id="PAGE" className="page overrides_Index full-second">
+    <div id="PAGE" className="overrides_Index full-second">
       <PageHead />
       <DonationPopup />
       <NavTop />
