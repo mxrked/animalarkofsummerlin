@@ -459,9 +459,62 @@
 
 // Responsive
 @media all and (max-width: 1995px) {
+  .contact_top {
+    height: 470px;
+
+    .contact_top_cnt {
+      max-width: 900px;
+
+      h1 {
+        font-size: clamp(51px, 59px, 59px);
+        line-height: 30px;
+      }
+
+      p {
+        font-size: clamp(21px, 23px, 23px);
+        max-width: 660px;
+        @include quickCenter("relative");
+      }
+    }
+  }
 }
 
 @media all and (max-width: 991px) {
+  .contact_top {
+    height: 470px;
+
+    .contact_top_cnt {
+      max-width: 600px;
+
+      h1 {
+        font-size: clamp(3rem, 4vw, 4rem);
+        line-height: 48px;
+        max-width: 100%;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(19px, 21px, 21px);
+        @include quickCenter("relative");
+      }
+
+      .contact_top_cnt_btns {
+        button {
+          height: 40px;
+        }
+
+        .contact_form_btn {
+          max-width: 140px;
+          font-size: clamp(17px, 18px, 18px);
+        }
+
+        .adopt_form_btn {
+          max-width: 150px;
+          font-size: clamp(17px, 18px, 18px);
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -469,30 +522,390 @@
 
 // Desktop Window (Smallest)
 @media all and (max-width: 768px) {
+  .contact_top {
+    height: 450px;
+
+    .contact_top_cnt {
+      max-width: 600px;
+
+      h1 {
+        font-size: clamp(2rem, 3vw, 3rem);
+        line-height: 35px;
+        max-width: 270px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(17px, 19px, 19px);
+        @include quickCenter("relative");
+        max-width: 380px;
+      }
+
+      .contact_top_cnt_btns {
+        button {
+          height: 40px;
+        }
+
+        .contact_form_btn {
+          max-width: 125px;
+          font-size: clamp(15px, 16px, 16px);
+        }
+
+        .adopt_form_btn {
+          max-width: 140px;
+          font-size: clamp(15px, 16px, 16px);
+        }
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
+  .contact_top {
+    height: 380px;
+
+    .contact_top_cnt {
+      max-width: 300px;
+      padding-left: 25px;
+      padding-right: 25px;
+
+      h1 {
+        font-size: clamp(1.7rem, 2vw, 2rem);
+        line-height: 32px;
+        max-width: 100%;
+        @include quickCenter("relative");
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: clamp(15px, 17px, 17px);
+        @include quickCenter("relative");
+        max-width: 380px;
+        margin-top: 0px;
+        margin-bottom: 30px;
+      }
+
+      .contact_top_cnt_btns {
+        display: grid;
+        max-width: 200px;
+
+        button {
+          height: 40px;
+        }
+
+        .contact_form_btn {
+          @include quickCenter("relative");
+          width: 125px;
+          font-size: clamp(15px, 16px, 16px);
+          margin-bottom: 10px;
+        }
+
+        .adopt_form_btn {
+          @include quickCenter("relative");
+          width: 140px;
+          font-size: clamp(15px, 16px, 16px);
+        }
+      }
+    }
+  }
 }
 
 // Pixel 2 XL
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .contact_top {
+    height: 240px;
+
+    .contact_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(1.7rem, 2vw, 2rem);
+        line-height: 15px;
+        max-width: 100%;
+        @include quickCenter("relative");
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: clamp(15px, 16px, 16px);
+        max-width: 410px;
+        @include quickCenter("relative");
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+
+      .contact_top_cnt_btns {
+        display: flex;
+        max-width: 300px;
+
+        button {
+          height: 40px;
+        }
+
+        .contact_form_btn {
+          @include quickCenter("relative");
+          width: 125px;
+          font-size: clamp(16px, 17px, 17px);
+          margin-bottom: 0px;
+        }
+
+        .adopt_form_btn {
+          @include quickCenter("relative");
+          width: 140px;
+          font-size: clamp(16px, 17px, 17px);
+        }
+      }
+    }
+  }
 }
 
 // Ipad
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .contact_top {
+    height: 380px;
+
+    .contact_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(32px, 34px, 34px);
+        line-height: 18px;
+        max-width: 460px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(16px, 17px, 17px);
+        max-width: 420px;
+        @include quickCenter("relative");
+        margin-top: 2px;
+        margin-bottom: 30px;
+      }
+
+      .contact_top_cnt_btns {
+        display: flex;
+        max-width: 300px;
+
+        button {
+          height: 40px;
+        }
+
+        .contact_form_btn {
+          @include quickCenter("relative");
+          width: 125px;
+          font-size: clamp(16px, 17px, 17px);
+          margin-bottom: 0px;
+        }
+
+        .adopt_form_btn {
+          @include quickCenter("relative");
+          width: 140px;
+          font-size: clamp(16px, 17px, 17px);
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .contact_top {
+    height: 340px;
+
+    .contact_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(32px, 34px, 34px);
+        line-height: 19px;
+        max-width: 450px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(16px, 17px, 17px);
+        max-width: 450px;
+        @include quickCenter("relative");
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+
+      .contact_top_cnt_btns {
+        display: flex;
+        max-width: 300px;
+
+        button {
+          height: 40px;
+        }
+
+        .contact_form_btn {
+          @include quickCenter("relative");
+          width: 125px;
+          font-size: clamp(16px, 17px, 17px);
+          margin-bottom: 0px;
+        }
+
+        .adopt_form_btn {
+          @include quickCenter("relative");
+          width: 140px;
+          font-size: clamp(16px, 17px, 17px);
+        }
+      }
+    }
+  }
 }
 
 // iPad Pro
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .contact_top {
+    height: 390px;
+
+    .contact_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(35px, 37px, 37px);
+        line-height: 20px;
+        max-width: 555px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(17px, 18px, 18px);
+        max-width: 480px;
+        @include quickCenter("relative");
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+
+      .contact_top_cnt_btns {
+        display: flex;
+        max-width: 300px;
+
+        button {
+          height: 40px;
+        }
+
+        .contact_form_btn {
+          @include quickCenter("relative");
+          width: 125px;
+          font-size: clamp(16px, 17px, 17px);
+          margin-bottom: 0px;
+        }
+
+        .adopt_form_btn {
+          @include quickCenter("relative");
+          width: 140px;
+          font-size: clamp(16px, 17px, 17px);
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .contact_top {
+    height: 390px;
+
+    .contact_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(37px, 38px, 38px);
+        line-height: 20px;
+        max-width: 540px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(17px, 18px, 18px);
+        max-width: 480px;
+        @include quickCenter("relative");
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+
+      .contact_top_cnt_btns {
+        display: flex;
+        max-width: 300px;
+
+        button {
+          height: 40px;
+        }
+
+        .contact_form_btn {
+          @include quickCenter("relative");
+          width: 125px;
+          font-size: clamp(16px, 17px, 17px);
+          margin-bottom: 0px;
+        }
+
+        .adopt_form_btn {
+          @include quickCenter("relative");
+          width: 140px;
+          font-size: clamp(16px, 17px, 17px);
+        }
+      }
+    }
+  }
 }
 
 // Laptops
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .contact_top {
+    height: 440px;
+
+    .contact_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(45px, 46px, 46px);
+        line-height: 33px;
+        max-width: 600px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(19px, 20px, 20px);
+        max-width: 680px;
+        @include quickCenter("relative");
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+
+      .contact_top_cnt_btns {
+        display: flex;
+        max-width: 350px;
+
+        button {
+          height: 40px;
+        }
+
+        .contact_form_btn {
+          @include quickCenter("relative");
+          width: 135px;
+          font-size: clamp(16px, 17px, 17px);
+          margin-bottom: 0px;
+        }
+
+        .adopt_form_btn {
+          @include quickCenter("relative");
+          width: 150px;
+          font-size: clamp(16px, 17px, 17px);
+        }
+      }
+    }
+  }
 }
