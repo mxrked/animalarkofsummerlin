@@ -69,6 +69,8 @@ function TriggerExitAnimations() {
         // Route to href value
         setTimeout(() => {
           window.location.href = sessionStorage.getItem("HREF");
+          document.body.style.overflowY = "auto";
+          document.body.style.pointerEvents = "auto";
         }, 1000);
       });
     }
