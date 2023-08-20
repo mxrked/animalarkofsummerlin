@@ -96,8 +96,8 @@ function TriggerExitAnimations() {
           });
 
           // Hiding elements
-          document.querySelector(".page").style.opacity = 0;
-          document.querySelector(".page").style.visibility = "hidden";
+          // document.querySelector(".page").style.opacity = 0;
+          // document.querySelector(".page").style.visibility = "hidden";
         }, 2120);
 
         // Removing background color of navs
@@ -122,8 +122,8 @@ function TriggerExitAnimations_NON_LINKS() {
   document.body.style.pointerEvents = "none";
 
   // Hiding page
-  document.querySelector(".page").style.opacity = 0;
-  document.querySelector(".page").style.visibility = "hidden";
+  // document.querySelector(".page").style.opacity = 0;
+  // document.querySelector(".page").style.visibility = "hidden";
 
   // Hiding elements
   document.querySelectorAll(".fm-motion").forEach((fm) => {
