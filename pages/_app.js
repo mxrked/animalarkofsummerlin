@@ -276,7 +276,7 @@ function MyApp({ Component, pageProps }) {
     }, 2500);
   }, []);
 
-  //! Removing/Adding Page class depending on device
+  //! Removing/Adding Page class depending on device (THIS FIXES THE PAGE SHOW ISSUE WHEN POPSTATE CHANGES ON MOBILE DEVICES)
   useEffect(() => {
     window.addEventListener("load", () => {
       CheckPageClass();
