@@ -45,10 +45,10 @@ export default function Home({ index_dogs_data }) {
     TriggerExitAnimations();
   }, []);
 
-  useEffect(() => {
-    document.querySelector(".page").style.opacity = 1;
-    document.querySelector(".page").style.visibility = "visible";
-  }, []);
+  // useEffect(() => {
+  //   document.querySelector(".page").style.opacity = 1;
+  //   document.querySelector(".page").style.visibility = "visible";
+  // }, []);
 
   return (
     <div id="PAGE" className="overrides_Index full-second">
