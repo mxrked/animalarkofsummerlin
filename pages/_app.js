@@ -109,10 +109,12 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     setTimeout(() => {
       if (sessionStorage.getItem("EA Fix")) {
-        if (document.querySelector(".page").style.visibility !== "visible") {
-          router.reload();
-        } else {
-          console.log("No need to refresh. The page is already visible.");
+        if (document.querySelector(".page")) {
+          if (document.querySelector(".page").style.visibility !== "visible") {
+            router.reload();
+          } else {
+            console.log("No need to refresh. The page is already visible.");
+          }
         }
       }
     }, 1500);
