@@ -266,6 +266,11 @@ function MyApp({ Component, pageProps }) {
   //     page.style.visibility = "visible";
   //   });
   // }, [router]);
+  useEffect(() => {
+    window.addEventListener("popstate", () => {
+      alert(true);
+    });
+  }, []);
 
   return <Component {...pageProps} />;
 }
