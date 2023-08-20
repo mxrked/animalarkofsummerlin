@@ -55,10 +55,10 @@ function TriggerExitAnimations() {
           }, 500);
         });
 
-        setTimeout(() => {
-          document.querySelector(".page").style.opacity = 0;
-          document.querySelector(".page").style.visibility = "hidden";
-        }, 600);
+        // setTimeout(() => {
+        //   document.querySelector(".page").style.opacity = 0;
+        //   document.querySelector(".page").style.visibility = "hidden";
+        // }, 600);
 
         // Removing background color of navs
         // document.getElementById("desktopNav").style.backgroundColor =
