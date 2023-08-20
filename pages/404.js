@@ -16,6 +16,11 @@ import "../assets/styles/modules/404/404.module.css";
 export default function NotFound() {
   const router = useRouter();
 
+  useEffect(() => {
+    document.querySelector(".page").style.opacity = 1;
+    document.querySelector(".page").style.visibility = "visible";
+  }, []);
+
   return (
     <div id="PAGE" className="page overrides_404 full-second">
       <PageHead />

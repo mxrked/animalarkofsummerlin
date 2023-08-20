@@ -259,13 +259,13 @@ function MyApp({ Component, pageProps }) {
     });
   }, []);
 
-  //! Showing Page after some time
-  useEffect(() => {
-    document.querySelectorAll(".page").forEach((page) => {
-      page.style.opacity = 1;
-      page.style.visibility = "visible";
-    });
-  }, [router]);
+  // //! Showing Page after some time
+  // useEffect(() => {
+  //   document.querySelectorAll(".page").forEach((page) => {
+  //     page.style.opacity = 1;
+  //     page.style.visibility = "visible";
+  //   });
+  // }, [router]);
 
   return <Component {...pageProps} />;
 }
