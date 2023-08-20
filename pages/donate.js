@@ -29,13 +29,8 @@ export default function Donate() {
     TriggerExitAnimations();
   }, []);
 
-  useEffect(() => {
-    document.querySelector(".page").style.opacity = 1;
-    document.querySelector(".page").style.visibility = "visible";
-  }, []);
-
   return (
-    <div id="PAGE" className="page overrides_Donate full-second">
+    <div id="PAGE" className="overrides_Donate full-second">
       <PageHead />
       <DonationPopup />
       <NavTop />

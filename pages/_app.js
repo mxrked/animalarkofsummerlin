@@ -27,6 +27,7 @@ import "../assets/styles/tools/global_classnames/global_classnames.css";
 import "../assets/styles/tools/overrides/overrides.css";
 import "../assets/styles/tools/resets/resets.css";
 import "../assets/styles/tools/library_styles/nprogress/nprogress.css";
+import CheckPageClass from "@/assets/functions/dom/checkers/CheckPageClass";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -106,19 +107,19 @@ function MyApp({ Component, pageProps }) {
   }, [router]);
 
   //! Reload Page if page is not visible
-  useEffect(() => {
-    setTimeout(() => {
-      if (sessionStorage.getItem("EA Fix")) {
-        if (document.querySelector(".page")) {
-          if (document.querySelector(".page").style.visibility !== "visible") {
-            router.reload();
-          } else {
-            console.log("No need to refresh. The page is already visible.");
-          }
-        }
-      }
-    }, 1500);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (sessionStorage.getItem("EA Fix")) {
+  //       if (document.querySelector(".page")) {
+  //         if (document.querySelector(".page").style.visibility !== "visible") {
+  //           router.reload();
+  //         } else {
+  //           console.log("No need to refresh. The page is already visible.");
+  //         }
+  //       }
+  //     }
+  //   }, 1500);
+  // }, []);
 
   //? DATA
   //! Session/Local Storage Clearing
@@ -261,16 +262,28 @@ function MyApp({ Component, pageProps }) {
     });
   }, []);
 
-  // //! Showing Page after some time
-  // useEffect(() => {
-  //   document.querySelectorAll(".page").forEach((page) => {
-  //     page.style.opacity = 1;
-  //     page.style.visibility = "visible";
-  //   });
-  // }, [router]);
+  //! Display Page after some time
   useEffect(() => {
-    window.addEventListener("popstate", () => {
-      alert(true);
+    setTimeout(() => {
+      if (document.querySelector(".page")) {
+        document.querySelectorAll(".page").forEach((page) => {
+          page.style.opacity = 1;
+          page.style.visibility = "visible";
+          page.style.overflowY = "auto";
+          page.style.pointerEvents = "auto";
+        });
+      }
+    }, 2500);
+  }, []);
+
+  //! Removing/Adding Page class depending on device
+  useEffect(() => {
+    window.addEventListener("load", () => {
+      CheckPageClass();
+    });
+
+    window.addEventListener("resize", () => {
+      CheckPageClass();
     });
   }, []);
 

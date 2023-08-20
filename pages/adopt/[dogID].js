@@ -105,7 +105,7 @@ export default function Dog({ DOG }) {
   }, []);
 
   return (
-    <div id="PAGE" className="page overrides_Adopt full-second">
+    <div id="PAGE" className="overrides_Adopt full-second">
       {/** <PageHead /> */}
 
       <Head>

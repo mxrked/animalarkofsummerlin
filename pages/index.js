@@ -43,16 +43,7 @@ export default function Home({ index_dogs_data }) {
   // Triggering exit animations
   useEffect(() => {
     TriggerExitAnimations();
-
-    // router.events.on("routeChangeStart", () => {
-    //   TriggerExitAnimations();
-    // });
   }, []);
-
-  // useEffect(() => {
-  //   document.querySelector(".page").style.opacity = 1;
-  //   document.querySelector(".page").style.visibility = "visible";
-  // }, []);
 
   return (
     <div id="PAGE" className="overrides_Index full-second">

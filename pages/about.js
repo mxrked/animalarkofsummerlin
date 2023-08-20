@@ -28,13 +28,8 @@ export default function About() {
     TriggerExitAnimations();
   }, []);
 
-  useEffect(() => {
-    document.querySelector(".page").style.opacity = 1;
-    document.querySelector(".page").style.visibility = "visible";
-  }, []);
-
   return (
-    <div id="PAGE" className="page overrides_About full-second">
+    <div id="PAGE" className="overrides_About full-second">
       <PageHead />
       <DonationPopup />
       <NavTop />

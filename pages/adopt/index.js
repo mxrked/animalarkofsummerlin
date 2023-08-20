@@ -46,7 +46,7 @@ export default function Adopt({ dogs_data }) {
   }, []);
 
   return (
-    <div id="PAGE" className="page overrides_Adopt full-second">
+    <div id="PAGE" className="overrides_Adopt full-second">
       <PageHead />
       <DonationPopup />
       <NavTop />
