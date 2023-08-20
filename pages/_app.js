@@ -86,6 +86,20 @@ function MyApp({ Component, pageProps }) {
 
   //! Reload Page after route change (This is mostly for the animations)
   useEffect(() => {
+    const handleRouteChange = (url, { shallow }) => {
+      if (!shallow) {
+        setTimeout(() => {
+          router.reload();
+        }, 3000); // Refresh after 3 seconds
+      }
+    };
+
+    router.events.on("routeChangeStart", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+
     router.events.on("routeChangeComplete", () => {
       router.reload();
     });
