@@ -140,7 +140,9 @@ export const ContactForm = () => {
                 </div>
               </div>
             </div>
-            <div className={`${styles.form_row} ${styles.single_row} row`}>
+            <div
+              className={`${styles.form_row} ${styles.single_row} ${styles.subject_row} row`}
+            >
               <div
                 className={`${styles.form_side} col-lg-12 col-md-12 col-sm-12 col-xs-12`}
               >
@@ -162,7 +164,9 @@ export const ContactForm = () => {
                 </div>
               </div>
             </div>
-            <div className={`${styles.form_row} ${styles.single_row} row`}>
+            <div
+              className={`${styles.form_row} ${styles.single_row} ${styles.message_row} row`}
+            >
               <div
                 className={`${styles.form_side} col-lg-12 col-md-12 col-sm-12 col-xs-12`}
               >

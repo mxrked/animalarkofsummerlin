@@ -143,17 +143,33 @@ export const AdoptDogs = (props) => {
 
                   <div className={`${styles.adopt_dog_inner_details}`}>
                     <div className={`${styles.adopt_dog_inner_details_cnt}`}>
-                      <span
-                        className={`${styles.dog_name} orientation-change-element half-second`}
-                      >
-                        {dog._dogName}
-                      </span>
+                      {dog._dogName !== "" ? (
+                        <span
+                          className={`${styles.dog_name} orientation-change-element half-second`}
+                        >
+                          {dog._dogName}
+                        </span>
+                      ) : (
+                        <span
+                          className={`${styles.dog_name} orientation-change-element half-second`}
+                        >
+                          ERROR: No Dog Name
+                        </span>
+                      )}
 
-                      <span
-                        className={`${styles.dog_breed} orientation-change-element half-second`}
-                      >
-                        {dog._dogBreed}
-                      </span>
+                      {dog._dogBreed !== "" ? (
+                        <span
+                          className={`${styles.dog_breed} orientation-change-element half-second`}
+                        >
+                          {dog._dogBreed}
+                        </span>
+                      ) : (
+                        <span
+                          className={`${styles.dog_breed} orientation-change-element half-second`}
+                        >
+                          ERROR: No Dog Breed
+                        </span>
+                      )}
 
                       <div className={`${styles.dog_adoption_status_holder}`}>
                         <span
@@ -174,7 +190,7 @@ export const AdoptDogs = (props) => {
                           ) : dog._dogAdoptStatus === "Adopted" ? (
                             <span className={`${styles.adopted}`}>Adopted</span>
                           ) : (
-                            <span>ERROR</span>
+                            <span>ERROR: No Adoption Status</span>
                           )}
 
                           {/** dog._dogAdoptStatus === "Pending" ? (
