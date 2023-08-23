@@ -174,6 +174,7 @@ export const DogMain = (props) => {
   return (
     <section id="dogMain" className={`${styles.dog_main} overrides_DogMain`}>
       <motion.div
+        key={props.dog._dogID}
         ref={REF}
         initial="hidden"
         animate={CONTROLS}
@@ -307,29 +308,67 @@ export const DogMain = (props) => {
 
         <div className={`${styles.dog_main_inner_details}`}>
           <div className={`${styles.dog_main_inner_details_cnt}`}>
-            <span
-              className={`${styles.dog_name} orientation-change-element half-second`}
-            >
-              {props.dog._dogName}
-            </span>
+            {props.dog._dogName !== "" ? (
+              <span
+                className={`${styles.dog_name} orientation-change-element half-second`}
+              >
+                {props.dog._dogName}
+              </span>
+            ) : (
+              <span
+                className={`${styles.dog_name} orientation-change-element half-second`}
+              >
+                ERROR: No Dog Name
+              </span>
+            )}
 
-            <span
-              className={`${styles.dog_breed} orientation-change-element half-second`}
-            >
-              {props.dog._dogBreed}
-            </span>
+            {props.dog._dogBreed !== "" ? (
+              <span
+                className={`${styles.dog_breed} orientation-change-element half-second`}
+              >
+                {props.dog._dogBreed}
+              </span>
+            ) : (
+              <span
+                className={`${styles.dog_breed} orientation-change-element half-second`}
+              >
+                ERROR: No Dog Breed
+              </span>
+            )}
 
-            <span
-              className={`${styles.dog_weight} orientation-change-element half-second`}
-            >
-              <strong>Weight:</strong> {props.dog._dogWeight}
-            </span>
+            {props.dog._dogWeight !== "?" ? (
+              <span
+                className={`${styles.dog_weight} orientation-change-element half-second`}
+              >
+                <strong>Weight:</strong> {props.dog._dogWeight}
+              </span>
+            ) : props.dog._dogWeight !== "" ? (
+              <span
+                className={`${styles.dog_weight} orientation-change-element half-second`}
+              >
+                ERROR: No Dog Weight
+              </span>
+            ) : (
+              <span
+                className={`${styles.dog_weight} orientation-change-element half-second`}
+              >
+                ERROR: No Dog Weight
+              </span>
+            )}
 
-            <p
-              className={`${styles.dog_desc} orientation-change-element half-second`}
-            >
-              {props.dog._dogDesc}
-            </p>
+            {props.dog._dogDesc !== "" ? (
+              <p
+                className={`${styles.dog_desc} orientation-change-element half-second`}
+              >
+                {props.dog._dogDesc}
+              </p>
+            ) : (
+              <p
+                className={`${styles.dog_desc} orientation-change-element half-second`}
+              >
+                ERROR: No Dog Desc
+              </p>
+            )}
 
             <div className={`${styles.dog_adoption_status_holder}`}>
               <span
@@ -346,7 +385,7 @@ export const DogMain = (props) => {
                 ) : props.dog._dogAdoptStatus === "Adopted" ? (
                   <span className={`${styles.adopted}`}>Adopted</span>
                 ) : (
-                  <span>ERROR</span>
+                  <span>ERROR: No Adoption Status</span>
                 )}
 
                 {/** dog._dogAdoptStatus === "Pending" ? (
