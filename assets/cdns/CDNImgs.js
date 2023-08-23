@@ -21,6 +21,7 @@ const SOPHIE_3 = CDNImgReturn("dogs", "sophie-3", "webp");
 
 const DOG_ART_1 = CDNImgReturn("dog-art", "dog-art-1", "webp");
 const DOG_ART_2 = CDNImgReturn("dog-art", "dog-art-2", "webp");
+const DOG_ART_3 = CDNImgReturn("dog-art", "dog-art-3", "webp");
 
 export {
   PLACEHOLDER,
@@ -30,4 +31,4 @@ export {
   PLACEHOLDER_RED,
 };
 export { MERLIN_1, PHOENIX_1, PHOENIX_2, SOPHIE_1, SOPHIE_2, SOPHIE_3 };
-export { DOG_ART_1, DOG_ART_2 };
+export { DOG_ART_1, DOG_ART_2, DOG_ART_3 };
