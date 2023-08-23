@@ -11,7 +11,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import { FADE_DOWN } from "../../../animations/FADES";
-import { DOG_ART_2 } from "@/assets/cdns/CDNImgs";
+import { DOG_ART_2, DOG_ART_3 } from "@/assets/cdns/CDNImgs";
 
 import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
 
@@ -40,7 +40,7 @@ export const AboutMain = () => {
         <div className={`${styles.about_main_inner_top}`}>
           <div className={`${styles.about_main_inner_top_bg_holder}`}>
             <BackgroundImage
-              src={DOG_ART_2}
+              src={DOG_ART_3}
               className={`${styles.bg}`}
               width="100%"
               height="100%"
