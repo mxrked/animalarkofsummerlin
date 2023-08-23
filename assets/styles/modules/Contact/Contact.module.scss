@@ -478,6 +478,69 @@
       }
     }
   }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 95px;
+
+    .contact_form_cnt,
+    .contact_adopt_form_cnt {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 780px;
+
+      h1 {
+        font-size: clamp(31px, 32px, 32px);
+      }
+
+      .form_notice {
+        font-size: clamp(15px, 16px, 16px);
+      }
+
+      form {
+        .form_box {
+          .double_row {
+            .form_side {
+              max-width: 50%;
+            }
+          }
+
+          .single_row {
+            margin-bottom: 5px;
+
+            &:last-child {
+              margin-top: 30px;
+            }
+          }
+        }
+
+        .form_btns {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  .contact_form {
+    .contact_form_cnt {
+      form {
+        .form_box {
+          .single_row {
+            .form_side_L {
+              .form_side_cnt {
+                input {
+                  margin-bottom: 5px;
+                }
+              }
+            }
+          }
+
+          .message_row {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 991px) {
@@ -677,6 +740,36 @@
       }
     }
   }
+  .contact_form,
+  .contact_adopt_form {
+    .contact_form_cnt,
+    .contact_adopt_form_cnt {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      form {
+        .form_box {
+          .single_row {
+            &:last-child {
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact_form {
+    .contact_form_cnt {
+      form {
+        .form_box {
+          .single_row {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
@@ -690,8 +783,8 @@
       padding-right: 25px;
 
       h1 {
-        font-size: clamp(1.7rem, 2vw, 2rem);
-        line-height: 32px;
+        font-size: clamp(1.6rem, 2vw, 2rem);
+        line-height: 28px;
         max-width: 100%;
         @include quickCenter("relative");
         margin-bottom: 30px;
@@ -724,6 +817,56 @@
           @include quickCenter("relative");
           width: 140px;
           font-size: clamp(15px, 16px, 16px);
+        }
+      }
+    }
+  }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 55px;
+
+    .contact_form_cnt,
+    .contact_adopt_form_cnt {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .form_notice {
+        font-size: clamp(13px, 13px, 13px);
+      }
+
+      form {
+        .form_box {
+          .single_row {
+            &:last-child {
+              margin-top: 0px;
+            }
+          }
+        }
+
+        .form_btns {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .contact_form {
+    .contact_form_cnt {
+      form {
+        .form_box {
+          .single_row {
+            .form_side_L {
+              .form_side_cnt {
+                input {
+                  margin-bottom: 5px;
+                }
+              }
+            }
+          }
+
+          .message_row {
+            margin-top: 0;
+          }
         }
       }
     }
@@ -779,6 +922,57 @@
       }
     }
   }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 55px;
+
+    .contact_form_cnt,
+    .contact_adopt_form_cnt {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 500px;
+
+      .form_notice {
+        font-size: clamp(13px, 13px, 13px);
+      }
+
+      form {
+        .form_box {
+          .single_row {
+            &:last-child {
+              margin-top: 0px;
+            }
+          }
+        }
+
+        .form_btns {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .contact_form {
+    .contact_form_cnt {
+      form {
+        .form_box {
+          .single_row {
+            .form_side_L {
+              .form_side_cnt {
+                input {
+                  margin-bottom: 5px;
+                }
+              }
+            }
+          }
+
+          .message_row {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Ipad
@@ -829,6 +1023,63 @@
       }
     }
   }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 95px;
+
+    .contact_form_cnt,
+    .contact_adopt_form_cnt {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 610px;
+
+      .form_notice {
+        font-size: clamp(13px, 13px, 13px);
+      }
+
+      form {
+        .form_box {
+          .double_row {
+            .form_side {
+              max-width: 50%;
+            }
+          }
+
+          .single_row {
+            &:last-child {
+              margin-top: 0px;
+            }
+          }
+        }
+
+        .form_btns {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .contact_form {
+    .contact_form_cnt {
+      form {
+        .form_box {
+          .single_row {
+            .form_side_L {
+              .form_side_cnt {
+                input {
+                  margin-bottom: 5px;
+                }
+              }
+            }
+          }
+
+          .message_row {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
@@ -874,6 +1125,69 @@
           @include quickCenter("relative");
           width: 140px;
           font-size: clamp(16px, 17px, 17px);
+        }
+      }
+    }
+  }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 75px;
+
+    .contact_form_cnt,
+    .contact_adopt_form_cnt {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 610px;
+
+      h1 {
+        font-size: clamp(27px, 28px, 28px);
+      }
+
+      .form_notice {
+        font-size: clamp(14px, 15px, 15px);
+      }
+
+      form {
+        .form_box {
+          .double_row {
+            .form_side {
+              max-width: 50%;
+            }
+          }
+
+          .single_row {
+            margin-bottom: 5px;
+
+            &:last-child {
+              margin-top: 0px;
+            }
+          }
+        }
+
+        .form_btns {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  .contact_form {
+    .contact_form_cnt {
+      form {
+        .form_box {
+          .single_row {
+            .form_side_L {
+              .form_side_cnt {
+                input {
+                  margin-bottom: 5px;
+                }
+              }
+            }
+          }
+
+          .message_row {
+            margin-top: 0;
+          }
         }
       }
     }
@@ -928,6 +1242,67 @@
       }
     }
   }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 95px;
+
+    .contact_form_cnt,
+    .contact_adopt_form_cnt {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 610px;
+
+      h1 {
+        font-size: clamp(31px, 32px, 32px);
+      }
+
+      .form_notice {
+        font-size: clamp(15px, 16px, 16px);
+      }
+
+      form {
+        .form_box {
+          .double_row {
+            .form_side {
+              max-width: 50%;
+            }
+          }
+
+          .single_row {
+            &:last-child {
+              margin-top: 30px;
+            }
+          }
+        }
+
+        .form_btns {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  .contact_form {
+    .contact_form_cnt {
+      form {
+        .form_box {
+          .single_row {
+            .form_side_L {
+              .form_side_cnt {
+                input {
+                  margin-bottom: 5px;
+                }
+              }
+            }
+          }
+
+          .message_row {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -973,6 +1348,69 @@
           @include quickCenter("relative");
           width: 140px;
           font-size: clamp(16px, 17px, 17px);
+        }
+      }
+    }
+  }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 95px;
+
+    .contact_form_cnt,
+    .contact_adopt_form_cnt {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 610px;
+
+      h1 {
+        font-size: clamp(31px, 32px, 32px);
+      }
+
+      .form_notice {
+        font-size: clamp(15px, 16px, 16px);
+      }
+
+      form {
+        .form_box {
+          .double_row {
+            .form_side {
+              max-width: 50%;
+            }
+          }
+
+          .single_row {
+            margin-bottom: 5px;
+
+            &:last-child {
+              margin-top: 30px;
+            }
+          }
+        }
+
+        .form_btns {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  .contact_form {
+    .contact_form_cnt {
+      form {
+        .form_box {
+          .single_row {
+            .form_side_L {
+              .form_side_cnt {
+                input {
+                  margin-bottom: 5px;
+                }
+              }
+            }
+          }
+
+          .message_row {
+            margin-top: 0;
+          }
         }
       }
     }
@@ -1023,6 +1461,69 @@
           @include quickCenter("relative");
           width: 150px;
           font-size: clamp(16px, 17px, 17px);
+        }
+      }
+    }
+  }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 95px;
+
+    .contact_form_cnt,
+    .contact_adopt_form_cnt {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 780px;
+
+      h1 {
+        font-size: clamp(31px, 32px, 32px);
+      }
+
+      .form_notice {
+        font-size: clamp(15px, 16px, 16px);
+      }
+
+      form {
+        .form_box {
+          .double_row {
+            .form_side {
+              max-width: 50%;
+            }
+          }
+
+          .single_row {
+            margin-bottom: 5px;
+
+            &:last-child {
+              margin-top: 30px;
+            }
+          }
+        }
+
+        .form_btns {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  .contact_form {
+    .contact_form_cnt {
+      form {
+        .form_box {
+          .single_row {
+            .form_side_L {
+              .form_side_cnt {
+                input {
+                  margin-bottom: 5px;
+                }
+              }
+            }
+          }
+
+          .message_row {
+            margin-top: 0;
+          }
         }
       }
     }

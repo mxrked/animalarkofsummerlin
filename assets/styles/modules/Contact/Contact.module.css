@@ -409,6 +409,60 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 95px;
+  }
+  .contact_form .contact_form_cnt,
+  .contact_form .contact_adopt_form_cnt,
+  .contact_adopt_form .contact_form_cnt,
+  .contact_adopt_form .contact_adopt_form_cnt {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 780px;
+  }
+  .contact_form .contact_form_cnt h1,
+  .contact_form .contact_adopt_form_cnt h1,
+  .contact_adopt_form .contact_form_cnt h1,
+  .contact_adopt_form .contact_adopt_form_cnt h1 {
+    font-size: 32px;
+  }
+  .contact_form .contact_form_cnt .form_notice,
+  .contact_form .contact_adopt_form_cnt .form_notice,
+  .contact_adopt_form .contact_form_cnt .form_notice,
+  .contact_adopt_form .contact_adopt_form_cnt .form_notice {
+    font-size: 16px;
+  }
+  .contact_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_form .contact_adopt_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side {
+    max-width: 50%;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row:last-child {
+    margin-top: 30px;
+  }
+  .contact_form .contact_form_cnt form .form_btns,
+  .contact_form .contact_adopt_form_cnt form .form_btns,
+  .contact_adopt_form .contact_form_cnt form .form_btns,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_btns {
+    margin-top: 50px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row .form_side_L .form_side_cnt input {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .message_row {
+    margin-top: 0;
+  }
 }
 @media all and (max-width: 991px) {
   .contact_top {
@@ -558,6 +612,22 @@
     max-width: 140px;
     font-size: 16px;
   }
+  .contact_form .contact_form_cnt,
+  .contact_form .contact_adopt_form_cnt,
+  .contact_adopt_form .contact_form_cnt,
+  .contact_adopt_form .contact_adopt_form_cnt {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row:last-child {
+    margin-top: 0px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row {
+    margin-bottom: 5px;
+  }
 }
 @media all and (max-width: 419px) {
   .contact_top {
@@ -569,8 +639,8 @@
     padding-right: 25px;
   }
   .contact_top .contact_top_cnt h1 {
-    font-size: clamp(1.7rem, 2vw, 2rem);
-    line-height: 32px;
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    line-height: 28px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -603,6 +673,41 @@
     margin-right: auto;
     width: 140px;
     font-size: 16px;
+  }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 55px;
+  }
+  .contact_form .contact_form_cnt,
+  .contact_form .contact_adopt_form_cnt,
+  .contact_adopt_form .contact_form_cnt,
+  .contact_adopt_form .contact_adopt_form_cnt {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .contact_form .contact_form_cnt .form_notice,
+  .contact_form .contact_adopt_form_cnt .form_notice,
+  .contact_adopt_form .contact_form_cnt .form_notice,
+  .contact_adopt_form .contact_adopt_form_cnt .form_notice {
+    font-size: 13px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row:last-child {
+    margin-top: 0px;
+  }
+  .contact_form .contact_form_cnt form .form_btns,
+  .contact_form .contact_adopt_form_cnt form .form_btns,
+  .contact_adopt_form .contact_form_cnt form .form_btns,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_btns {
+    margin-top: 20px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row .form_side_L .form_side_cnt input {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .message_row {
+    margin-top: 0;
   }
 }
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -650,6 +755,42 @@
     width: 140px;
     font-size: 17px;
   }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 55px;
+  }
+  .contact_form .contact_form_cnt,
+  .contact_form .contact_adopt_form_cnt,
+  .contact_adopt_form .contact_form_cnt,
+  .contact_adopt_form .contact_adopt_form_cnt {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 500px;
+  }
+  .contact_form .contact_form_cnt .form_notice,
+  .contact_form .contact_adopt_form_cnt .form_notice,
+  .contact_adopt_form .contact_form_cnt .form_notice,
+  .contact_adopt_form .contact_adopt_form_cnt .form_notice {
+    font-size: 13px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row:last-child {
+    margin-top: 0px;
+  }
+  .contact_form .contact_form_cnt form .form_btns,
+  .contact_form .contact_adopt_form_cnt form .form_btns,
+  .contact_adopt_form .contact_form_cnt form .form_btns,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_btns {
+    margin-top: 20px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row .form_side_L .form_side_cnt input {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .message_row {
+    margin-top: 0;
+  }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .contact_top {
@@ -694,6 +835,48 @@
     margin-right: auto;
     width: 140px;
     font-size: 17px;
+  }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 95px;
+  }
+  .contact_form .contact_form_cnt,
+  .contact_form .contact_adopt_form_cnt,
+  .contact_adopt_form .contact_form_cnt,
+  .contact_adopt_form .contact_adopt_form_cnt {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 610px;
+  }
+  .contact_form .contact_form_cnt .form_notice,
+  .contact_form .contact_adopt_form_cnt .form_notice,
+  .contact_adopt_form .contact_form_cnt .form_notice,
+  .contact_adopt_form .contact_adopt_form_cnt .form_notice {
+    font-size: 13px;
+  }
+  .contact_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_form .contact_adopt_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side {
+    max-width: 50%;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row:last-child {
+    margin-top: 0px;
+  }
+  .contact_form .contact_form_cnt form .form_btns,
+  .contact_form .contact_adopt_form_cnt form .form_btns,
+  .contact_adopt_form .contact_form_cnt form .form_btns,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_btns {
+    margin-top: 20px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row .form_side_L .form_side_cnt input {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .message_row {
+    margin-top: 0;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
@@ -740,6 +923,60 @@
     width: 140px;
     font-size: 17px;
   }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 75px;
+  }
+  .contact_form .contact_form_cnt,
+  .contact_form .contact_adopt_form_cnt,
+  .contact_adopt_form .contact_form_cnt,
+  .contact_adopt_form .contact_adopt_form_cnt {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 610px;
+  }
+  .contact_form .contact_form_cnt h1,
+  .contact_form .contact_adopt_form_cnt h1,
+  .contact_adopt_form .contact_form_cnt h1,
+  .contact_adopt_form .contact_adopt_form_cnt h1 {
+    font-size: 28px;
+  }
+  .contact_form .contact_form_cnt .form_notice,
+  .contact_form .contact_adopt_form_cnt .form_notice,
+  .contact_adopt_form .contact_form_cnt .form_notice,
+  .contact_adopt_form .contact_adopt_form_cnt .form_notice {
+    font-size: 15px;
+  }
+  .contact_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_form .contact_adopt_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side {
+    max-width: 50%;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row:last-child {
+    margin-top: 0px;
+  }
+  .contact_form .contact_form_cnt form .form_btns,
+  .contact_form .contact_adopt_form_cnt form .form_btns,
+  .contact_adopt_form .contact_form_cnt form .form_btns,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_btns {
+    margin-top: 30px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row .form_side_L .form_side_cnt input {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .message_row {
+    margin-top: 0;
+  }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .contact_top {
@@ -784,6 +1021,54 @@
     margin-right: auto;
     width: 140px;
     font-size: 17px;
+  }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 95px;
+  }
+  .contact_form .contact_form_cnt,
+  .contact_form .contact_adopt_form_cnt,
+  .contact_adopt_form .contact_form_cnt,
+  .contact_adopt_form .contact_adopt_form_cnt {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 610px;
+  }
+  .contact_form .contact_form_cnt h1,
+  .contact_form .contact_adopt_form_cnt h1,
+  .contact_adopt_form .contact_form_cnt h1,
+  .contact_adopt_form .contact_adopt_form_cnt h1 {
+    font-size: 32px;
+  }
+  .contact_form .contact_form_cnt .form_notice,
+  .contact_form .contact_adopt_form_cnt .form_notice,
+  .contact_adopt_form .contact_form_cnt .form_notice,
+  .contact_adopt_form .contact_adopt_form_cnt .form_notice {
+    font-size: 16px;
+  }
+  .contact_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_form .contact_adopt_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side {
+    max-width: 50%;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row:last-child {
+    margin-top: 30px;
+  }
+  .contact_form .contact_form_cnt form .form_btns,
+  .contact_form .contact_adopt_form_cnt form .form_btns,
+  .contact_adopt_form .contact_form_cnt form .form_btns,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_btns {
+    margin-top: 50px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row .form_side_L .form_side_cnt input {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .message_row {
+    margin-top: 0;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -830,6 +1115,60 @@
     width: 140px;
     font-size: 17px;
   }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 95px;
+  }
+  .contact_form .contact_form_cnt,
+  .contact_form .contact_adopt_form_cnt,
+  .contact_adopt_form .contact_form_cnt,
+  .contact_adopt_form .contact_adopt_form_cnt {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 610px;
+  }
+  .contact_form .contact_form_cnt h1,
+  .contact_form .contact_adopt_form_cnt h1,
+  .contact_adopt_form .contact_form_cnt h1,
+  .contact_adopt_form .contact_adopt_form_cnt h1 {
+    font-size: 32px;
+  }
+  .contact_form .contact_form_cnt .form_notice,
+  .contact_form .contact_adopt_form_cnt .form_notice,
+  .contact_adopt_form .contact_form_cnt .form_notice,
+  .contact_adopt_form .contact_adopt_form_cnt .form_notice {
+    font-size: 16px;
+  }
+  .contact_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_form .contact_adopt_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side {
+    max-width: 50%;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row:last-child {
+    margin-top: 30px;
+  }
+  .contact_form .contact_form_cnt form .form_btns,
+  .contact_form .contact_adopt_form_cnt form .form_btns,
+  .contact_adopt_form .contact_form_cnt form .form_btns,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_btns {
+    margin-top: 50px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row .form_side_L .form_side_cnt input {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .message_row {
+    margin-top: 0;
+  }
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .contact_top {
@@ -874,5 +1213,59 @@
     margin-right: auto;
     width: 150px;
     font-size: 17px;
+  }
+  .contact_form,
+  .contact_adopt_form {
+    margin-bottom: 95px;
+  }
+  .contact_form .contact_form_cnt,
+  .contact_form .contact_adopt_form_cnt,
+  .contact_adopt_form .contact_form_cnt,
+  .contact_adopt_form .contact_adopt_form_cnt {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 780px;
+  }
+  .contact_form .contact_form_cnt h1,
+  .contact_form .contact_adopt_form_cnt h1,
+  .contact_adopt_form .contact_form_cnt h1,
+  .contact_adopt_form .contact_adopt_form_cnt h1 {
+    font-size: 32px;
+  }
+  .contact_form .contact_form_cnt .form_notice,
+  .contact_form .contact_adopt_form_cnt .form_notice,
+  .contact_adopt_form .contact_form_cnt .form_notice,
+  .contact_adopt_form .contact_adopt_form_cnt .form_notice {
+    font-size: 16px;
+  }
+  .contact_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_form .contact_adopt_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_form_cnt form .form_box .double_row .form_side,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .double_row .form_side {
+    max-width: 50%;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_form .contact_adopt_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_form_cnt form .form_box .single_row:last-child,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_box .single_row:last-child {
+    margin-top: 30px;
+  }
+  .contact_form .contact_form_cnt form .form_btns,
+  .contact_form .contact_adopt_form_cnt form .form_btns,
+  .contact_adopt_form .contact_form_cnt form .form_btns,
+  .contact_adopt_form .contact_adopt_form_cnt form .form_btns {
+    margin-top: 50px;
+  }
+  .contact_form .contact_form_cnt form .form_box .single_row .form_side_L .form_side_cnt input {
+    margin-bottom: 5px;
+  }
+  .contact_form .contact_form_cnt form .form_box .message_row {
+    margin-top: 0;
   }
 }/*# sourceMappingURL=Contact.module.css.map */
