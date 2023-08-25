@@ -3,7 +3,7 @@
     "_dogID": "_D0001",
     "_dogName": "Merlin",
     "_dogBreed": "Aussie/Border Collie",
-    "_dogWeight": "?",
+    "_dogWeight": "55lbs",
     "_dogDesc": "This Black and white beauty is Merlin, a part Aussie, part Border Collie who is 2 years old.",
     "_dogImg": [
       "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/dogs/merlin-1.webp",
@@ -11,13 +11,13 @@
       "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/placeholders/purple.webp",
       "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/placeholders/red.webp"
     ],
-    "_dogAdoptStatus": "Available"
+    "_dogAdoptStatus": "Adopted"
   },
   {
     "_dogID": "_D0002",
     "_dogName": "Phoenix",
     "_dogBreed": "Beagle",
-    "_dogWeight": "?",
+    "_dogWeight": "34lbs",
     "_dogDesc": "Phoenix is now a beautiful happy Beagle who loves life.",
     "_dogImg": [
       "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/dogs/phoenix-1.webp",
@@ -25,13 +25,13 @@
       "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/placeholders/purple.webp",
       "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/placeholders/red.webp"
     ],
-    "_dogAdoptStatus": "Available"
+    "_dogAdoptStatus": "Adopted"
   },
   {
     "_dogID": "_D0003",
     "_dogName": "Sophie",
     "_dogBreed": "Pit Mix",
-    "_dogWeight": "?",
+    "_dogWeight": "55lbs",
     "_dogDesc": "The Pit mix is Sophie who is also 2yo, tan and white, housetrained, and shy.",
     "_dogImg": [
       "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/dogs/sophie-1.webp",
