@@ -22,12 +22,83 @@
 }
 
 // Desktop
+.donate_top {
+  height: 615px;
+  @include displayElement(flex, center, center);
+  text-align: center;
+  margin-bottom: 50px;
+
+  .donate_top_cnt {
+    h1 {
+      white-space: pre-wrap;
+      font-family: "Poppins Bold";
+      font-size: $Heading;
+      text-transform: uppercase;
+      line-height: 40px;
+      color: $EbonyClay;
+      margin-bottom: 40px;
+
+      span {
+        color: $RoyalPurple;
+      }
+    }
+
+    p {
+      white-space: pre-wrap;
+      font-family: "Lato Regular";
+      font-size: $Text;
+      color: $EbonyClay;
+      margin-top: 20px;
+      margin-bottom: 45px;
+      @include quickCenter("relative");
+      max-width: 890px;
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
+  .donate_top {
+    height: 410px;
+
+    .donate_top_cnt {
+      max-width: 900px;
+
+      h1 {
+        font-size: clamp(51px, 59px, 59px);
+        line-height: 30px;
+      }
+
+      p {
+        font-size: clamp(21px, 23px, 23px);
+        max-width: 660px;
+        @include quickCenter("relative");
+      }
+    }
+  }
 }
 
 @media all and (max-width: 991px) {
+  .donate_top {
+    height: 400px;
+    margin-bottom: 0;
+
+    .donate_top_cnt {
+      max-width: 600px;
+
+      h1 {
+        font-size: clamp(3rem, 4vw, 4rem);
+        line-height: 48px;
+        max-width: 100%;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(19px, 21px, 21px);
+        @include quickCenter("relative");
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -35,30 +106,223 @@
 
 // Desktop Window (Smallest)
 @media all and (max-width: 768px) {
+  .donate_top {
+    height: 350px;
+
+    .donate_top_cnt {
+      max-width: 600px;
+
+      h1 {
+        font-size: clamp(2rem, 3vw, 3rem);
+        line-height: 35px;
+        max-width: 270px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(17px, 19px, 19px);
+        @include quickCenter("relative");
+        max-width: 380px;
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
+  .donate_top {
+    height: 280px;
+
+    .donate_top_cnt {
+      max-width: 300px;
+      padding-left: 25px;
+      padding-right: 25px;
+
+      h1 {
+        font-size: clamp(1.6rem, 2vw, 2rem);
+        line-height: 28px;
+        max-width: 100%;
+        @include quickCenter("relative");
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: clamp(15px, 17px, 17px);
+        @include quickCenter("relative");
+        max-width: 380px;
+        margin-top: 0px;
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
 // Pixel 2 XL
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .donate_top {
+    height: 210px;
+
+    .donate_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(1.7rem, 2vw, 2rem);
+        line-height: 15px;
+        max-width: 100%;
+        @include quickCenter("relative");
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: clamp(15px, 16px, 16px);
+        max-width: 450px;
+        @include quickCenter("relative");
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
 // Ipad
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .donate_top {
+    height: 300px;
+
+    .donate_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(32px, 34px, 34px);
+        line-height: 18px;
+        max-width: 460px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(16px, 17px, 17px);
+        max-width: 470px;
+        @include quickCenter("relative");
+        margin-top: 2px;
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .donate_top {
+    height: 270px;
+    margin-bottom: 0;
+
+    .donate_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(32px, 34px, 34px);
+        line-height: 19px;
+        max-width: 450px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(16px, 17px, 17px);
+        max-width: 450px;
+        @include quickCenter("relative");
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
 // iPad Pro
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .donate_top {
+    height: 350px;
+    margin-bottom: 25px;
+
+    .donate_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(35px, 37px, 37px);
+        line-height: 20px;
+        max-width: 555px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(17px, 18px, 18px);
+        max-width: 480px;
+        @include quickCenter("relative");
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .donate_top {
+    height: 320px;
+    margin-bottom: 25px;
+
+    .donate_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(37px, 38px, 38px);
+        line-height: 20px;
+        max-width: 540px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(17px, 18px, 18px);
+        max-width: 480px;
+        @include quickCenter("relative");
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
 
 // Laptops
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .donate_top {
+    height: 440px;
+
+    .donate_top_cnt {
+      padding-left: 25px;
+      padding-right: 25px;
+      max-width: 100%;
+
+      h1 {
+        font-size: clamp(45px, 46px, 46px);
+        line-height: 33px;
+        max-width: 600px;
+        @include quickCenter("relative");
+      }
+
+      p {
+        font-size: clamp(19px, 20px, 20px);
+        max-width: 680px;
+        @include quickCenter("relative");
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+  }
 }
