@@ -12,6 +12,8 @@ const PLACEHOLDER_RED = ("placeholders", "red", "webp");
 const PLACEHOLDER_GREEN = ("placeholders", "green", "webp");
 const PLACEHOLDER_PURPLE = ("placeholders", "purple", "webp");
 
+const PAW = CDNImgReturn("combo", "paw", "webp");
+
 const MERLIN_1 = CDNImgReturn("dogs", "merlin-1", "webp");
 const PHOENIX_1 = CDNImgReturn("dogs", "phoenix-1", "webp");
 const PHOENIX_2 = CDNImgReturn("dogs", "phoenix-2", "webp");
@@ -30,5 +32,6 @@ export {
   PLACEHOLDER_PURPLE,
   PLACEHOLDER_RED,
 };
+export { PAW };
 export { MERLIN_1, PHOENIX_1, PHOENIX_2, SOPHIE_1, SOPHIE_2, SOPHIE_3 };
 export { DOG_ART_1, DOG_ART_2, DOG_ART_3 };
