@@ -22,7 +22,7 @@ Demo: animalarkofsummerlin.com
 
 ## Started Developement - 8/4/2023
 
-## Ended Development - IN PROGRESS
+## Ended Development - 8/29/2023
 
 ## Status
 
