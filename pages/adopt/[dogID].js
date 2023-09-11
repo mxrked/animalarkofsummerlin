@@ -28,7 +28,7 @@ import "../../assets/styles/modules/Adopt/Adopt.module.css";
 export async function getStaticPaths() {
   try {
     const ALL_DOGS = await fetch(
-      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/json/dogs/Dogs.json"
+      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/json/dogs/Dogs.json?timestamp=12345" // timestamp=12345 is to get the most up-to-date version
     );
 
     if (!ALL_DOGS.ok) {
@@ -62,7 +62,7 @@ export async function getStaticProps(context) {
   // Getting the link for the JSON
   try {
     const ALL_DOGS = await fetch(
-      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/json/dogs/Dogs.json"
+      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/json/dogs/Dogs.json?timestamp=12345" // timestamp=12345 is to get the most up-to-date version
     );
 
     if (!ALL_DOGS.ok) {

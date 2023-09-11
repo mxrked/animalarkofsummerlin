@@ -25,7 +25,7 @@ import "../../assets/styles/modules/Adopt/Adopt.module.css";
 
 export const getStaticProps = async () => {
   const DOGS_RES = await fetch(
-    "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/json/dogs/Dogs.json"
+    "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/json/dogs/Dogs.json?timestamp=12345" // timestamp=12345 is to get the most up-to-date version
   );
 
   const DOGS_RES_DATA = await DOGS_RES.json();

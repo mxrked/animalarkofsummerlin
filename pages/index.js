@@ -25,7 +25,7 @@ import "../assets/styles/modules/Index/Index.module.css";
 
 export const getStaticProps = async () => {
   const INDEX_DOGS_RES = await fetch(
-    "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/json/dogs/IndexDogs.json"
+    "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/json/dogs/IndexDogs.json?timestamp=12345" // timestamp=12345 is to get the most up-to-date version
   );
 
   const INDEX_DOGS_RES_DATA = await INDEX_DOGS_RES.json();
