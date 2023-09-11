@@ -12,6 +12,9 @@ import {
   SOPHIE_1,
   SOPHIE_2,
   SOPHIE_3,
+  STELLA_1,
+  STELLA_2,
+  STELLA_3,
 } from "../../cdns/CDNImgs";
 
 import Dog from "../classes/Dog";
@@ -43,5 +46,14 @@ const OBJ_SOPHIE = new Dog(
   [SOPHIE_1, SOPHIE_2, SOPHIE_3, PLACEHOLDER_RED],
   "Available"
 );
+const OBJ_STELLA = new Dog(
+  "_D0004",
+  "Stella",
+  "Husky",
+  "?",
+  "?",
+  [STELLA_1, STELLA_2, STELLA_3, PLACEHOLDER_RED],
+  "Available"
+);
 
-export { OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE };
+export { OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE, OBJ_STELLA };
