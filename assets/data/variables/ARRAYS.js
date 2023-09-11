@@ -1,6 +1,6 @@
 // This file is used to hold some arrays
 
-import { OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE } from "./OBJECTS";
+import { OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE, OBJ_STELLA } from "./OBJECTS";
 
 const INDEX_KWS = [
   "Animal Ark",
@@ -110,7 +110,7 @@ const DONTATE_KWS = [
 ];
 
 const INDEX_DOGS = [OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE];
-const DOGS = [OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE];
+const DOGS = [OBJ_MERLIN, OBJ_PHOENIX, OBJ_SOPHIE, OBJ_STELLA];
 
 export { INDEX_KWS, ABOUT_KWS, ADOPT_KWS, CONTACT_KWS, DONTATE_KWS };
 export { INDEX_DOGS, DOGS };

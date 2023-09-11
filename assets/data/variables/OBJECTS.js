@@ -26,7 +26,7 @@ const OBJ_MERLIN = new Dog(
   "?",
   "This Black and white beauty is Merlin, a part Aussie, part Border Collie who is 2 years old.",
   [MERLIN_1, PLACEHOLDER_GREEN, PLACEHOLDER_PURPLE, PLACEHOLDER_RED],
-  "Available"
+  "Adopted"
 );
 const OBJ_PHOENIX = new Dog(
   "_D0002",
@@ -35,7 +35,7 @@ const OBJ_PHOENIX = new Dog(
   "?",
   "Phoenix is now a beautiful happy Beagle who loves life.",
   [PHOENIX_1, PHOENIX_2, PLACEHOLDER_PURPLE, PLACEHOLDER_RED],
-  "Available"
+  "Adopted"
 );
 const OBJ_SOPHIE = new Dog(
   "_D0003",
