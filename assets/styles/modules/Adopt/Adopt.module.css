@@ -92,6 +92,12 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+.adopt_dogs .adopt_dogs_inner .adopt_dogs_inner_box .adopt_dogs_inner_row .adopt_dog {
+  margin-bottom: 40px;
+}
+.adopt_dogs .adopt_dogs_inner .adopt_dogs_inner_box .adopt_dogs_inner_row .adopt_dog:last-child {
+  margin-bottom: 0;
+}
 .adopt_dogs .adopt_dogs_inner .adopt_dogs_inner_box .adopt_dogs_inner_row .adopt_dog .adopt_dog_inner {
   max-width: 93%;
   margin-left: auto;

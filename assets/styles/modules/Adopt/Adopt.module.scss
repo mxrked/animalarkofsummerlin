@@ -110,6 +110,12 @@
     .adopt_dogs_inner_box {
       .adopt_dogs_inner_row {
         .adopt_dog {
+          margin-bottom: 40px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
           .adopt_dog_inner {
             max-width: 93%;
             @include quickCenter("relative");
