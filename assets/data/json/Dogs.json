@@ -40,5 +40,19 @@
       "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/placeholders/red.webp"
     ],
     "_dogAdoptStatus": "Available"
+  },
+  {
+    "_dogID": "_D0004",
+    "_dogName": "Stella",
+    "_dogBreed": "Husky",
+    "_dogWeight": "?",
+    "_dogDesc": "?",
+    "_dogImg": [
+      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/dogs/stella-1.webp",
+      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/dogs/stella-2.webp",
+      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/dogs/stella-3.webp",
+      "https://raw.githubusercontent.com/mxrked/freelance_projects_CDN/main/animalarkofsummerlin/imgs/placeholders/red.webp"
+    ],
+    "_dogAdoptStatus": "Available"
   }
 ]
