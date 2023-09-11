@@ -9,6 +9,7 @@ import { BackgroundImage } from "react-image-and-background-image-fade";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+import { DOGS } from "@/assets/data/variables/ARRAYS";
 import { FADE_DOWN } from "../../../animations/FADES";
 
 import TriggerInViewMotion from "@/assets/functions/dom/triggers/TriggerInViewMotion";
