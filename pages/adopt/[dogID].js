@@ -85,6 +85,7 @@ export async function getStaticProps(context) {
       props: {
         DOG,
       },
+      revalidate: 60,
     };
   } catch (error) {
     console.error("Error fetching index browse data:", error);
